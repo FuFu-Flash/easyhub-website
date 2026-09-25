@@ -149,6 +149,10 @@ section{padding:92px 0}
 .btn-primary:hover{background:var(--blue-deep)}
 .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--blue);box-shadow:0 10px 26px -16px rgba(38,76,150,.5)}
+.btn-gitee{background:#FFF6F6;color:#C71D23;border-color:#F1C8CB}
+.btn-gitee:hover{background:#FCEBED;border-color:#C71D23;box-shadow:0 10px 26px -16px rgba(199,29,35,.45)}
+.btn-github{background:#F5F5F6;color:#181717;border-color:#D6D8DC}
+.btn-github:hover{background:#EBECED;border-color:#181717;box-shadow:0 10px 26px -16px rgba(24,23,23,.4)}
 
 /* ============ Hero ============ */
 .hero{padding:80px 0 88px;background:linear-gradient(180deg,#FFFFFF 0%,#F4F7FC 100%);border-bottom:1px solid var(--line)}
@@ -158,7 +162,10 @@ section{padding:92px 0}
 .hero h1{font-size:46px;font-weight:900;line-height:1.24;letter-spacing:-.015em}
 .hero h1 .accent{color:var(--blue)}
 .hero p.lead{margin-top:22px;font-size:17px;color:var(--muted);max-width:500px;line-height:1.85}
-.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.hero-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:34px}
+.hero-actions .btn{justify-content:center;min-width:0;padding:12px 9px;gap:7px;font-size:13px;white-space:nowrap}
+.hero-actions .btn svg,.hero-actions .btn img{width:17px;height:17px;flex:none}
+.hero-label-mobile{display:none}
 .hero-meta{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
 .hero-meta div{font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:8px;font-weight:500}
 .hero-meta svg{flex:none}
@@ -345,11 +352,10 @@ table.matrix{width:100%;border-collapse:collapse;table-layout:fixed;min-width:90
 .dl-card ul{margin:9px 0 0;padding-left:18px;font-size:13px;color:var(--muted);line-height:2}
 .dl-card ul li::marker{color:var(--blue)}
 .dl-links{display:grid;gap:8px;margin-top:15px}
-.dl-links a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;border:1px solid #D9E6FF;border-radius:9px;background:#fff;color:var(--blue-deep);font-size:13px;font-weight:700;transition:border-color .18s,background .18s}
+.dl-links a{display:flex;align-items:center;justify-content:center;gap:10px;padding:9px 12px;border:1px solid #D9E6FF;border-radius:9px;background:#fff;color:var(--blue-deep);font-size:13px;font-weight:700;text-align:center;transition:border-color .18s,background .18s}
 .dl-links a:hover{border-color:var(--blue);background:var(--blue-softer)}
-.dl-links small{color:var(--muted);font-size:11px;font-weight:500}
-.dl-source{margin-top:16px;font-size:12px;font-weight:700;color:var(--ink-2)}
-.dl-source-note{margin-top:10px}
+.dl-source{display:flex;align-items:center;gap:7px;margin-top:16px;font-size:12px;font-weight:700;color:var(--ink-2)}
+.dl-source img{width:16px;height:16px}
 .download-verify{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 .download-verify summary{cursor:pointer;color:var(--blue-deep);font-weight:700}
 .download-verify p{margin-top:9px;font-size:12px}
@@ -400,6 +406,11 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .nav-toggle{display:block}
   .hero h1{font-size:30px}
   .hero p.lead{font-size:15.5px}
+  .hero-actions{gap:7px}
+  .hero-actions .btn{padding:11px 5px;gap:5px;font-size:12px}
+  .hero-actions .btn svg,.hero-actions .btn img{width:15px;height:15px}
+  .hero-label-desktop{display:none}
+  .hero-label-mobile{display:inline}
   .pain-grid,.feat-grid,.dl-grid,.compare-note,.steps{grid-template-columns:1fr}
   .sec-title{font-size:24px}
   .sec-head{margin-bottom:38px}
@@ -465,15 +476,15 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
-          下载与运行
+          <span class="hero-label-desktop">下载与运行</span><span class="hero-label-mobile">下载</span>
         </a>
-        <a class="btn btn-ghost" href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7 3 12l4 5M17 7l4 5-4 5M14 4l-4 16"/></svg>
-          查看 GitHub 仓库
+        <a class="btn btn-gitee" href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer" aria-label="查看 Gitee 仓库">
+          <img src="assets/gitee.svg" alt="">
+          <span class="hero-label-desktop">查看 Gitee 仓库</span><span class="hero-label-mobile">Gitee</span>
         </a>
-        <a class="btn btn-ghost" href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7 3 12l4 5M17 7l4 5-4 5M14 4l-4 16"/></svg>
-          查看 Gitee 仓库
+        <a class="btn btn-github" href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer" aria-label="查看 GitHub 仓库">
+          <img src="assets/github.svg" alt="">
+          <span class="hero-label-desktop">查看 GitHub 仓库</span><span class="hero-label-mobile">GitHub</span>
         </a>
       </div>
       <div class="hero-meta">
@@ -864,22 +875,21 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
         <h3>Windows 1.0.1 安装版、便携版与演示版</h3>
         <p>选择适合自己的版本和下载来源。三者都无需安装 Git：</p>
-        <div class="dl-source">GitHub 下载</div>
+        <div class="dl-source"><img src="assets/gitee.svg" alt="">Gitee 下载</div>
         <div class="dl-links">
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe"><span>下载安装版</span><small>安装向导 ↗</small></a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-portable.exe"><span>下载便携版</span><small>直接运行 ↗</small></a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-demo.exe"><span>下载演示版</span><small>模拟数据 ↗</small></a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe">下载安装版</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-portable.exe">下载便携版</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-demo.exe">下载演示版</a>
         </div>
-        <div class="dl-source">Gitee 下载</div>
+        <div class="dl-source"><img src="assets/github.svg" alt="">GitHub 下载</div>
         <div class="dl-links">
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe"><span>下载安装版</span><small>Gitee ↗</small></a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-portable.exe"><span>下载便携版</span><small>Gitee ↗</small></a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-demo.exe"><span>下载演示版</span><small>Gitee ↗</small></a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe">下载安装版</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-portable.exe">下载便携版</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-demo.exe">下载演示版</a>
         </div>
-        <p class="dl-source-note">Gitee 是另一条下载线路；实际速度取决于你的网络。</p>
         <details class="download-verify">
           <summary>下载慢或失败？查看说明与文件校验</summary>
-          <p>可以切换 GitHub 或 Gitee 下载，也可以在 <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>、<a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>选择文件。</p>
+          <p>可以切换 Gitee 或 GitHub 下载，也可以在 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>、<a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>选择文件。</p>
           <p>如果从其他地方取得安装包，请核对 SHA-256：</p>
           <ul>
             <li>安装版<code>ad5ed390c6d174c2bd931282333d70f28718b4e861ea8cffb6e38b598e978bc6</code></li>
@@ -927,8 +937,8 @@ pnpm build</pre>
       <a href="#compare">同类对比</a>
       <a href="#roadmap">路线</a>
       <a href="#download">开始使用</a>
-      <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
       <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee 仓库</a>
+      <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
     </div>
     <p class="footer-note">EasyHub 是面向新手的开源 GitHub Windows 桌面客户端，以 GPL-3.0-only 协议发布。通过 OAuth 设备授权直连 GitHub，访问令牌仅保存在 Windows 凭证管理器，无自有服务器；未登录时可用演示数据体验主要流程，先试后用。</p>
     <p class="footer-copy">© 2026 EasyHub · v1.0.1 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
