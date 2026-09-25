@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EasyHub - 简单易用的 GitHub Windows 客户端 | 免装 Git</title>
-<meta name="description" content="EasyHub 是面向新手的开源 GitHub Windows 桌面客户端。免装 Git，管理项目、查看问题、发布源码和带安装包的新版本；可先下载演示版体验。">
+<meta name="description" content="EasyHub 是面向新手的开源 GitHub Windows 桌面客户端。免装 Git，管理项目、查看问题、发布源码和新版本；还能通过 EasyHub 热门发现近期活跃的公开项目。">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/">
 <link rel="sitemap" type="application/xml" href="https://fufu-flash.github.io/easyhub-website/sitemap.xml">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="EasyHub">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="EasyHub - 简单易用的 GitHub Windows 客户端">
-<meta property="og:description" content="免装 Git，一句话发布源码；管理问题，发布带安装包的新版本。开源、免费，也能先体验演示版。">
+<meta property="og:description" content="免装 Git，一句话发布源码；管理问题、发布新版本，还能通过 EasyHub 热门发现近期活跃的开源项目。">
 <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/">
 <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="EasyHub：让 GitHub 简单到每个人都会用">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EasyHub - 简单易用的 GitHub Windows 客户端">
-<meta name="twitter:description" content="免装 Git，轻松管理项目、问题和新版本。">
+<meta name="twitter:description" content="免装 Git，轻松管理项目、问题和新版本，发现 EasyHub 热门项目。">
 <meta name="twitter:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <script type="application/ld+json">
 {
@@ -28,7 +28,7 @@
   "@type": "SoftwareApplication",
   "name": "EasyHub",
   "url": "https://fufu-flash.github.io/easyhub-website/",
-  "description": "面向新手的开源 GitHub Windows 桌面客户端，可管理项目、问题并发布源码与新版本。",
+  "description": "面向新手的开源 GitHub Windows 桌面客户端，可管理项目、问题，发布源码与新版本，并通过 EasyHub 热门发现公开项目。",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Windows",
   "softwareVersion": "1.0.1",
@@ -233,6 +233,46 @@ section{padding:92px 0}
 .feat-card p{font-size:13.5px;color:var(--muted);line-height:1.8}
 .feat-card .note{display:inline-block;margin-top:12px;font-size:11.5px;font-weight:700;color:var(--orange);background:var(--orange-soft);padding:3px 11px;border-radius:999px}
 
+/* ============ EasyHub 热门手绘界面 ============ */
+.trending-showcase{background:linear-gradient(160deg,#F0F6FF 0%,#F8FAFF 68%,#F3F7FF 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line);scroll-margin-top:64px}
+.trend-layout{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:46px;align-items:center}
+.trend-copy .sec-head{margin-bottom:26px}
+.trend-copy .sec-title{max-width:390px}
+.trend-copy .sec-sub{max-width:430px}
+.trend-points{list-style:none;display:grid;gap:13px}
+.trend-points li{display:flex;align-items:flex-start;gap:10px;color:var(--ink-2);font-size:14px;line-height:1.65}
+.trend-points svg{width:18px;height:18px;flex:none;margin-top:2px;stroke:var(--blue)}
+.trend-note{font-size:12px;color:var(--muted);margin-top:24px;line-height:1.7}
+.trend-window{box-shadow:0 32px 64px -35px rgba(38,76,150,.38)}
+.trend-window .win-body{min-height:368px}
+.trend-main{padding:13px 15px 15px}
+.trend-eyebrow{color:var(--blue);font-weight:800;font-size:8px;letter-spacing:.08em}
+.trend-page-title{font-size:15px;font-weight:900;line-height:1.3;margin-top:2px}
+.trend-page-sub{font-size:8px;color:var(--muted);margin-top:2px;line-height:1.45}
+.trend-scope{display:flex;gap:4px;margin-top:10px}
+.trend-scope span{font-size:8px;padding:4px 8px;border-radius:6px;color:#697A94;background:#EAF0F8;font-weight:700}
+.trend-scope .on{background:#E8F1FF;color:var(--blue-deep)}
+.trend-search{height:25px;border:1px solid #DCE6F5;border-radius:6px;background:#fff;color:#9AA8BD;font-size:8px;display:flex;align-items:center;gap:6px;padding:0 8px;margin-top:8px}
+.trend-search svg{width:10px;height:10px;flex:none}
+.trend-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:13px}
+.trend-head strong{font-size:11px;font-weight:900}
+.trend-head small{font-size:8px;color:var(--blue-deep);font-weight:700}
+.trend-tabs{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap}
+.trend-tabs span{padding:3px 7px;background:#fff;border:1px solid #DFE7F3;border-radius:5px;color:#71819A;font-size:8px;font-weight:700;white-space:nowrap}
+.trend-tabs .on{background:var(--blue-soft);border-color:#BFD4FF;color:var(--blue-deep)}
+.trend-list{display:grid;gap:6px;margin-top:9px}
+.trend-card{display:grid;grid-template-columns:19px 28px minmax(0,1fr) 10px;align-items:start;gap:7px;background:#fff;border:1px solid #E3EAF5;border-radius:8px;padding:8px 9px;min-width:0}
+.trend-rank{color:var(--blue-deep);font-size:9px;font-weight:900;padding-top:8px}
+.trend-avatar{width:27px;height:27px;display:grid;place-items:center;border-radius:7px;background:#DFEBFF;color:#3570D6;font-weight:900;font-size:12px}
+.trend-avatar.purple{background:#EEE9FF;color:#8063C7}
+.trend-info{display:grid;gap:1px;min-width:0;line-height:1.25}
+.trend-info strong{font-size:9px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trend-info small{font-size:7px;color:#8190A6}
+.trend-info .description{font-size:7px;color:#63738B;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trend-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;color:#6F8099;font-size:7px}
+.trend-meta .growth{color:var(--green);font-weight:700}
+.trend-chevron{color:#8FA2BD;font-size:14px;line-height:1.4}
+
 /* ============ 使用流程（浅色） ============ */
 .workflow{background:linear-gradient(170deg,#EFF5FF 0%,#F6F9FF 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -343,6 +383,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .hero-grid{grid-template-columns:1fr;gap:50px}
   .stage{max-width:580px;margin:0 auto;width:100%}
   .hero h1{font-size:38px}
+  .trend-layout{grid-template-columns:1fr;gap:34px}
+  .trend-copy .sec-title,.trend-copy .sec-sub{max-width:680px}
+  .trend-window{max-width:680px;width:100%;margin:0 auto}
   .feat-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
   .sec-title{font-size:28px}
@@ -375,6 +418,10 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .mock-project{padding:8px}
   .mock-grid{grid-template-columns:1fr}
   .mock-grid .mock-panel:last-child{display:none}
+  .trend-main{padding:10px 8px}
+  .trend-card{grid-template-columns:18px 24px minmax(0,1fr) 8px;gap:5px;padding:7px 6px}
+  .trend-avatar{width:23px;height:23px;font-size:10px}
+  .trend-meta{gap:4px 7px}
   .stage{padding:22px 6px 26px}
   .float-toast{top:-34px;bottom:auto;right:8px}
   .hero-plant{width:74px;left:-8px}
@@ -394,6 +441,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt="EasyHub 图标"><span>EasyHub</span></a>
     <nav class="nav-links" id="navLinks">
       <a href="#features">特性</a>
+      <a href="#trending">热门</a>
       <a href="#workflow">使用流程</a>
       <a href="#compare">同类对比</a>
       <a href="#roadmap">路线</a>
@@ -538,6 +586,55 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h10M4 12h16M4 19h7"/><path d="M18 3l3 2-3 2"/></svg></div>
         <h3>公开内容翻译</h3>
         <p>一键统一翻译项目简介、README、问题与 Release 描述；README 按段落随滚动逐步翻译。私有项目不发送给第三方，项目名、版本号、文件名以占位符保护，译文本地缓存。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EasyHub 热门 ===== -->
+<section class="trending-showcase" id="trending">
+  <div class="wrap trend-layout">
+    <div class="trend-copy reveal">
+      <div class="sec-head">
+        <div class="sec-kicker">发现好项目</div>
+        <h2 class="sec-title">今天有什么值得关注？打开 EasyHub 热门看看</h2>
+        <p class="sec-sub">在“发现 / 搜索”里浏览近期活跃、受关注的公开项目。EasyHub 结合 Star 数、近期活动和更新时间排列结果，帮你从更多作品里找到感兴趣的项目。</p>
+      </div>
+      <ul class="trend-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>切换今日热门、本周热门、本月热门，看看不同时间里的新发现。</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>卡片展示作者、语言、Star 数和 EasyHub 观察到的增长趋势。</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>点进只读项目页查看介绍、问题与历史版本，再选择想下载的文件。</li>
+      </ul>
+      <p class="trend-note">这是 EasyHub 自己的热门排序，不是 GitHub 官方 Trending。右侧项目仅为界面示例，实际内容从 GitHub 获取。</p>
+    </div>
+    <div class="window trend-window reveal" role="img" aria-label="EasyHub 热门手绘界面示意">
+      <div class="win-bar" aria-hidden="true">
+        <span class="win-brand"><img src="assets/easyhub-icon.svg" alt="">EasyHub</span>
+        <span class="win-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>搜索项目/用户...</span>
+        <span class="win-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span class="win-avatar">你</span></span>
+        <span class="win-controls">− □ ×</span>
+      </div>
+      <div class="win-body" aria-hidden="true">
+        <aside class="win-side">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"/></svg>首页</span>
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9H3z"/></svg>我的项目</span>
+          <span class="si on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m9 15 2-5 5-2-2 5z"/></svg>发现</span>
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 0 1-8 8 9 9 0 0 1-4-.9L4 20l1-4a8 8 0 1 1 15-5z"/></svg>问题</span>
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="#F8FAFE"/><circle cx="15" cy="17" r="2" fill="#F8FAFE"/></svg>设置</span>
+        </aside>
+        <main class="win-main trend-main">
+          <div class="trend-eyebrow">发现更多作品</div>
+          <div class="trend-page-title">发现 / 搜索</div>
+          <div class="trend-page-sub">看看大家最近在创作什么。</div>
+          <div class="trend-scope"><span class="on">项目搜索</span><span>用户搜索</span></div>
+          <div class="trend-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>搜索公开项目...</div>
+          <div class="trend-head"><strong>EasyHub 热门</strong><small>刷新</small></div>
+          <div class="trend-tabs"><span class="on">今日热门</span><span>本周热门</span><span>本月热门</span></div>
+          <div class="trend-list">
+            <div class="trend-card"><span class="trend-rank">#1</span><span class="trend-avatar">O</span><span class="trend-info"><strong>Open Canvas</strong><small>studio-team</small><span class="description">轻量的开源画板与协作工具</span><span class="trend-meta"><span>TypeScript</span><span>★ 2,480</span><span class="growth">增长观察中</span></span></span><span class="trend-chevron">›</span></div>
+            <div class="trend-card"><span class="trend-rank">#2</span><span class="trend-avatar purple">P</span><span class="trend-info"><strong>Pocket Notes</strong><small>paperbird</small><span class="description">把零散想法整理成清晰笔记</span><span class="trend-meta"><span>Rust</span><span>★ 980</span><span class="growth">观察期 +12 Star</span></span></span><span class="trend-chevron">›</span></div>
+          </div>
+        </main>
       </div>
     </div>
   </div>
@@ -811,6 +908,7 @@ pnpm build</pre>
     </div>
     <div class="footer-links">
       <a href="#features">特性</a>
+      <a href="#trending">EasyHub 热门</a>
       <a href="#workflow">使用流程</a>
       <a href="#compare">同类对比</a>
       <a href="#roadmap">路线</a>
