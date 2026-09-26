@@ -448,7 +448,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div>
       <span class="hero-badge"><span class="dot"></span>开源 · GPL-3.0 · Windows 桌面客户端 v1.0.2</span>
       <h1>让 GitHub<br><span class="accent">简单到每个人都会用</span></h1>
-      <p class="lead">不用学命令行，也不用安装 Git。选择项目文件夹、写一句更新说明，就能发布源码；还可以单独发布带介绍和下载文件的新版本。没准备好账号，就先在演示模式里体验。</p>
+      <p class="lead">不用学命令行，也不用安装 Git。选择项目文件夹、写一句更新说明，就能发布源码；还可以单独发布带介绍和下载文件的新版本。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -465,7 +465,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       </div>
       <div class="hero-meta">
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>免装 Git，双击即用</div>
-        <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>演示模式，先试后用</div>
+        <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>安全登录，直连 GitHub</div>
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h10M4 12h16M4 19h7"/><path d="M18 3l3 2-3 2"/></svg>中文界面，中英双语</div>
       </div>
     </div>
@@ -547,13 +547,13 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="sec-head reveal">
       <div class="sec-kicker">核心特性</div>
       <h2 class="sec-title">把日常用到的 GitHub 操作，都做成简单按钮</h2>
-      <p class="sec-sub">未登录时可用模拟数据体验新建项目、源码更新、新版本发布与问题回复，数据只存在于当前窗口；登录后连接真实 GitHub 项目，访问令牌保存在 Windows 凭证管理器，全程直连、无自有服务器。</p>
+      <p class="sec-sub">使用 GitHub 登录后管理真实项目、发布源码与新版本、回复问题。访问令牌保存在 Windows 凭证管理器，全程直连 GitHub，无需 EasyHub 账号或自有服务器。</p>
     </div>
     <div class="feat-grid">
       <div class="feat-card reveal">
-        <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>演示 / 真实双模式</h3>
-        <p>不登录也能新建项目、发布更新、回复问题，只修改窗口内的演示数据并在重启后复原；登录后同样的界面操作真实 GitHub，先试后用不慌张。</p>
+        <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 11l2 2 3-4"/></svg></div>
+        <h3>使用 GitHub 安全登录</h3>
+        <p>通过 GitHub 设备授权登录，无需另建账号。访问令牌由 Windows 凭证管理器保存；项目资料从 GitHub 获取，不需要 EasyHub 云端服务。</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
@@ -769,7 +769,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="compare-note reveal">
       <div class="cn-card key">
         <h4>为新手重新设计，而不是堆叠功能</h4>
-        GitHub Desktop、GitKraken 等工具默认用户理解提交与分支；OctoPunk 明确面向 power user；DevHub、Gitify 只解决通知。EasyHub 把日常操作收进一个首页——<b>新建项目、看到改动、写一句话、点"发布更新"</b>；演示模式让你不登录、不碰真实数据就能先学会。
+        GitHub Desktop、GitKraken 等工具默认用户理解提交与分支；OctoPunk 明确面向 power user；DevHub、Gitify 只解决通知。EasyHub 把日常操作收进一个首页——<b>新建项目、看到改动、写一句话、点"发布更新"</b>；项目介绍、问题和历史版本也能在应用中查看。
       </div>
       <div class="cn-card alt">
         <h4>一句话定位</h4>
@@ -789,19 +789,17 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="dl-grid">
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
-        <h3>Windows 1.0.2 安装版、便携版与演示版</h3>
-        <p>选择适合自己的版本和下载来源。三者都无需安装 Git：</p>
+        <h3>Windows 1.0.2 安装版与便携版</h3>
+        <p>选择适合自己的版本和下载来源。两种版本都无需安装 Git：</p>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Gitee 下载</div>
         <div class="dl-links">
           <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.2/EasyHub-1.0.2-setup.exe">下载安装版</a>
           <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.2/EasyHub-1.0.2-portable.exe">下载便携版</a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.2/EasyHub-1.0.2-demo.exe">下载演示版</a>
         </div>
         <div class="dl-source"><img src="assets/github.svg" alt="">GitHub 下载</div>
         <div class="dl-links">
           <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.2/EasyHub-1.0.2-setup.exe">下载安装版</a>
           <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.2/EasyHub-1.0.2-portable.exe">下载便携版</a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.2/EasyHub-1.0.2-demo.exe">下载演示版</a>
         </div>
         <details class="download-verify">
           <summary>下载慢或失败？查看说明与文件校验</summary>
@@ -810,7 +808,6 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <ul>
             <li>安装版<code>1cb5fa967aa5b9bdd3c57ea35c8fceaf546cc2ef40289acc1b4599fa5eb040b7</code></li>
             <li>便携版<code>2d64b1d6201d2f56fc537cbb681580a0b6b94217141f2dd786ab2b4f4b208c3f</code></li>
-            <li>演示版<code>a19a4111faed19d68a129848504de766f91c9ca079df2de1e11df341355c1985</code></li>
           </ul>
         </details>
         <p style="margin-top:10px">仅提供 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。</p>
@@ -855,7 +852,7 @@ pnpm build</pre>
       <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee 仓库</a>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
     </div>
-    <p class="footer-note">EasyHub 是面向新手的开源 GitHub Windows 桌面客户端，以 GPL-3.0-only 协议发布。通过 OAuth 设备授权直连 GitHub，访问令牌仅保存在 Windows 凭证管理器，无自有服务器；未登录时可用演示数据体验主要流程，先试后用。</p>
+    <p class="footer-note">EasyHub 是面向新手的开源 GitHub Windows 桌面客户端，以 GPL-3.0-only 协议发布。通过 OAuth 设备授权直连 GitHub，访问令牌仅保存在 Windows 凭证管理器，无自有服务器。</p>
     <p class="footer-copy">© 2026 EasyHub · v1.0.2 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
   </div>
 </footer>
