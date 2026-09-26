@@ -7,6 +7,9 @@
 <meta name="description" content="EasyHub 是面向新手的开源 GitHub Windows 桌面客户端。免装 Git，管理项目、查看问题、发布源码和新版本；还能通过 EasyHub 热门发现近期活跃的公开项目。">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/">
+<link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/">
+<link rel="alternate" hreflang="en" href="https://fufu-flash.github.io/easyhub-website/en.html">
+<link rel="alternate" hreflang="x-default" href="https://fufu-flash.github.io/easyhub-website/">
 <link rel="sitemap" type="application/xml" href="https://fufu-flash.github.io/easyhub-website/sitemap.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EasyHub">
@@ -38,6 +41,17 @@
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
   "author": {"@type": "Person", "name": "FuFu-Flash", "url": "https://github.com/FuFu-Flash"}
 }
+</script>
+<script>
+(function(){
+  if(location.pathname.split('/').pop()==='en.html')return;
+  var chosen='';
+  try{chosen=localStorage.getItem('easyhub-site-language')||''}catch(e){}
+  var browser=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
+  if(chosen==='en'||(!chosen&&!browser.toLowerCase().startsWith('zh'))){
+    location.replace(new URL('en.html'+location.search+location.hash,location.href));
+  }
+})();
 </script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
      width='1024' height='1024' viewBox='0 0 64 64'%3E
@@ -132,7 +146,7 @@ section{padding:92px 0}
 
 /* ============ 顶部导航 ============ */
 .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;gap:32px;height:64px}
+.nav-inner{display:flex;align-items:center;gap:14px;height:64px}
 .brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:19px}
 .brand img{width:34px;height:34px;border-radius:9px}
 .nav-links{display:flex;gap:4px;margin-left:auto;align-items:center}
@@ -141,6 +155,10 @@ section{padding:92px 0}
 .nav-cta{background:var(--blue)!important;color:#fff!important;font-weight:700!important;padding:9px 18px!important}
 .nav-cta:hover{background:var(--blue-deep)!important}
 .nav-toggle{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 11px;cursor:pointer}
+.language-switch{display:flex;align-items:center;gap:2px;flex:none;padding:3px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.language-switch a{padding:5px 8px;border-radius:7px;font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap}
+.language-switch a:hover{color:var(--blue-deep)}
+.language-switch a[aria-current="page"]{background:var(--blue-soft);color:var(--blue-deep)}
 
 /* ============ 按钮 ============ */
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;font-size:15.5px;font-weight:700;cursor:pointer;border:1.5px solid transparent;transition:transform .16s,box-shadow .16s,background .18s;font-family:var(--font)}
@@ -166,8 +184,8 @@ section{padding:92px 0}
 .hero-actions .btn{justify-content:center;min-width:0;padding:12px 9px;gap:7px;font-size:13px;white-space:nowrap}
 .hero-actions .btn svg,.hero-actions .btn img{width:17px;height:17px;flex:none}
 .hero-label-mobile{display:none}
-.hero-meta{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap}
-.hero-meta div{font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:8px;font-weight:500}
+.hero-meta{display:flex;gap:12px;margin-top:40px;flex-wrap:nowrap;white-space:nowrap}
+.hero-meta div{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;font-weight:500}
 .hero-meta svg{flex:none}
 
 /* ===== 应用项目页手绘预览 ===== */
@@ -323,8 +341,8 @@ table.matrix{width:100%;border-collapse:collapse;table-layout:fixed;min-width:90
 
 /* ============ 下载运行 ============ */
 .download{background:#fff;border-top:1px solid var(--line)}
-.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.dl-card{border:1px solid var(--line);border-radius:var(--radius);padding:27px;display:flex;flex-direction:column;background:var(--bg)}
+.dl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dl-card{min-width:0;border:1px solid var(--line);border-radius:var(--radius);padding:27px;display:flex;flex-direction:column;background:var(--bg)}
 .dl-ico{width:41px;height:41px;border-radius:11px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
 .dl-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
 .dl-card p{font-size:13.5px;color:var(--muted);line-height:1.8}
@@ -364,11 +382,13 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 .reveal.in{opacity:1;transform:none}
 
 /* ============ 响应式 ============ */
+@media (max-width:1180px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:50px}
+  .stage{max-width:580px;margin:0 auto;width:100%;min-width:0}
+}
 @media (max-width:980px){
   section{padding:74px 0}
   .hero{padding:60px 0 70px}
-  .hero-grid{grid-template-columns:1fr;gap:50px}
-  .stage{max-width:580px;margin:0 auto;width:100%}
   .hero h1{font-size:38px}
   .trend-layout{grid-template-columns:1fr;gap:34px}
   .trend-copy .sec-title,.trend-copy .sec-sub{max-width:680px}
@@ -377,14 +397,19 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .steps{grid-template-columns:1fr 1fr}
   .sec-title{font-size:28px}
 }
-@media (max-width:680px){
-  .wrap{padding:0 20px}
+@media (max-width:900px){
   .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:10px 16px 16px;border-bottom:1px solid var(--line)}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 14px;font-size:15px}
-  .nav-toggle{display:block}
+  .nav-toggle{display:block;margin-left:0}
+  .language-switch{margin-left:auto}
+}
+@media (max-width:680px){
+  .wrap{padding:0 20px}
   .hero h1{font-size:30px}
   .hero p.lead{font-size:15.5px}
+  .hero-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;white-space:normal}
+  .hero-meta div{align-items:flex-start;font-size:10.5px;line-height:1.5;gap:5px}
   .hero-actions{gap:7px}
   .hero-actions .btn{padding:11px 5px;gap:5px;font-size:12px}
   .hero-actions .btn svg,.hero-actions .btn img{width:15px;height:15px}
@@ -436,6 +461,10 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a href="#compare">同类对比</a>
       <a class="nav-cta" href="#download">开始使用</a>
     </nav>
+    <div class="language-switch" role="group" aria-label="语言 / Language">
+      <a href="./" data-lang="zh" lang="zh-CN" aria-current="page">中文</a>
+      <a href="en.html" data-lang="en" lang="en">EN</a>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C2635" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -466,7 +495,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="hero-meta">
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>免装 Git，双击即用</div>
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>安全登录，直连 GitHub</div>
-        <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h10M4 12h16M4 19h7"/><path d="M18 3l3 2-3 2"/></svg>中文界面，中英双语</div>
+        <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h10M4 12h16M4 19h7"/><path d="M18 3l3 2-3 2"/></svg>中英双语</div>
       </div>
     </div>
     <div class="stage">
@@ -676,7 +705,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="sec-head reveal">
       <div class="sec-kicker">同类项目对比</div>
       <h2 class="sec-title">差别不在功能多少，而在为谁设计</h2>
-      <p class="sec-sub">大多数 GitHub 工具默认你已经懂 Git。EasyHub 从第一次接触 GitHub 的人的视角出发：把操作做少、把话说直白、让新手不登录也能先练手。</p>
+      <p class="sec-sub">大多数 GitHub 工具默认你已经懂 Git。EasyHub 从第一次接触 GitHub 的人的视角出发：把操作做少、把话说直白，让新手也能看懂每一步。</p>
     </div>
     <div class="table-scroll reveal">
       <table class="matrix">
@@ -864,6 +893,13 @@ var navToggle=document.getElementById('navToggle');
 var navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',function(){navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
+
+document.querySelectorAll('.language-switch a[data-lang]').forEach(function(link){
+  link.addEventListener('click',function(){
+    try{localStorage.setItem('easyhub-site-language',link.dataset.lang)}catch(e){}
+    link.href=link.getAttribute('href').split('#')[0]+location.hash;
+  });
+});
 
 // 滚动揭示（带多重兜底，任何环境下都不会留下空白区块）
 var reveals=document.querySelectorAll('.reveal');
