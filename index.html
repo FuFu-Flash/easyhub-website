@@ -321,27 +321,6 @@ table.matrix{width:100%;border-collapse:collapse;table-layout:fixed;min-width:90
 .cn-card.alt{background:var(--bg);border:1px solid var(--line);color:var(--muted)}
 .cn-card.alt h4{color:var(--ink)}
 
-/* ============ 路线时间轴 ============ */
-.roadmap{background:linear-gradient(180deg,#F4F8FF 0%,var(--bg) 100%);border-top:1px solid var(--line)}
-.tl{max-width:940px}
-.tl-row{display:grid;grid-template-columns:140px 46px 1fr}
-.tl-mid{position:relative;display:flex;justify-content:center}
-.tl-mid::before{content:'';position:absolute;top:0;bottom:0;width:2px;background:var(--line)}
-.tl-row:first-child .tl-mid::before{top:24px}
-.tl-row:last-child .tl-mid::before{bottom:calc(100% - 24px)}
-.tl-dot{width:17px;height:17px;border-radius:50%;margin-top:18px;z-index:1;border:3.5px solid #fff}
-.tl-dot.done{background:var(--green);box-shadow:0 0 0 2px #BFE3C8}
-.tl-dot.plan{background:#fff;box-shadow:0 0 0 2px var(--orange)}
-.tl-time{text-align:right;padding-right:20px;align-self:center;font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.5}
-.tl-time small{display:block;font-weight:400;color:var(--muted);font-size:11.5px}
-.tl-card{padding:15px 0 26px 8px}
-.tc-box{background:#fff;border:1px solid var(--line);border-radius:13px;padding:17px 22px}
-.tl-card h3{font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.tl-card p{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.8}
-.tl-status{font-size:11px;font-weight:700;padding:2px 10px;border-radius:999px}
-.tl-status.done{background:var(--green-soft);color:var(--green)}
-.tl-status.plan{background:var(--orange-soft);color:var(--orange)}
-
 /* ============ 下载运行 ============ */
 .download{background:#fff;border-top:1px solid var(--line)}
 .dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -414,8 +393,6 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .pain-grid,.feat-grid,.dl-grid,.compare-note,.steps{grid-template-columns:1fr}
   .sec-title{font-size:24px}
   .sec-head{margin-bottom:38px}
-  .tl-row{grid-template-columns:88px 32px 1fr}
-  .tl-time{font-size:12px;padding-right:13px}
   .win-body{grid-template-columns:78px minmax(0,1fr)}
   .win-side{padding:11px 5px}
   .win-side .si{font-size:8px;padding:5px 4px;gap:4px}
@@ -457,7 +434,6 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a href="#trending">热门</a>
       <a href="#workflow">使用流程</a>
       <a href="#compare">同类对比</a>
-      <a href="#roadmap">路线</a>
       <a class="nav-cta" href="#download">开始使用</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="打开菜单">
@@ -803,74 +779,6 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   </div>
 </section>
 
-<!-- ===== 路线时间轴 ===== -->
-<section class="roadmap" id="roadmap">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="sec-kicker">开发路线</div>
-      <h2 class="sec-title">Windows 已发布 1.0.2，移动端在规划中</h2>
-    </div>
-    <div class="tl reveal">
-      <div class="tl-row">
-        <div class="tl-time">阶段一<small>演示界面</small></div>
-        <div class="tl-mid"><span class="tl-dot done"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>可点击的演示界面 <span class="tl-status done">已完成</span></h3>
-          <p>内置演示数据，走通新建项目、选择文件夹、模拟修改、发布更新、查看历史版本；包含 Markdown 介绍编辑与仿 GitHub 的危险区操作。</p>
-        </div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-time">阶段二<small>GitHub 接入</small></div>
-        <div class="tl-mid"><span class="tl-dot done"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>真实 GitHub 连接 <span class="tl-status done">已完成</span></h3>
-          <p>OAuth 设备授权登录，支持真实项目列表、README、问题创建与回复、历史版本，以及项目 ZIP 下载，下载通知显示速度与预计剩余时间、可取消。</p>
-        </div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-time">阶段三<small>本地项目</small></div>
-        <div class="tl-mid"><span class="tl-dot done"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>本地项目与源码发布 <span class="tl-status done">已完成</span></h3>
-          <p>文件夹识别、Worker 扫描文件变化、GitEngine 发布源码。2026-09-24 经用户授权，对新建的私有测试仓库完成真实创建、源码发布与重新下载验收。</p>
-        </div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-time">阶段四<small>2026-09-25</small></div>
-        <div class="tl-mid"><span class="tl-dot done"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>发布前安全同步 <span class="tl-status done">已完成</span></h3>
-          <p>发布前检查云端：可衔接的更新自动先获取；同一文件双方改动时提供双版本预览、逐文件确认；分叉历史阻止自动同步，不默认强制上传。</p>
-        </div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-time">版本 1.0.1<small>Windows</small></div>
-        <div class="tl-mid"><span class="tl-dot done"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>发布可下载的新版本 <span class="tl-status done">已发布</span></h3>
-          <p>项目所有者可填写版本号与介绍，插入图片和链接、上传多个附件并预览；发布到 GitHub 后可在应用内选择下载。真实发布与下载流程已在测试项目验收。</p>
-        </div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-time">版本 1.0.2<small>Windows</small></div>
-        <div class="tl-mid"><span class="tl-dot done"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>发现页与安装体验更新 <span class="tl-status done">已发布</span></h3>
-          <p>浏览项目或用户资料后返回，会保留发现页的位置、热门分类和页码；热门项目支持分页。安装时可以选择位置和是否创建桌面快捷方式。</p>
-        </div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-time">阶段五<small>规划中</small></div>
-        <div class="tl-mid"><span class="tl-dot plan"></span></div>
-        <div class="tl-card"><div class="tc-box">
-          <h3>Expo 移动端 <span class="tl-status plan">规划中</span></h3>
-          <p>手机端提供登录、项目、介绍、问题与回复、历史版本、ZIP 下载与新建项目，手机 UI 单独设计。</p>
-        </div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== 下载与运行 ===== -->
 <section class="download" id="download">
   <div class="wrap">
@@ -943,7 +851,6 @@ pnpm build</pre>
       <a href="#trending">EasyHub 热门</a>
       <a href="#workflow">使用流程</a>
       <a href="#compare">同类对比</a>
-      <a href="#roadmap">路线</a>
       <a href="#download">开始使用</a>
       <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee 仓库</a>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
