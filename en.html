@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EasyHub - A simpler GitHub app for Windows | No Git install</title>
-<meta name="description" content="EasyHub is an open source GitHub desktop app for Windows. Manage projects and issues, publish code and releases without installing Git, and discover trending open source projects.">
+<meta name="description" content="EasyHub is an open source GitHub app for Windows. Manage projects, publish code and releases without installing Git, and use AI to review proposed changes while you make the final decision.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/en.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="EasyHub">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="EasyHub - A simpler GitHub app for Windows">
-<meta property="og:description" content="Publish code in a few clicks without installing Git. Manage issues, create releases, and explore EasyHub Trending.">
+<meta property="og:description" content="Publish code without installing Git. Use AI to summarize potential issues in proposed changes, then decide whether to approve or reject.">
 <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/en.html">
 <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="EasyHub: Make GitHub simple for everyone">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EasyHub - A simpler GitHub app for Windows">
-<meta name="twitter:description" content="Manage GitHub projects, issues, and releases without installing Git. Discover EasyHub Trending.">
+<meta name="twitter:description" content="Manage GitHub projects and issues without installing Git. AI helps review proposed changes; you make the final decision.">
 <meta name="twitter:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <script type="application/ld+json">
 {
@@ -31,12 +31,12 @@
   "@type": "SoftwareApplication",
   "name": "EasyHub",
   "url": "https://fufu-flash.github.io/easyhub-website/en.html",
-  "description": "An open source GitHub desktop app for Windows. Manage projects and issues, publish code and releases, and discover trending public projects.",
+  "description": "An open source GitHub desktop app for Windows. Manage projects, publish code and releases, and use AI to review proposed changes.",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Windows",
-  "softwareVersion": "1.1.0",
+  "softwareVersion": "1.2.0",
   "image": "https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png",
-  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.1.0",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.2.0",
   "license": "https://github.com/FuFu-Flash/EasyHub/blob/main/LICENSE",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
   "author": {"@type": "Person", "name": "FuFu-Flash", "url": "https://github.com/FuFu-Flash"}
@@ -257,6 +257,26 @@ section{padding:92px 0}
 .feat-card h3{font-size:16.5px;font-weight:700;margin-bottom:9px}
 .feat-card p{font-size:13.5px;color:var(--muted);line-height:1.8}
 .feat-card .note{display:inline-block;margin-top:12px;font-size:11.5px;font-weight:700;color:var(--orange);background:var(--orange-soft);padding:3px 11px;border-radius:999px}
+.ai-spotlight{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.88fr);gap:36px;align-items:center;padding:34px 38px;margin-bottom:24px;border:1px solid #CCDFFF;border-radius:var(--radius);background:linear-gradient(125deg,#F0F6FF,#FBFDFF);overflow:hidden}
+.ai-eyebrow{display:inline-flex;padding:5px 10px;border-radius:8px;background:#DFEBFF;color:var(--blue-deep);font-size:11px;font-weight:800}
+.ai-spotlight h3{font-size:25px;line-height:1.35;margin:15px 0 11px}
+.ai-spotlight p{font-size:14px;line-height:1.8;color:var(--ink-2)}
+.ai-points{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 13px}
+.ai-points span{padding:6px 10px;border:1px solid #D8E6FA;border-radius:7px;background:#fff;color:var(--blue-deep);font-size:11px;font-weight:700}
+.ai-spotlight small{display:block;color:var(--muted);font-size:11.5px;line-height:1.7}
+.ai-preview{min-width:0;padding:17px;border:1px solid #DCE6F5;border-radius:14px;background:#fff;box-shadow:0 18px 40px -30px rgba(30,68,133,.45)}
+.ai-preview-head{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--ink)}
+.ai-preview-head svg{width:17px;height:17px;stroke:var(--blue)}
+.ai-preview-head small{margin-left:auto;color:var(--muted);font-size:10px;font-weight:600}
+.ai-preview-files{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:15px 0;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:10px;color:var(--muted)}
+.ai-preview-files b{padding:4px 7px;border-radius:5px;background:#F1F5FA;color:#526581;font-weight:700}
+.ai-preview-result{padding:13px;border:1px solid #DDE9FF;border-radius:9px;background:#F7FAFF}
+.ai-preview-result strong{display:block;font-size:12px;color:var(--ink)}
+.ai-preview-result p{margin-top:6px;font-size:10.5px;line-height:1.55;color:var(--muted)}
+.ai-preview-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px;font-size:10px;color:var(--muted)}
+.ai-preview-actions{display:flex;gap:6px;white-space:nowrap}
+.ai-preview-actions span{padding:5px 9px;border:1px solid #DFE7F3;border-radius:6px;background:#fff;color:var(--ink-2);font-size:10px;font-weight:700}
+.ai-preview-actions span:last-child{border-color:var(--blue);background:var(--blue);color:#fff}
 
 /* ============ EasyHub 热门手绘界面 ============ */
 .trending-showcase{background:linear-gradient(160deg,#F0F6FF 0%,#F8FAFF 68%,#F3F7FF 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line);scroll-margin-top:64px}
@@ -394,6 +414,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .trend-copy .sec-title,.trend-copy .sec-sub{max-width:680px}
   .trend-window{max-width:680px;width:100%;margin:0 auto}
   .feat-grid{grid-template-columns:1fr 1fr}
+  .ai-spotlight{grid-template-columns:1fr;gap:26px}
   .steps{grid-template-columns:1fr 1fr}
   .sec-title{font-size:28px}
 }
@@ -416,6 +437,8 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   .hero-label-desktop{display:none}
   .hero-label-mobile{display:inline}
   .pain-grid,.feat-grid,.dl-grid,.compare-note,.steps{grid-template-columns:1fr}
+  .ai-spotlight{padding:24px 20px}
+  .ai-spotlight h3{font-size:21px}
   .sec-title{font-size:24px}
   .sec-head{margin-bottom:38px}
   .win-body{grid-template-columns:78px minmax(0,1fr)}
@@ -475,9 +498,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span>Open source · GPL-3.0 · Windows desktop app v1.1.0</span>
+      <span class="hero-badge"><span class="dot"></span>Open source · GPL-3.0 · Windows desktop app v1.2.0</span>
       <h1>Make GitHub<br><span class="accent">simple for everyone</span></h1>
-      <p class="lead">No command line or Git installation required. Find projects already on your computer or choose a folder to start creating. Write a short update to publish your code.</p>
+      <p class="lead">No command line or Git installation required. Find projects already on your computer or choose a folder to start creating. Write a short update to publish your code. When someone proposes a change, AI can help you review it while you make the final decision.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -562,9 +585,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       </div>
       <div class="pain-card reveal">
         <div class="pc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
-        <h3>Web tasks are scattered</h3>
-        <p>Browsing projects, downloading files, replying to issues, and checking history often means jumping between pages without clear download progress.</p>
-        <div class="arrow">One window, with download speed and time remaining</div>
+        <h3>Too many steps in the browser</h3>
+        <p>Browsing projects, replying to issues, reviewing proposed changes, and downloading files often means switching between pages. Download progress and next steps are scattered too.</p>
+        <div class="arrow">Handle it in one window, with clear download progress</div>
       </div>
     </div>
   </div>
@@ -576,7 +599,22 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="sec-head reveal">
       <div class="sec-kicker">Features</div>
       <h2 class="sec-title">Everyday GitHub tasks, made simple</h2>
-      <p class="sec-sub">Sign in with GitHub to manage your projects, publish code and releases, and reply to issues. Your access token stays in Windows Credential Manager; EasyHub connects directly to GitHub without its own account or server.</p>
+      <p class="sec-sub">Sign in with GitHub to manage projects, publish code and releases, reply to issues, and use AI to review proposed changes. Your access token stays in Windows Credential Manager; EasyHub needs no separate account or server.</p>
+    </div>
+    <div class="ai-spotlight reveal">
+      <div>
+        <span class="ai-eyebrow">New in v1.2.0 · AI assisted review</span>
+        <h3>Review proposed changes before you decide</h3>
+        <p>Inspect the changed files first, then let AI summarize potential issues and suggestions. EasyHub shows what will be sent and to which service before every review. Nothing is sent until you confirm, and you decide whether to approve or reject.</p>
+        <div class="ai-points"><span>Bring your own API key</span><span>Sent only after confirmation</span><span>Never merges automatically</span></div>
+        <small>Only readable text changes are reviewed; no code or tests are run. Results are advisory, and your AI provider may charge for usage.</small>
+      </div>
+      <div class="ai-preview" role="img" aria-label="Illustration of EasyHub AI assisted review">
+        <div class="ai-preview-head"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg>AI review suggestions<small>You decide</small></div>
+        <div class="ai-preview-files">Changed files <b>App.tsx</b><b>settings.ts</b></div>
+        <div class="ai-preview-result"><strong>Check when settings are saved</strong><p>Close and reopen the window to confirm that settings are retained.</p></div>
+        <div class="ai-preview-bottom"><span>Suggestions only</span><span class="ai-preview-actions"><span>Reject</span><span>Approve</span></span></div>
+      </div>
     </div>
     <div class="feat-grid">
       <div class="feat-card reveal">
@@ -818,25 +856,25 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="dl-grid">
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
-        <h3>EasyHub 1.1.0 for Windows: installer and portable app</h3>
+        <h3>EasyHub 1.2.0 for Windows: installer and portable app</h3>
         <p>Choose the edition and download source that suit you. Neither requires Git:</p>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Download from Gitee</div>
         <div class="dl-links">
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.1.0/EasyHub-1.1.0-setup.exe">Download installer</a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.1.0/EasyHub-1.1.0-portable.exe">Download portable app</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.2.0/EasyHub-1.2.0-setup.exe">Download installer</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.2.0/EasyHub-1.2.0-portable.exe">Download portable app</a>
         </div>
         <div class="dl-source"><img src="assets/github.svg" alt="">Download from GitHub</div>
         <div class="dl-links">
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.1.0/EasyHub-1.1.0-setup.exe">Download installer</a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.1.0/EasyHub-1.1.0-portable.exe">Download portable app</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.2.0/EasyHub-1.2.0-setup.exe">Download installer</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.2.0/EasyHub-1.2.0-portable.exe">Download portable app</a>
         </div>
         <details class="download-verify">
           <summary>Slow or failed download? Check the sources and file hashes</summary>
-          <p>Try Gitee or GitHub, or choose a file on the <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer">Gitee release page</a> or <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer">GitHub release page</a>.</p>
+          <p>Try Gitee or GitHub, or choose a file on the <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">Gitee release page</a> or <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub release page</a>.</p>
           <p>If you got a file elsewhere, verify its SHA-256 hash:</p>
           <ul>
-            <li>Installer<code>c186951d791f4edb52fd8bb2b4a7c4e53313f8ebd910e8ebe7241588b4bd49b9</code></li>
-            <li>Portable app<code>0eea7a815adfbcfc754de1a9fd251e5d22643f2612e353395905e3108c758b13</code></li>
+            <li>Installer<code>2124d8836b182ff878ee88e2d40d291ee10e20af2d9e3b6e096dafb2be038277</code></li>
+            <li>Portable app<code>ea6ab416dad058743b2042d6db4b4d1adb73a310f56380707f2bc987f759b2c4</code></li>
           </ul>
         </details>
         <p style="margin-top:10px">Windows x64 only. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.</p>
@@ -861,7 +899,7 @@ pnpm build</pre>
         <p style="margin-top:10px">Run UI smoke checks with pnpm test:ui.</p>
       </div>
     </div>
-    <p class="dl-foot reveal">Current version <b>v1.1.0</b> · See the repository for features and build instructions</p>
+    <p class="dl-foot reveal">Current version <b>v1.2.0</b> · See the repository for features and build instructions</p>
   </div>
 </section>
 
@@ -882,7 +920,7 @@ pnpm build</pre>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub repository</a>
     </div>
     <p class="footer-note">EasyHub is an open source GitHub desktop app for Windows, designed for beginners and licensed under GPL-3.0-only. It signs in through GitHub device authorization, stores tokens in Windows Credential Manager, and needs no EasyHub server.</p>
-    <p class="footer-copy">© 2026 EasyHub · v1.1.0 · Comparison based on public project information from September 2026</p>
+    <p class="footer-copy">© 2026 EasyHub · v1.2.0 · Comparison based on public project information from September 2026</p>
   </div>
 </footer>
 
