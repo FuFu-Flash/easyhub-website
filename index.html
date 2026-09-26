@@ -34,9 +34,9 @@
   "description": "面向新手的开源 GitHub Windows 桌面客户端，可管理项目、问题，发布源码与新版本，并通过 EasyHub 热门发现公开项目。",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Windows",
-  "softwareVersion": "1.0.2",
+  "softwareVersion": "1.1.0",
   "image": "https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png",
-  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.2",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.1.0",
   "license": "https://github.com/FuFu-Flash/EasyHub/blob/main/LICENSE",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
   "author": {"@type": "Person", "name": "FuFu-Flash", "url": "https://github.com/FuFu-Flash"}
@@ -475,9 +475,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span>开源 · GPL-3.0 · Windows 桌面客户端 v1.0.2</span>
+      <span class="hero-badge"><span class="dot"></span>开源 · GPL-3.0 · Windows 桌面客户端 v1.1.0</span>
       <h1>让 GitHub<br><span class="accent">简单到每个人都会用</span></h1>
-      <p class="lead">不用学命令行，也不用安装 Git。选择项目文件夹、写一句更新说明，就能发布源码；还可以单独发布带介绍和下载文件的新版本。</p>
+      <p class="lead">不用学命令行，也不用安装 Git。找回电脑上已有的项目，或选择文件夹开始创作；写一句更新说明就能发布源码，还能单独发布带介绍和下载文件的新版本。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -587,7 +587,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
         <h3>本地文件夹发布源码</h3>
-        <p>选择任意文件夹即可识别为项目；独立 Worker 扫描新增、修改、删除、重命名的文件，遵守 .gitignore、避开依赖目录，变化时防抖复检。基于 isomorphic-git，无需安装 Git。</p>
+        <p>选择文件夹即可识别项目；也能指定位置，找回已连接到自己 GitHub 项目的文件夹。后台扫描新增、修改、删除和重命名的文件，遵守 .gitignore、避开依赖目录；无需安装 Git。</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -596,8 +596,8 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>问题全流程管理</h3>
-        <p>创建问题、回复评论、关闭与重新打开；问题列表按项目分组，从全局进入默认收起、从项目详情进入自动展开对应项目。</p>
+        <h3>问题与改进请求</h3>
+        <p>创建和回复问题，关闭或重新打开；问题列表按项目分组并可继续加载。项目页还能查看改进请求，也能为其他项目准备并提交代码改进。</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L8 8m4-4l4 4M4 20h16"/></svg></div>
@@ -620,7 +620,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="sec-head">
         <div class="sec-kicker">发现好项目</div>
         <h2 class="sec-title">今天有什么值得关注？打开 EasyHub 热门看看</h2>
-        <p class="sec-sub">在“发现 / 搜索”里浏览近期活跃、受关注的公开项目。EasyHub 结合 Star 数、近期活动和更新时间排列结果，帮你从更多作品里找到感兴趣的项目。</p>
+        <p class="sec-sub">在“发现 / 搜索”里浏览近期活跃、受关注的公开项目，也可粘贴 GitHub 项目地址直达项目页。EasyHub 结合 Star 数、近期活动和更新时间排列结果，帮你找到感兴趣的作品。</p>
       </div>
       <ul class="trend-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>切换今日热门、本周热门、本月热门，看看不同时间里的新发现。</li>
@@ -818,25 +818,25 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="dl-grid">
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
-        <h3>Windows 1.0.2 安装版与便携版</h3>
+        <h3>Windows 1.1.0 安装版与便携版</h3>
         <p>选择适合自己的版本和下载来源。两种版本都无需安装 Git：</p>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Gitee 下载</div>
         <div class="dl-links">
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.2/EasyHub-1.0.2-setup.exe">下载安装版</a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.2/EasyHub-1.0.2-portable.exe">下载便携版</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.1.0/EasyHub-1.1.0-setup.exe">下载安装版</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.1.0/EasyHub-1.1.0-portable.exe">下载便携版</a>
         </div>
         <div class="dl-source"><img src="assets/github.svg" alt="">GitHub 下载</div>
         <div class="dl-links">
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.2/EasyHub-1.0.2-setup.exe">下载安装版</a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.2/EasyHub-1.0.2-portable.exe">下载便携版</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.1.0/EasyHub-1.1.0-setup.exe">下载安装版</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.1.0/EasyHub-1.1.0-portable.exe">下载便携版</a>
         </div>
         <details class="download-verify">
           <summary>下载慢或失败？查看说明与文件校验</summary>
-          <p>可以切换 Gitee 或 GitHub 下载，也可以在 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.2" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>、<a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.2" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>选择文件。</p>
+          <p>可以切换 Gitee 或 GitHub 下载，也可以在 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>、<a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.1.0" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>选择文件。</p>
           <p>如果从其他地方取得安装包，请核对 SHA-256：</p>
           <ul>
-            <li>安装版<code>1cb5fa967aa5b9bdd3c57ea35c8fceaf546cc2ef40289acc1b4599fa5eb040b7</code></li>
-            <li>便携版<code>2d64b1d6201d2f56fc537cbb681580a0b6b94217141f2dd786ab2b4f4b208c3f</code></li>
+            <li>安装版<code>c186951d791f4edb52fd8bb2b4a7c4e53313f8ebd910e8ebe7241588b4bd49b9</code></li>
+            <li>便携版<code>0eea7a815adfbcfc754de1a9fd251e5d22643f2612e353395905e3108c758b13</code></li>
           </ul>
         </details>
         <p style="margin-top:10px">仅提供 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。</p>
@@ -853,7 +853,7 @@ pnpm dev</pre>
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
         <h3>检查与构建</h3>
-        <p>现有 72 项单元测试与界面点击测试，交付前可完整检查：</p>
+        <p>项目提供 TypeScript 检查、Lint、单元测试与界面点击测试，交付前可完整检查：</p>
         <pre class="code">pnpm typecheck
 pnpm lint
 pnpm test
@@ -861,7 +861,7 @@ pnpm build</pre>
         <p style="margin-top:10px">界面冒烟测试运行 pnpm test:ui。</p>
       </div>
     </div>
-    <p class="dl-foot reveal">当前版本 <b>v1.0.2</b> · 功能范围与构建方式见项目说明</p>
+    <p class="dl-foot reveal">当前版本 <b>v1.1.0</b> · 功能范围与构建方式见项目说明</p>
   </div>
 </section>
 
@@ -882,7 +882,7 @@ pnpm build</pre>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
     </div>
     <p class="footer-note">EasyHub 是面向新手的开源 GitHub Windows 桌面客户端，以 GPL-3.0-only 协议发布。通过 OAuth 设备授权直连 GitHub，访问令牌仅保存在 Windows 凭证管理器，无自有服务器。</p>
-    <p class="footer-copy">© 2026 EasyHub · v1.0.2 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
+    <p class="footer-copy">© 2026 EasyHub · v1.1.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
   </div>
 </footer>
 
