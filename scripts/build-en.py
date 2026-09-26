@@ -157,7 +157,7 @@ TEXT = {
     'EasyHub 不追求覆盖 GitHub 的全部功能，只追求让"记录创意、发布更新、管理项目"对普通人足够简单；免装 Git、中文界面与内容翻译都为这一个目标服务。对比基于各项目 2026 年 9 月公开资料整理。': 'EasyHub makes recording ideas, publishing updates, and managing projects simple for ordinary users. Its Git-free setup, bilingual interface, and content translation all serve that goal. This comparison is based on publicly available information from September 2026.',
     '下载已发布版本，或从源码运行': 'Download EasyHub or run it from source',
     'Windows 1.2.0 安装版与便携版': 'EasyHub 1.2.0 for Windows: installer and portable app',
-    '选择适合自己的版本和下载来源。两种版本都无需安装 Git：': 'Choose the edition and download source that suit you. Neither requires Git:',
+    '安装版和便携版已于 2026 年 9 月 27 日更新。选择适合自己的版本和下载来源，两种版本都无需安装 Git：': 'The installer and portable app were updated on September 27, 2026. Choose the edition and download source that suit you. Neither requires Git:',
     'Gitee 下载': 'Download from Gitee',
     'GitHub 下载': 'Download from GitHub',
     '下载安装版': 'Download installer',
