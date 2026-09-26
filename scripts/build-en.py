@@ -19,7 +19,7 @@ TEXT = {
     '开源 · GPL-3.0 · Windows 桌面客户端 v1.1.0': 'Open source · GPL-3.0 · Windows desktop app v1.1.0',
     '让 GitHub': 'Make GitHub',
     '简单到每个人都会用': 'simple for everyone',
-    '不用学命令行，也不用安装 Git。找回电脑上已有的项目，或选择文件夹开始创作；写一句更新说明就能发布源码，还能单独发布带介绍和下载文件的新版本。': 'No command line or Git installation required. Find projects already on your computer or choose a folder to start creating. Write a short update to publish your code, then make a separate release with a description and downloadable files.',
+    '不用学命令行，也不用安装 Git。找回电脑上已有的项目，或选择文件夹开始创作；写一句更新说明就能发布源码。': 'No command line or Git installation required. Find projects already on your computer or choose a folder to start creating. Write a short update to publish your code.',
     '下载与运行': 'Download',
     '下载': 'Download',
     '查看 Gitee 仓库': 'View Gitee repo',
