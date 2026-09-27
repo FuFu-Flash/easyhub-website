@@ -373,13 +373,10 @@ table.matrix{width:100%;border-collapse:collapse;table-layout:fixed;min-width:90
 .dl-links a:hover{border-color:var(--blue);background:var(--blue-softer)}
 .dl-source{display:flex;align-items:center;gap:7px;margin-top:16px;font-size:12px;font-weight:700;color:var(--ink-2)}
 .dl-source img{width:16px;height:16px}
-.download-verify{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-.download-verify summary{cursor:pointer;color:var(--blue-deep);font-weight:700}
-.download-verify p{margin-top:9px;font-size:12px}
-.download-verify a{color:var(--blue-deep);text-decoration:underline;text-underline-offset:2px}
-.download-verify ul{padding-left:17px;margin-top:8px;line-height:1.6}
-.download-verify li{margin-top:7px}
-.download-verify code{display:block;overflow-wrap:anywhere;font:11px/1.5 var(--mono);color:var(--ink-2)}
+.download-help{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.download-help summary{cursor:pointer;color:var(--blue-deep);font-weight:700}
+.download-help p{margin-top:9px;font-size:12px}
+.download-help a{color:var(--blue-deep);text-decoration:underline;text-underline-offset:2px}
 pre.code{background:var(--ink);color:#CFDBED;border-radius:11px;padding:15px 17px;font-family:var(--mono);font-size:12.5px;line-height:1.9;overflow-x:auto;margin-top:12px;white-space:pre}
 pre.code .c{color:#7E8DA6}
 .dl-foot{margin-top:38px;text-align:center;font-size:13.5px;color:var(--muted)}
@@ -868,14 +865,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.2.0/EasyHub-1.2.0-setup.exe">Download installer</a>
           <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.2.0/EasyHub-1.2.0-portable.exe">Download portable app</a>
         </div>
-        <details class="download-verify">
-          <summary>Slow or failed download? Check the sources and file hashes</summary>
+        <details class="download-help">
+          <summary>Slow or failed download? Try another source</summary>
           <p>Try Gitee or GitHub, or choose a file on the <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">Gitee release page</a> or <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub release page</a>.</p>
-          <p>If you got a file elsewhere, verify its SHA-256 hash:</p>
-          <ul>
-            <li>Installer<code>0b3b247cbdf71a0a352f2dd8a606c2f40dbe98d69635e2ec9ec96870ceb8962d</code></li>
-            <li>Portable app<code>c12411a0315226d5d53f75088234bb9e9b3e9f7104364a58de06b5104177b347</code></li>
-          </ul>
         </details>
         <p style="margin-top:10px">Windows x64 only. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.</p>
       </div>
