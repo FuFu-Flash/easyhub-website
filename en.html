@@ -34,9 +34,9 @@
   "description": "An open source GitHub desktop app for Windows. Manage projects, publish code and releases, and use AI to review proposed changes.",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Windows",
-  "softwareVersion": "1.2.0",
+  "softwareVersion": "1.0.0",
   "image": "https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png",
-  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.2.0",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0",
   "license": "https://github.com/FuFu-Flash/EasyHub/blob/main/LICENSE",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
   "author": {"@type": "Person", "name": "FuFu-Flash", "url": "https://github.com/FuFu-Flash"}
@@ -108,7 +108,6 @@
   %3C/g%3E
 %3C/svg%3E
 ">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
 <style>
 /* ============ 设计令牌（对齐应用真实配色） ============ */
 :root{
@@ -467,6 +466,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 }
 
 </style>
+<link rel="stylesheet" href="assets/site-refresh.css">
 </head>
 <body id="top">
 
@@ -495,9 +495,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span>Open source · GPL-3.0 · Windows desktop app v1.2.0</span>
+      <span class="hero-badge"><span class="dot"></span>Open source · GPL-3.0 · Windows desktop app</span>
       <h1>Make GitHub<br><span class="accent">simple for everyone</span></h1>
-      <p class="lead">No command line or Git installation required. Find projects already on your computer or choose a folder to start creating. Write a short update to publish your code. When someone proposes a change, AI can help you review it while you make the final decision.</p>
+      <p class="lead">Choose a project folder and EasyHub shows what changed. Write a short update to save your work to GitHub. Manage issues, releases, and proposed changes in the same place.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -600,7 +600,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     </div>
     <div class="ai-spotlight reveal">
       <div>
-        <span class="ai-eyebrow">New in v1.2.0 · AI assisted review</span>
+        <span class="ai-eyebrow">AI assisted review</span>
         <h3>Review proposed changes before you decide</h3>
         <p>Inspect the changed files first, then let AI summarize potential issues and suggestions. EasyHub shows what will be sent and to which service before every review. Nothing is sent until you confirm, and you decide whether to approve or reject.</p>
         <div class="ai-points"><span>Bring your own API key</span><span>Sent only after confirmation</span><span>Never merges automatically</span></div>
@@ -653,8 +653,8 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   <div class="wrap trend-layout">
     <div class="trend-copy reveal">
       <div class="sec-head">
-        <div class="sec-kicker">Discover projects</div>
-        <h2 class="sec-title">Find something worth exploring with EasyHub Trending</h2>
+        <div class="sec-kicker">EasyHub Trending</div>
+        <h2 class="sec-title">Discover public projects worth following</h2>
         <p class="sec-sub">Browse active, well-liked public projects in Discover, or paste a GitHub project URL to open it directly. EasyHub ranks projects using stars, recent activity, and update time to help you find something interesting.</p>
       </div>
       <ul class="trend-points">
@@ -742,7 +742,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <h2 class="sec-title">Designed around the people who use it</h2>
       <p class="sec-sub">Most GitHub tools assume you already know Git. EasyHub starts with the first-time user: fewer steps, clearer language, and a path you can understand.</p>
     </div>
-    <div class="table-scroll reveal">
+    <details class="compare-expand reveal">
+      <summary>View the full feature comparison</summary>
+    <div class="table-scroll">
       <table class="matrix">
         <colgroup>
           <col style="width:15%"><col style="width:11%"><col style="width:10%"><col style="width:9%">
@@ -830,6 +832,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <span><span class="mark n"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Not supported</span>
       <span><span class="mark na"><i></i></span>Not applicable</span>
     </div>
+    </details>
     <div class="compare-note reveal">
       <div class="cn-card key">
         <h4>Designed for beginners, with less to learn</h4>
@@ -853,21 +856,21 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="dl-grid">
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
-        <h3>EasyHub 1.2.0 for Windows: installer and portable app</h3>
-        <p>The installer and portable app were rebuilt on September 27, 2026, with an optional GitHub connection repair feature. Choose the edition and download source that suit you. Neither requires Git:</p>
+        <h3>EasyHub 1.0.0 for Windows: installer and portable app</h3>
+        <p>EasyHub 1.0.0 has been rebuilt: the installer is about 85.7 MiB and the portable app about 85.4 MiB. Neither requires Git.</p>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Download from Gitee</div>
         <div class="dl-links">
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.2.0/EasyHub-1.2.0-setup.exe">Download installer</a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.2.0/EasyHub-1.2.0-portable.exe">Download portable app</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-1.0.0-setup.exe">Download installer</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-1.0.0-portable.exe">Download portable app</a>
         </div>
         <div class="dl-source"><img src="assets/github.svg" alt="">Download from GitHub</div>
         <div class="dl-links">
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.2.0/EasyHub-1.2.0-setup.exe">Download installer</a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.2.0/EasyHub-1.2.0-portable.exe">Download portable app</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-1.0.0-setup.exe">Download installer</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-1.0.0-portable.exe">Download portable app</a>
         </div>
         <details class="download-help">
-          <summary>Slow or failed download? Try another source</summary>
-          <p>Try Gitee or GitHub, or choose a file on the <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">Gitee release page</a> or <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.2.0" target="_blank" rel="noopener noreferrer">GitHub release page</a>.</p>
+          <summary>Slow download? Try another source</summary>
+          <p>Both Gitee and GitHub offer the installer and portable app with identical files. You can also visit the <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Gitee release page</a> and <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">GitHub release page</a>.</p>
         </details>
         <p style="margin-top:10px">Windows x64 only. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.</p>
       </div>
@@ -891,7 +894,7 @@ pnpm build</pre>
         <p style="margin-top:10px">Run UI smoke checks with pnpm test:ui.</p>
       </div>
     </div>
-    <p class="dl-foot reveal">Current version <b>v1.2.0</b> · See the repository for features and build instructions</p>
+    <p class="dl-foot reveal">Current version <b>v1.0.0</b> · See the repository for features and build instructions</p>
   </div>
 </section>
 
@@ -912,7 +915,7 @@ pnpm build</pre>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub repository</a>
     </div>
     <p class="footer-note">EasyHub is an open source GitHub desktop app for Windows, designed for beginners and licensed under GPL-3.0-only. It signs in through GitHub device authorization, stores tokens in Windows Credential Manager, and needs no EasyHub server.</p>
-    <p class="footer-copy">© 2026 EasyHub · v1.2.0 · Comparison based on public project information from September 2026</p>
+    <p class="footer-copy">© 2026 EasyHub · v1.0.0 · Comparison based on public project information from September 2026</p>
   </div>
 </footer>
 
