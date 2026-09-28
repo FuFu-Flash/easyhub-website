@@ -172,7 +172,8 @@ TEXT = {
     '便携版': 'Portable app',
     '适用于 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。': 'For Windows x64. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.',
     'Android 1.0.0 随身版': 'EasyHub 1.0.0 for Android',
-    '在手机上查看项目、回复问题、下载版本，也能审查别人提交的改进。适用于 Android 7.0 及以上；本地文件发布仍在 Windows 版完成。': 'Browse projects, reply to issues, download releases, and review proposed changes on your phone. Requires Android 7.0 or later; local file publishing remains on Windows.',
+    '在手机上查看项目、回复问题、下载发行版，也能审查别人提交的改进。适用于 Android 7.0 及以上；本地文件发布仍在 Windows 版完成。': 'Browse projects, reply to issues, download releases, and review proposed changes on your phone. Requires Android 7.0 or later; local file publishing remains on Windows.',
+    '了解 Android 版': 'Explore Android app',
     '下载精简安装包': 'Download arm64 APK',
     '下载通用安装包': 'Download universal APK',
     '大多数较新的手机选择精简安装包；无法安装时再试通用安装包。': 'Choose the arm64 APK for most newer phones. Try the universal APK if it does not install.',
@@ -262,6 +263,7 @@ def build() -> None:
                             '<a href="./" data-lang="zh" lang="zh-CN">', 1)
     result = result.replace('<a href="en.html" data-lang="en" lang="en">',
                             '<a href="en.html" data-lang="en" lang="en" aria-current="page">', 1)
+    result = result.replace('href="android.html"', 'href="android-en.html"')
 
     # Text in CSS/HTML comments and the shared script can stay in Chinese.
     head, body = result.split('<body id="top">', 1)

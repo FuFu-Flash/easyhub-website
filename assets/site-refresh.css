@@ -222,6 +222,8 @@ html[data-theme="light"] .theme-sun, html[data-theme="dark"] .theme-moon { displ
 .android-card > p { max-width: 750px; color: var(--ink-2); }
 .android-card .dl-links { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
 .android-card .android-hint { margin-top: 14px; font-size: 12px; color: var(--muted); }
+.android-page-link { display: inline-flex; align-items: center; gap: 7px; margin: 14px 0 4px; color: var(--blue-deep); font-size: 13px; font-weight: 750; }
+.android-page-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .android-phone {
   position: absolute; right: clamp(55px, 8vw, 125px); top: 34px;
   width: 205px; height: 345px; padding: 13px 12px 15px;
