@@ -33,11 +33,11 @@
   <link rel="stylesheet" href="assets/android-illustration.css">
   <script src="assets/android-page.js" defer></script>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <nav class="page-wrap site-nav" aria-label="Main navigation">
-      <a class="brand" href="./"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
-      <div class="nav-links"><a href="./">Home</a><a href="#features">Features</a><a href="#download">Download Android</a></div>
+      <a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
+      <div class="nav-links"><a href="#top">Home</a><a href="#features">Features</a><a href="#download">Download Android</a></div>
       <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="true"><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.87 13.16A9 9 0 0 1 10.84 3.13a9 9 0 1 0 10.03 10.03Z"/></svg></button>
       <div class="language-switch" role="group" aria-label="Language"><a href="android.html" data-lang="zh">中文</a><a href="android-en.html" data-lang="en" aria-current="page">EN</a></div>
     </nav>
@@ -49,7 +49,7 @@
           <p class="eyebrow"><span class="status-dot"></span> EasyHub Android 1.0.0</p>
           <h1 id="hero-title">Your projects,<br><span>wherever you are.</span></h1>
           <p class="hero-lead">Publish on your computer and stay connected on your phone. Browse projects, reply to issues, download releases, and review proposed changes.</p>
-          <div class="hero-actions"><a class="button primary" href="#download">Download Android</a><a class="button quiet" href="./">Explore Windows app <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-actions"><a class="button primary" href="#download">Download Android</a><a class="button quiet" href="./?platform=windows">Explore Windows app <span aria-hidden="true">↗</span></a></div>
           <p class="hero-note">Free and open source · Android 7.0+ · Sign in with GitHub</p>
         </div>
         <div class="illustration" role="img" aria-label="Illustrated preview based on the EasyHub Android home screen">
@@ -85,7 +85,7 @@
       </div>
     </section>
     <section class="together" aria-labelledby="together-title">
-      <div class="page-wrap together-inner reveal"><div><p class="kicker">Each platform has its place</p><h2 id="together-title">Create on Windows. Keep up on Android.</h2><p>Choosing local folders, detecting file changes, publishing code, and uploading new releases still happen on Windows. Sign in to the same GitHub account on both devices to see the same projects, issues, and releases.</p></div><a class="button quiet" href="./">See Windows app <span aria-hidden="true">↗</span></a></div>
+      <div class="page-wrap together-inner reveal"><div><p class="kicker">Each platform has its place</p><h2 id="together-title">Create on Windows. Keep up on Android.</h2><p>Choosing local folders, detecting file changes, publishing code, and uploading new releases still happen on Windows. Sign in to the same GitHub account on both devices to see the same projects, issues, and releases.</p></div><a class="button quiet" href="./?platform=windows">See Windows app <span aria-hidden="true">↗</span></a></div>
     </section>
     <section class="download" id="download" aria-labelledby="download-title">
       <div class="page-wrap"><div class="section-head reveal"><p class="kicker">Get started</p><h2 id="download-title">Choose the right APK for your phone.</h2><p>Choose the smaller APK for most newer Android phones. If it does not install, try the universal APK.</p></div>
@@ -97,6 +97,6 @@
       </div>
     </section>
   </main>
-  <footer><div class="page-wrap footer-inner"><a class="brand" href="./"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a><span>Open source · GPL-3.0-only · v1.0.0</span><div><a href="./">Website home</a><a href="https://gitee.com/HUAJILA/easy-hub">Gitee repository</a><a href="https://github.com/FuFu-Flash/EasyHub">GitHub repository</a></div></div></footer>
+  <footer><div class="page-wrap footer-inner"><a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a><span>Open source · GPL-3.0-only · v1.0.0</span><div><a href="./?platform=windows">Website home</a><a href="https://gitee.com/HUAJILA/easy-hub">Gitee repository</a><a href="https://github.com/FuFu-Flash/EasyHub">GitHub repository</a></div></div></footer>
 </body>
 </html>

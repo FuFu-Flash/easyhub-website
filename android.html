@@ -33,11 +33,11 @@
   <link rel="stylesheet" href="assets/android-illustration.css">
   <script src="assets/android-page.js" defer></script>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <nav class="page-wrap site-nav" aria-label="主导航">
-      <a class="brand" href="./"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
-      <div class="nav-links"><a href="./">首页</a><a href="#features">功能</a><a href="#download">下载 Android 版</a></div>
+      <a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
+      <div class="nav-links"><a href="#top">首页</a><a href="#features">功能</a><a href="#download">下载 Android 版</a></div>
       <button class="theme-toggle" type="button" aria-label="切换到浅色模式" title="切换到浅色模式" aria-pressed="true"><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.87 13.16A9 9 0 0 1 10.84 3.13a9 9 0 1 0 10.03 10.03Z"/></svg></button>
       <div class="language-switch" role="group" aria-label="语言 / Language"><a href="android.html" data-lang="zh" aria-current="page">中文</a><a href="android-en.html" data-lang="en">EN</a></div>
     </nav>
@@ -49,7 +49,7 @@
           <p class="eyebrow"><span class="status-dot"></span> EasyHub Android 1.0.0</p>
           <h1 id="hero-title">你的项目，<br><span>随时在手边。</span></h1>
           <p class="hero-lead">在电脑上发布，在手机上接着看。浏览项目、回复问题、下载发行版，也能查看和审查别人提交的改进。</p>
-          <div class="hero-actions"><a class="button primary" href="#download">下载 Android 版</a><a class="button quiet" href="./">了解 Windows 版 <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-actions"><a class="button primary" href="#download">下载 Android 版</a><a class="button quiet" href="./?platform=windows">了解 Windows 版 <span aria-hidden="true">↗</span></a></div>
           <p class="hero-note">免费开源 · Android 7.0 及以上 · 使用 GitHub 登录</p>
         </div>
         <div class="illustration" role="img" aria-label="根据 EasyHub Android 首页绘制的界面预览">
@@ -85,7 +85,7 @@
       </div>
     </section>
     <section class="together" aria-labelledby="together-title">
-      <div class="page-wrap together-inner reveal"><div><p class="kicker">各有所长</p><h2 id="together-title">Windows 创作，Android 随行。</h2><p>选择本地文件夹、检测文件变化、发布源码和上传新版本，仍在 Windows 版完成。两端使用同一个 GitHub 账号，项目、问题与版本通过 GitHub 保持一致。</p></div><a class="button quiet" href="./">查看 Windows 版 <span aria-hidden="true">↗</span></a></div>
+      <div class="page-wrap together-inner reveal"><div><p class="kicker">各有所长</p><h2 id="together-title">Windows 创作，Android 随行。</h2><p>选择本地文件夹、检测文件变化、发布源码和上传新版本，仍在 Windows 版完成。两端使用同一个 GitHub 账号，项目、问题与版本通过 GitHub 保持一致。</p></div><a class="button quiet" href="./?platform=windows">查看 Windows 版 <span aria-hidden="true">↗</span></a></div>
     </section>
     <section class="download" id="download" aria-labelledby="download-title">
       <div class="page-wrap"><div class="section-head reveal"><p class="kicker">开始使用</p><h2 id="download-title">选择适合手机的安装包。</h2><p>大多数较新的 Android 手机选择精简安装包；如果无法安装，再试通用安装包。</p></div>
@@ -97,6 +97,6 @@
       </div>
     </section>
   </main>
-  <footer><div class="page-wrap footer-inner"><a class="brand" href="./"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a><span>开源 · GPL-3.0-only · v1.0.0</span><div><a href="./">网站首页</a><a href="https://gitee.com/HUAJILA/easy-hub">Gitee 仓库</a><a href="https://github.com/FuFu-Flash/EasyHub">GitHub 仓库</a></div></div></footer>
+  <footer><div class="page-wrap footer-inner"><a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a><span>开源 · GPL-3.0-only · v1.0.0</span><div><a href="./?platform=windows">网站首页</a><a href="https://gitee.com/HUAJILA/easy-hub">Gitee 仓库</a><a href="https://github.com/FuFu-Flash/EasyHub">GitHub 仓库</a></div></div></footer>
 </body>
 </html>

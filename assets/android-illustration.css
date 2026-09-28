@@ -210,3 +210,37 @@ html.motion-ready .mobile-phone { animation: mobile-phone-enter .7s .2s both; }
   }
 }
 @media (prefers-reduced-motion: reduce) { html.motion-ready .mobile-phone { animation: none; } }
+
+/* On an Android screen, install choices matter more than a second phone screen. */
+@media (max-width: 700px) {
+  main { display: flex; flex-direction: column; }
+  main > .hero { order: 1; }
+  main > .download { order: 2; }
+  main > .features { order: 3; }
+  main > .together { order: 4; }
+  .hero { padding: 36px 0 32px; }
+  .hero-grid { display: block; }
+  .hero .illustration { display: none; }
+  .eyebrow { margin-bottom: 17px; }
+  .hero h1 { font-size: clamp(42px, 11vw, 52px); line-height: 1.16; }
+  .hero-lead { margin-top: 17px; font-size: 15px; line-height: 1.7; }
+  .hero-actions { display: flex; flex-direction: column; align-items: stretch; gap: 4px; margin-top: 24px; }
+  .hero-actions .button.primary { width: 100%; min-height: 52px; }
+  .hero-actions .button.quiet { align-self: center; min-height: 42px; padding: 7px 14px; border: 0; background: transparent; color: var(--blue-deep); box-shadow: none; }
+  .hero-note { margin-top: 12px; text-align: center; }
+  .download { padding: 34px 0 54px; }
+  .download .section-head { margin-bottom: 23px; }
+  .download .section-head h2 { font-size: clamp(28px, 7.5vw, 36px); }
+  .download-card { padding: 21px; }
+  .download-card h3 { margin-top: 13px; font-size: 22px; }
+  .download-card p { min-height: 0; }
+  .download-actions { margin-top: 18px; }
+  .features { padding-top: 69px; }
+  html.motion-ready .reveal:not(.in) { opacity: 1; transform: none; }
+  html[data-theme=dark] .download-actions .button.gitee { background: #fff1f1; border-color: #ffc8cb; color: #a71d28; }
+  html[data-theme=dark] .download-actions .button.github { background: #f7f9fc; border-color: #dce6f5; color: #263c59; }
+}
+@media (max-width: 390px) {
+  .hero { padding-top: 30px; }
+  .download-actions { grid-template-columns: 1fr; }
+}

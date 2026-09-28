@@ -53,11 +53,22 @@
 </script>
 <script>
 (function(){
-  if(location.pathname.split('/').pop()==='en.html')return;
   var chosen='';
   try{chosen=localStorage.getItem('easyhub-site-language')||''}catch(e){}
   var browser=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
-  if(chosen==='en'||(!chosen&&!browser.toLowerCase().startsWith('zh'))){
+  var english=chosen==='en'||(!chosen&&!browser.toLowerCase().startsWith('zh'));
+  var windowsRequested=new URLSearchParams(location.search).get('platform')==='windows';
+  var windowsChosen=false;
+  try{
+    if(windowsRequested)sessionStorage.setItem('easyhub-site-platform','windows');
+    windowsChosen=sessionStorage.getItem('easyhub-site-platform')==='windows';
+  }catch(e){windowsChosen=windowsRequested}
+  if(/Android/i.test(navigator.userAgent)&&!windowsChosen&&!location.hash){
+    location.replace(new URL((english?'android-en.html':'android.html')+location.search+location.hash,location.href));
+    return;
+  }
+  if(location.pathname.split('/').pop()==='en.html')return;
+  if(english){
     location.replace(new URL('en.html'+location.search+location.hash,location.href));
   }
 })();
