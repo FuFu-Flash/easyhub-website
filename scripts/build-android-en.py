@@ -16,6 +16,14 @@ TEXT = {
     '了解 Windows 版': 'Explore Windows app',
     '免费开源 · Android 7.0 及以上 · 使用 GitHub 登录': 'Free and open source · Android 7.0+ · Sign in with GitHub',
     '项目已更新': 'Project updated', '刚刚': 'Just now', '你': 'Y',
+    '你的创作空间': 'Your creative space',
+    '今天也来做点有趣的事情。': 'Let’s make something fun today.',
+    '＋ 新建项目': '＋ New project', '接着创作': 'Keep creating',
+    '你的项目都已保存。': 'Your projects are saved.',
+    '打开项目，继续创作。': 'Open a project and keep creating.',
+    '查看项目 →': 'View projects →', '一个 Windows 小工具': 'A handy Windows tool',
+    '● 已保存': '● Saved',
+    '我的网站': 'My website', '我的个人主页': 'My personal page',
     '早上好 👋': 'Good morning 👋', '你的项目都在这里。': 'Your projects are here.',
     '我的项目': 'My projects', '查看全部 ›': 'View all ›',
     '1 个待处理的问题': '1 open issue', '刚刚更新': 'Updated just now',
@@ -63,6 +71,7 @@ ATTRIBUTES = {
     '语言 / Language': 'Language',
     'EasyHub Android 项目首页手绘示意': 'Hand drawn preview of the EasyHub Android home screen',
     '安卓应用截图预留位置': 'Reserved space for an Android app screenshot',
+    '根据 EasyHub Android 首页绘制的界面预览': 'Illustrated preview based on the EasyHub Android home screen',
 }
 
 
