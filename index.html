@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EasyHub - 简单易用的 GitHub Windows 客户端 | 免装 Git</title>
-<meta name="description" content="EasyHub 是面向新手的开源 GitHub Windows 客户端。免装 Git，管理项目、发布源码和新版本，并用 AI 辅助审查代码改进；最终操作由用户决定。">
+<script>
+(function(){
+  var saved='';
+  try{saved=localStorage.getItem('easyhub-site-theme')||''}catch(e){}
+  var system=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:(system?'dark':'light');
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ready')}
+})();
+</script>
+<title>EasyHub - 简单易用的 GitHub 客户端 | Windows 与 Android</title>
+<meta name="description" content="EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，Android 上查看项目、回复问题和审查改进。">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/">
 <link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/">
@@ -14,7 +23,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EasyHub">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:title" content="EasyHub - 简单易用的 GitHub Windows 客户端">
+<meta property="og:title" content="EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android">
 <meta property="og:description" content="免装 Git，一句话发布源码；收到改进请求时，用 AI 整理可能的问题和建议，批准或拒绝由你决定。">
 <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/">
 <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
@@ -22,7 +31,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="EasyHub：让 GitHub 简单到每个人都会用">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EasyHub - 简单易用的 GitHub Windows 客户端">
+<meta name="twitter:title" content="EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android">
 <meta name="twitter:description" content="免装 Git 管理项目和问题，AI 辅助审查代码改进；最后由你决定是否采纳。">
 <meta name="twitter:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <script type="application/ld+json">
@@ -31,9 +40,9 @@
   "@type": "SoftwareApplication",
   "name": "EasyHub",
   "url": "https://fufu-flash.github.io/easyhub-website/",
-  "description": "面向新手的开源 GitHub Windows 桌面客户端，可管理项目、发布源码和版本，并用 AI 辅助审查代码改进。",
+  "description": "面向新手的开源 GitHub 客户端。Windows 上发布作品，Android 上浏览项目和处理问题。",
   "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Windows",
+  "operatingSystem": "Windows, Android",
   "softwareVersion": "1.0.0",
   "image": "https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png",
   "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0",
@@ -481,6 +490,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a href="#compare">同类对比</a>
       <a class="nav-cta" href="#download">开始使用</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到浅色模式" title="切换到浅色模式" aria-pressed="true">
+      <span class="theme-sun" aria-hidden="true">☀</span><span class="theme-moon" aria-hidden="true">☾</span>
+    </button>
     <div class="language-switch" role="group" aria-label="语言 / Language">
       <a href="./" data-lang="zh" lang="zh-CN" aria-current="page">中文</a>
       <a href="en.html" data-lang="en" lang="en">EN</a>
@@ -495,9 +507,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span>开源 · GPL-3.0 · Windows 桌面客户端</span>
+      <span class="hero-badge"><span class="dot"></span>开源 · GPL-3.0 · Windows 与 Android</span>
       <h1>让 GitHub<br><span class="accent">简单到每个人都会用</span></h1>
-      <p class="lead">选择项目文件夹，EasyHub 会告诉你改了哪些文件。写一句更新说明，就能把作品保存到 GitHub；问题、版本和别人的改进也能在一个地方处理。</p>
+      <p class="lead">在 Windows 上选择项目文件夹、写一句更新说明，就能把作品保存到 GitHub。拿起 Android 手机，随时查看项目、回复问题和审查改进。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -596,7 +608,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="sec-head reveal">
       <div class="sec-kicker">核心特性</div>
       <h2 class="sec-title">把日常用到的 GitHub 操作，都做成简单按钮</h2>
-      <p class="sec-sub">使用 GitHub 登录后管理项目、发布源码与新版本、回复问题，还能用 AI 辅助审查别人提交的代码改进。访问令牌保存在 Windows 凭证管理器，无需 EasyHub 账号或自有服务器。</p>
+      <p class="sec-sub">Windows 版负责创作和发布，Android 版方便随时查看项目、处理问题和改进请求。两端通过 GitHub 获取内容，无需 EasyHub 账号或自有服务器。</p>
     </div>
     <div class="ai-spotlight reveal">
       <div>
@@ -617,7 +629,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 11l2 2 3-4"/></svg></div>
         <h3>使用 GitHub 安全登录</h3>
-        <p>通过 GitHub 设备授权登录，无需另建账号。访问令牌由 Windows 凭证管理器保存；项目资料从 GitHub 获取，不需要 EasyHub 云端服务。</p>
+        <p>通过 GitHub 设备授权登录，无需另建账号。Windows 和 Android 各自使用系统安全存储保存凭证；项目资料直接从 GitHub 获取。</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
@@ -632,7 +644,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>问题与改进请求</h3>
-        <p>创建和回复问题，关闭或重新打开；问题列表按项目分组并可继续加载。项目页还能查看改进请求，也能为其他项目准备并提交代码改进。</p>
+        <p>Windows 和 Android 都能创建、回复、关闭或重新打开问题，也能查看改进请求；在 Windows 上还可以为其他项目准备并提交代码改进。</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L8 8m4-4l4 4M4 20h16"/></svg></div>
@@ -872,7 +884,32 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <summary>下载慢？切换下载来源</summary>
           <p>Gitee 和 GitHub 均提供安装版与便携版，两个来源的文件一致。也可以查看 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>和 <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>。</p>
         </details>
-        <p style="margin-top:10px">仅提供 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。</p>
+        <p style="margin-top:10px">适用于 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。</p>
+      </div>
+      <div class="dl-card android-card reveal">
+        <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 17h4"/></svg></div>
+        <h3>Android 1.0.0 随身版</h3>
+        <p>在手机上查看项目、回复问题、下载版本，也能审查别人提交的改进。适用于 Android 7.0 及以上；本地文件发布仍在 Windows 版完成。</p>
+        <div class="dl-source"><img src="assets/gitee.svg" alt="">Gitee 下载</div>
+        <div class="dl-links">
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-Android-1.0.0-arm64.apk">下载精简安装包</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-Android-1.0.0-universal.apk">下载通用安装包</a>
+        </div>
+        <div class="dl-source"><img src="assets/github.svg" alt="">GitHub 下载</div>
+        <div class="dl-links">
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-Android-1.0.0-arm64.apk">下载精简安装包</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-Android-1.0.0-universal.apk">下载通用安装包</a>
+        </div>
+        <p class="android-hint">大多数较新的手机选择精简安装包；无法安装时再试通用安装包。</p>
+        <div class="android-phone" aria-hidden="true">
+          <div class="phone-speaker"></div>
+          <div class="phone-top"><span class="phone-brand">EasyHub</span><span class="phone-user"></span></div>
+          <div class="phone-greeting"></div><div class="phone-greeting short"></div>
+          <div class="phone-card"><span class="phone-tile"></span><span class="phone-lines"><i></i><i></i></span><b></b></div>
+          <div class="phone-card"><span class="phone-tile violet"></span><span class="phone-lines"><i></i><i></i></span><b></b></div>
+          <div class="phone-card"><span class="phone-tile mint"></span><span class="phone-lines"><i></i><i></i></span><b></b></div>
+          <div class="phone-tabs"><span></span><span></span><span></span><span></span></div>
+        </div>
       </div>
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div>
@@ -914,7 +951,7 @@ pnpm build</pre>
       <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee 仓库</a>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
     </div>
-    <p class="footer-note">EasyHub 是面向新手的开源 GitHub Windows 桌面客户端，以 GPL-3.0-only 协议发布。通过 OAuth 设备授权直连 GitHub，访问令牌仅保存在 Windows 凭证管理器，无自有服务器。</p>
+    <p class="footer-note">EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows 与 Android 版本，以 GPL-3.0-only 协议发布。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。</p>
     <p class="footer-copy">© 2026 EasyHub · v1.0.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
   </div>
 </footer>
@@ -926,6 +963,27 @@ var navToggle=document.getElementById('navToggle');
 var navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',function(){navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
+
+var themeToggle=document.getElementById('themeToggle');
+function updateThemeButton(){
+  var dark=document.documentElement.dataset.theme==='dark';
+  var label=document.documentElement.lang==='en'?(dark?'Switch to light mode':'Switch to dark mode'):(dark?'切换到浅色模式':'切换到深色模式');
+  themeToggle.setAttribute('aria-label',label);
+  themeToggle.setAttribute('title',label);
+  themeToggle.setAttribute('aria-pressed',String(dark));
+}
+themeToggle.addEventListener('click',function(){
+  var next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('easyhub-site-theme',next)}catch(e){}
+  updateThemeButton();
+});
+if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(event){
+  var saved='';
+  try{saved=localStorage.getItem('easyhub-site-theme')||''}catch(e){}
+  if(saved!=='light'&&saved!=='dark'){document.documentElement.dataset.theme=event.matches?'dark':'light';updateThemeButton()}
+})}
+updateThemeButton();
 
 document.querySelectorAll('.language-switch a[data-lang]').forEach(function(link){
   link.addEventListener('click',function(){

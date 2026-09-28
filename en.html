@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EasyHub - A simpler GitHub app for Windows | No Git install</title>
-<meta name="description" content="EasyHub is an open source GitHub app for Windows. Manage projects, publish code and releases without installing Git, and use AI to review proposed changes while you make the final decision.">
+<script>
+(function(){
+  var saved='';
+  try{saved=localStorage.getItem('easyhub-site-theme')||''}catch(e){}
+  var system=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:(system?'dark':'light');
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ready')}
+})();
+</script>
+<title>EasyHub - A simpler GitHub app for Windows and Android</title>
+<meta name="description" content="EasyHub is an open source GitHub app for beginners. Publish projects on Windows without installing Git; browse, reply, and review on Android.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/en.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/">
@@ -14,7 +23,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EasyHub">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="EasyHub - A simpler GitHub app for Windows">
+<meta property="og:title" content="EasyHub - A simpler GitHub app for Windows and Android">
 <meta property="og:description" content="Publish code without installing Git. Use AI to summarize potential issues in proposed changes, then decide whether to approve or reject.">
 <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/en.html">
 <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
@@ -22,7 +31,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="EasyHub: Make GitHub simple for everyone">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EasyHub - A simpler GitHub app for Windows">
+<meta name="twitter:title" content="EasyHub - A simpler GitHub app for Windows and Android">
 <meta name="twitter:description" content="Manage GitHub projects and issues without installing Git. AI helps review proposed changes; you make the final decision.">
 <meta name="twitter:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <script type="application/ld+json">
@@ -31,9 +40,9 @@
   "@type": "SoftwareApplication",
   "name": "EasyHub",
   "url": "https://fufu-flash.github.io/easyhub-website/en.html",
-  "description": "An open source GitHub desktop app for Windows. Manage projects, publish code and releases, and use AI to review proposed changes.",
+  "description": "An open source GitHub app for beginners. Publish on Windows and browse projects or handle issues on Android.",
   "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Windows",
+  "operatingSystem": "Windows, Android",
   "softwareVersion": "1.0.0",
   "image": "https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png",
   "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0",
@@ -481,6 +490,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a href="#compare">Comparison</a>
       <a class="nav-cta" href="#download">Get started</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="true">
+      <span class="theme-sun" aria-hidden="true">☀</span><span class="theme-moon" aria-hidden="true">☾</span>
+    </button>
     <div class="language-switch" role="group" aria-label="Language">
       <a href="./" data-lang="zh" lang="zh-CN">中文</a>
       <a href="en.html" data-lang="en" lang="en" aria-current="page">EN</a>
@@ -495,9 +507,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span>Open source · GPL-3.0 · Windows desktop app</span>
+      <span class="hero-badge"><span class="dot"></span>Open source · GPL-3.0 · Windows and Android</span>
       <h1>Make GitHub<br><span class="accent">simple for everyone</span></h1>
-      <p class="lead">Choose a project folder and EasyHub shows what changed. Write a short update to save your work to GitHub. Manage issues, releases, and proposed changes in the same place.</p>
+      <p class="lead">On Windows, choose a project folder and write a short note to save your work to GitHub. On Android, browse projects, reply to issues, and review proposed changes wherever you are.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -596,7 +608,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="sec-head reveal">
       <div class="sec-kicker">Features</div>
       <h2 class="sec-title">Everyday GitHub tasks, made simple</h2>
-      <p class="sec-sub">Sign in with GitHub to manage projects, publish code and releases, reply to issues, and use AI to review proposed changes. Your access token stays in Windows Credential Manager; EasyHub needs no separate account or server.</p>
+      <p class="sec-sub">Create and publish on Windows. Use Android to browse projects, handle issues, and review proposed changes on the go. Both apps connect to GitHub with no separate EasyHub account or server.</p>
     </div>
     <div class="ai-spotlight reveal">
       <div>
@@ -617,7 +629,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 11l2 2 3-4"/></svg></div>
         <h3>Secure GitHub sign-in</h3>
-        <p>Sign in through GitHub device authorization. There is no separate EasyHub account. Windows Credential Manager stores your token, and project data comes directly from GitHub.</p>
+        <p>Sign in through GitHub device authorization with no new account. Windows and Android each keep credentials in secure device storage; project data comes directly from GitHub.</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
@@ -632,7 +644,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>Issues and contributions</h3>
-        <p>Create and reply to issues, close or reopen them, and load more results in project groups. View pull requests on project pages, and prepare code improvements for other projects to review.</p>
+        <p>Create, reply to, close, or reopen issues on Windows and Android, and review proposed changes. On Windows you can also prepare and submit improvements to other projects.</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L8 8m4-4l4 4M4 20h16"/></svg></div>
@@ -872,7 +884,32 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <summary>Slow download? Try another source</summary>
           <p>Both Gitee and GitHub offer the installer and portable app with identical files. You can also visit the <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Gitee release page</a> and <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">GitHub release page</a>.</p>
         </details>
-        <p style="margin-top:10px">Windows x64 only. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.</p>
+        <p style="margin-top:10px">For Windows x64. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.</p>
+      </div>
+      <div class="dl-card android-card reveal">
+        <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 17h4"/></svg></div>
+        <h3>EasyHub 1.0.0 for Android</h3>
+        <p>Browse projects, reply to issues, download releases, and review proposed changes on your phone. Requires Android 7.0 or later; local file publishing remains on Windows.</p>
+        <div class="dl-source"><img src="assets/gitee.svg" alt="">Download from Gitee</div>
+        <div class="dl-links">
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-Android-1.0.0-arm64.apk">Download arm64 APK</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-Android-1.0.0-universal.apk">Download universal APK</a>
+        </div>
+        <div class="dl-source"><img src="assets/github.svg" alt="">Download from GitHub</div>
+        <div class="dl-links">
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-Android-1.0.0-arm64.apk">Download arm64 APK</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-Android-1.0.0-universal.apk">Download universal APK</a>
+        </div>
+        <p class="android-hint">Choose the arm64 APK for most newer phones. Try the universal APK if it does not install.</p>
+        <div class="android-phone" aria-hidden="true">
+          <div class="phone-speaker"></div>
+          <div class="phone-top"><span class="phone-brand">EasyHub</span><span class="phone-user"></span></div>
+          <div class="phone-greeting"></div><div class="phone-greeting short"></div>
+          <div class="phone-card"><span class="phone-tile"></span><span class="phone-lines"><i></i><i></i></span><b></b></div>
+          <div class="phone-card"><span class="phone-tile violet"></span><span class="phone-lines"><i></i><i></i></span><b></b></div>
+          <div class="phone-card"><span class="phone-tile mint"></span><span class="phone-lines"><i></i><i></i></span><b></b></div>
+          <div class="phone-tabs"><span></span><span></span><span></span><span></span></div>
+        </div>
       </div>
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div>
@@ -914,7 +951,7 @@ pnpm build</pre>
       <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee repository</a>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub repository</a>
     </div>
-    <p class="footer-note">EasyHub is an open source GitHub desktop app for Windows, designed for beginners and licensed under GPL-3.0-only. It signs in through GitHub device authorization, stores tokens in Windows Credential Manager, and needs no EasyHub server.</p>
+    <p class="footer-note">EasyHub is an open source GitHub app for beginners on Windows and Android, licensed under GPL-3.0-only. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.</p>
     <p class="footer-copy">© 2026 EasyHub · v1.0.0 · Comparison based on public project information from September 2026</p>
   </div>
 </footer>
@@ -926,6 +963,27 @@ var navToggle=document.getElementById('navToggle');
 var navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',function(){navLinks.classList.toggle('open')});
 navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navLinks.classList.remove('open')})});
+
+var themeToggle=document.getElementById('themeToggle');
+function updateThemeButton(){
+  var dark=document.documentElement.dataset.theme==='dark';
+  var label=document.documentElement.lang==='en'?(dark?'Switch to light mode':'Switch to dark mode'):(dark?'切换到浅色模式':'切换到深色模式');
+  themeToggle.setAttribute('aria-label',label);
+  themeToggle.setAttribute('title',label);
+  themeToggle.setAttribute('aria-pressed',String(dark));
+}
+themeToggle.addEventListener('click',function(){
+  var next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('easyhub-site-theme',next)}catch(e){}
+  updateThemeButton();
+});
+if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(event){
+  var saved='';
+  try{saved=localStorage.getItem('easyhub-site-theme')||''}catch(e){}
+  if(saved!=='light'&&saved!=='dark'){document.documentElement.dataset.theme=event.matches?'dark':'light';updateThemeButton()}
+})}
+updateThemeButton();
 
 document.querySelectorAll('.language-switch a[data-lang]').forEach(function(link){
   link.addEventListener('click',function(){

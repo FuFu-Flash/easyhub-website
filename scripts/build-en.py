@@ -16,10 +16,10 @@ TEXT = {
     '使用流程': 'How it works',
     '同类对比': 'Comparison',
     '开始使用': 'Get started',
-    '开源 · GPL-3.0 · Windows 桌面客户端': 'Open source · GPL-3.0 · Windows desktop app',
+    '开源 · GPL-3.0 · Windows 与 Android': 'Open source · GPL-3.0 · Windows and Android',
     '让 GitHub': 'Make GitHub',
     '简单到每个人都会用': 'simple for everyone',
-    '选择项目文件夹，EasyHub 会告诉你改了哪些文件。写一句更新说明，就能把作品保存到 GitHub；问题、版本和别人的改进也能在一个地方处理。': 'Choose a project folder and EasyHub shows what changed. Write a short update to save your work to GitHub. Manage issues, releases, and proposed changes in the same place.',
+    '在 Windows 上选择项目文件夹、写一句更新说明，就能把作品保存到 GitHub。拿起 Android 手机，随时查看项目、回复问题和审查改进。': 'On Windows, choose a project folder and write a short note to save your work to GitHub. On Android, browse projects, reply to issues, and review proposed changes wherever you are.',
     '下载与运行': 'Download',
     '下载': 'Download',
     '查看 Gitee 仓库': 'View Gitee repo',
@@ -64,7 +64,7 @@ TEXT = {
     '把操作说清楚：新建项目、发布源码、查看问题': 'Clear actions: create a project, publish code, view issues',
     '核心特性': 'Features',
     '把日常用到的 GitHub 操作，都做成简单按钮': 'Everyday GitHub tasks, made simple',
-    '使用 GitHub 登录后管理项目、发布源码与新版本、回复问题，还能用 AI 辅助审查别人提交的代码改进。访问令牌保存在 Windows 凭证管理器，无需 EasyHub 账号或自有服务器。': 'Sign in with GitHub to manage projects, publish code and releases, reply to issues, and use AI to review proposed changes. Your access token stays in Windows Credential Manager; EasyHub needs no separate account or server.',
+    'Windows 版负责创作和发布，Android 版方便随时查看项目、处理问题和改进请求。两端通过 GitHub 获取内容，无需 EasyHub 账号或自有服务器。': 'Create and publish on Windows. Use Android to browse projects, handle issues, and review proposed changes on the go. Both apps connect to GitHub with no separate EasyHub account or server.',
     'AI 辅助审查': 'AI assisted review',
     '收到代码改进，先看清楚再决定': 'Review proposed changes before you decide',
     '先查看对方修改的文件，再让 AI 整理可能的问题和修改建议。每次审查前都会显示要发送的内容和所选服务，得到你的确认才开始；批准或拒绝始终由你决定。': 'Inspect the changed files first, then let AI summarize potential issues and suggestions. EasyHub shows what will be sent and to which service before every review. Nothing is sent until you confirm, and you decide whether to approve or reject.',
@@ -81,13 +81,13 @@ TEXT = {
     '拒绝': 'Reject',
     '批准': 'Approve',
     '使用 GitHub 安全登录': 'Secure GitHub sign-in',
-    '通过 GitHub 设备授权登录，无需另建账号。访问令牌由 Windows 凭证管理器保存；项目资料从 GitHub 获取，不需要 EasyHub 云端服务。': 'Sign in through GitHub device authorization. There is no separate EasyHub account. Windows Credential Manager stores your token, and project data comes directly from GitHub.',
+    '通过 GitHub 设备授权登录，无需另建账号。Windows 和 Android 各自使用系统安全存储保存凭证；项目资料直接从 GitHub 获取。': 'Sign in through GitHub device authorization with no new account. Windows and Android each keep credentials in secure device storage; project data comes directly from GitHub.',
     '本地文件夹发布源码': 'Publish from a local folder',
     '选择文件夹即可识别项目；也能指定位置，找回已连接到自己 GitHub 项目的文件夹。后台扫描新增、修改、删除和重命名的文件，遵守 .gitignore、避开依赖目录；无需安装 Git。': 'Choose a folder to make it a project, or search a location for folders already connected to your GitHub projects. Background scanning detects added, changed, deleted, and renamed files while respecting .gitignore and skipping dependency folders. No Git installation is required.',
     '冲突安全处理': 'Safe conflict handling',
     '发布前先检查云端：可安全衔接的更新自动先获取；双方改动同一文件时，双版本预览、逐个选择保留版本。复杂历史会阻止自动发布，绝不强制覆盖。': 'EasyHub checks GitHub before publishing. Compatible updates are fetched first; if the same file changed in two places, you can compare both versions and choose what to keep. Complex cases stop the publish instead of overwriting files.',
     '问题与改进请求': 'Issues and contributions',
-    '创建和回复问题，关闭或重新打开；问题列表按项目分组并可继续加载。项目页还能查看改进请求，也能为其他项目准备并提交代码改进。': 'Create and reply to issues, close or reopen them, and load more results in project groups. View pull requests on project pages, and prepare code improvements for other projects to review.',
+    'Windows 和 Android 都能创建、回复、关闭或重新打开问题，也能查看改进请求；在 Windows 上还可以为其他项目准备并提交代码改进。': 'Create, reply to, close, or reopen issues on Windows and Android, and review proposed changes. On Windows you can also prepare and submit improvements to other projects.',
     '发布新版本 Release': 'Publish downloadable releases',
     '正式版、Alpha、Beta 三种类型，自动建议并续号版本名；可插入链接与图片、选择多个下载文件，按 GitHub 公开限制校验（单文件小于 2 GiB、每版最多 1000 个、不可同名），随后真实创建 Release、逐个上传附件，已完成端到端验收。': 'Choose a stable, Alpha, or Beta release and get a suggested version number. Add links, images, and multiple downloads; EasyHub checks GitHub limits before creating the release and uploading each file.',
     '公开内容翻译': 'Translate public content',
@@ -170,7 +170,12 @@ TEXT = {
     '和': ' and',
     '安装版': 'Installer',
     '便携版': 'Portable app',
-    '仅提供 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。': 'Windows x64 only. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.',
+    '适用于 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。': 'For Windows x64. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.',
+    'Android 1.0.0 随身版': 'EasyHub 1.0.0 for Android',
+    '在手机上查看项目、回复问题、下载版本，也能审查别人提交的改进。适用于 Android 7.0 及以上；本地文件发布仍在 Windows 版完成。': 'Browse projects, reply to issues, download releases, and review proposed changes on your phone. Requires Android 7.0 or later; local file publishing remains on Windows.',
+    '下载精简安装包': 'Download arm64 APK',
+    '下载通用安装包': 'Download universal APK',
+    '大多数较新的手机选择精简安装包；无法安装时再试通用安装包。': 'Choose the arm64 APK for most newer phones. Try the universal APK if it does not install.',
     '从源码运行': 'Run from source',
     '环境要求：': 'Requirements:',
     'Windows 系统': 'Windows',
@@ -183,15 +188,15 @@ TEXT = {
     '当前版本': 'Current version',
     '· 功能范围与构建方式见项目说明': '· See the repository for features and build instructions',
     '让 GitHub 简单到每个人都会用': 'Make GitHub simple for everyone',
-    'EasyHub 是面向新手的开源 GitHub Windows 桌面客户端，以 GPL-3.0-only 协议发布。通过 OAuth 设备授权直连 GitHub，访问令牌仅保存在 Windows 凭证管理器，无自有服务器。': 'EasyHub is an open source GitHub desktop app for Windows, designed for beginners and licensed under GPL-3.0-only. It signs in through GitHub device authorization, stores tokens in Windows Credential Manager, and needs no EasyHub server.',
+    'EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows 与 Android 版本，以 GPL-3.0-only 协议发布。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。': 'EasyHub is an open source GitHub app for beginners on Windows and Android, licensed under GPL-3.0-only. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.',
     '© 2026 EasyHub · v1.0.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · v1.0.0 · Comparison based on public project information from September 2026',
     'Gitee 仓库': 'Gitee repository',
     'GitHub 仓库': 'GitHub repository',
 }
 
 ATTRIBUTES = {
-    'EasyHub - 简单易用的 GitHub Windows 客户端': 'EasyHub - A simpler GitHub app for Windows',
-    'EasyHub 是面向新手的开源 GitHub Windows 客户端。免装 Git，管理项目、发布源码和新版本，并用 AI 辅助审查代码改进；最终操作由用户决定。': 'EasyHub is an open source GitHub app for Windows. Manage projects, publish code and releases without installing Git, and use AI to review proposed changes while you make the final decision.',
+    'EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android': 'EasyHub - A simpler GitHub app for Windows and Android',
+    'EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，Android 上查看项目、回复问题和审查改进。': 'EasyHub is an open source GitHub app for beginners. Publish projects on Windows without installing Git; browse, reply, and review on Android.',
     '免装 Git，一句话发布源码；收到改进请求时，用 AI 整理可能的问题和建议，批准或拒绝由你决定。': 'Publish code without installing Git. Use AI to summarize potential issues in proposed changes, then decide whether to approve or reject.',
     'EasyHub：让 GitHub 简单到每个人都会用': 'EasyHub: Make GitHub simple for everyone',
     '免装 Git 管理项目和问题，AI 辅助审查代码改进；最后由你决定是否采纳。': 'Manage GitHub projects and issues without installing Git. AI helps review proposed changes; you make the final decision.',
@@ -200,6 +205,7 @@ ATTRIBUTES = {
     'EasyHub 热门手绘界面示意': 'Illustration of EasyHub Trending',
     'EasyHub AI 辅助审查界面示意': 'Illustration of EasyHub AI assisted review',
     '打开菜单': 'Open menu',
+    '切换到浅色模式': 'Switch to light mode',
     '语言 / Language': 'Language',
     '查看 Gitee 仓库': 'View Gitee repository',
     '查看 GitHub 仓库': 'View GitHub repository',
@@ -240,8 +246,8 @@ def build() -> None:
     result = result.replace('GitHub release page</a>。</p>', 'GitHub release page</a>.</p>')
 
     result = result.replace('<html lang="zh-CN">', '<html lang="en">', 1)
-    result = result.replace('<title>EasyHub - 简单易用的 GitHub Windows 客户端 | 免装 Git</title>',
-                            '<title>EasyHub - A simpler GitHub app for Windows | No Git install</title>', 1)
+    result = result.replace('<title>EasyHub - 简单易用的 GitHub 客户端 | Windows 与 Android</title>',
+                            '<title>EasyHub - A simpler GitHub app for Windows and Android</title>', 1)
     result = result.replace('<meta property="og:locale" content="zh_CN">',
                             '<meta property="og:locale" content="en_US">', 1)
     result = result.replace('<link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/">',
@@ -250,8 +256,8 @@ def build() -> None:
                             '<meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/en.html">', 1)
     result = result.replace('"url": "https://fufu-flash.github.io/easyhub-website/",',
                             '"url": "https://fufu-flash.github.io/easyhub-website/en.html",', 1)
-    result = result.replace('"description": "面向新手的开源 GitHub Windows 桌面客户端，可管理项目、发布源码和版本，并用 AI 辅助审查代码改进。",',
-                            '"description": "An open source GitHub desktop app for Windows. Manage projects, publish code and releases, and use AI to review proposed changes.",', 1)
+    result = result.replace('"description": "面向新手的开源 GitHub 客户端。Windows 上发布作品，Android 上浏览项目和处理问题。",',
+                            '"description": "An open source GitHub app for beginners. Publish on Windows and browse projects or handle issues on Android.",', 1)
     result = result.replace('<a href="./" data-lang="zh" lang="zh-CN" aria-current="page">',
                             '<a href="./" data-lang="zh" lang="zh-CN">', 1)
     result = result.replace('<a href="en.html" data-lang="en" lang="en">',
