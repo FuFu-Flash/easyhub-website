@@ -62,6 +62,7 @@ ATTRIBUTES = {
     '主导航': 'Main navigation', '切换到浅色模式': 'Switch to light mode',
     '语言 / Language': 'Language',
     'EasyHub Android 项目首页手绘示意': 'Hand drawn preview of the EasyHub Android home screen',
+    '安卓应用截图预留位置': 'Reserved space for an Android app screenshot',
 }
 
 
