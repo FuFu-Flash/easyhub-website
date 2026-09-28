@@ -492,7 +492,8 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a class="nav-cta" href="#download">开始使用</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到浅色模式" title="切换到浅色模式" aria-pressed="true">
-      <span class="theme-sun" aria-hidden="true">☀</span><span class="theme-moon" aria-hidden="true">☾</span>
+      <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      <svg class="theme-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.87 13.16A9 9 0 0 1 10.84 3.13a9 9 0 1 0 10.03 10.03Z"/></svg>
     </button>
     <div class="language-switch" role="group" aria-label="语言 / Language">
       <a href="./" data-lang="zh" lang="zh-CN" aria-current="page">中文</a>
@@ -514,7 +515,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
-          <span class="hero-label-desktop">下载与运行</span><span class="hero-label-mobile">下载</span>
+          <span class="hero-label-desktop">下载</span><span class="hero-label-mobile">下载</span>
         </a>
         <a class="btn btn-gitee" href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer" aria-label="查看 Gitee 仓库">
           <img src="assets/gitee.svg" alt="">
@@ -525,6 +526,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <span class="hero-label-desktop">查看 GitHub 仓库</span><span class="hero-label-mobile">GitHub</span>
         </a>
       </div>
+      <a class="hero-android-link" href="android.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg><span>了解 Android 版</span><span aria-hidden="true">↗</span></a>
       <div class="hero-meta">
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>免装 Git，双击即用</div>
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>安全登录，直连 GitHub</div>
@@ -616,7 +618,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         <span class="ai-eyebrow">AI 辅助审查</span>
         <h3>收到代码改进，先看清楚再决定</h3>
         <p>先查看对方修改的文件，再让 AI 整理可能的问题和修改建议。每次审查前都会显示要发送的内容和所选服务，得到你的确认才开始；批准或拒绝始终由你决定。</p>
-        <div class="ai-points"><span>自带 API Key</span><span>确认后才发送</span><span>不会自动合入</span></div>
+        <div class="ai-points"><span>支持 API Key</span><span>确认后才发送</span><span>不会自动合入</span></div>
         <small>只分析可读取的文字修改，不运行程序或测试；结果仅供参考，服务商可能收费。</small>
       </div>
       <div class="ai-preview" role="img" aria-label="EasyHub AI 辅助审查界面示意">

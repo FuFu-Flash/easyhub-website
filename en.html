@@ -492,7 +492,8 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a class="nav-cta" href="#download">Get started</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="true">
-      <span class="theme-sun" aria-hidden="true">☀</span><span class="theme-moon" aria-hidden="true">☾</span>
+      <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      <svg class="theme-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.87 13.16A9 9 0 0 1 10.84 3.13a9 9 0 1 0 10.03 10.03Z"/></svg>
     </button>
     <div class="language-switch" role="group" aria-label="Language">
       <a href="./" data-lang="zh" lang="zh-CN">中文</a>
@@ -525,6 +526,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <span class="hero-label-desktop">View GitHub repo</span><span class="hero-label-mobile">GitHub</span>
         </a>
       </div>
+      <a class="hero-android-link" href="android-en.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg><span>Explore Android app</span><span aria-hidden="true">↗</span></a>
       <div class="hero-meta">
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>No Git install. Just launch.</div>
         <div><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F6BFE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>Secure sign-in, direct GitHub access</div>
@@ -616,7 +618,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         <span class="ai-eyebrow">AI assisted review</span>
         <h3>Review proposed changes before you decide</h3>
         <p>Inspect the changed files first, then let AI summarize potential issues and suggestions. EasyHub shows what will be sent and to which service before every review. Nothing is sent until you confirm, and you decide whether to approve or reject.</p>
-        <div class="ai-points"><span>Bring your own API key</span><span>Sent only after confirmation</span><span>Never merges automatically</span></div>
+        <div class="ai-points"><span>Supports API keys</span><span>Sent only after confirmation</span><span>Never merges automatically</span></div>
         <small>Only readable text changes are reviewed; no code or tests are run. Results are advisory, and your AI provider may charge for usage.</small>
       </div>
       <div class="ai-preview" role="img" aria-label="Illustration of EasyHub AI assisted review">

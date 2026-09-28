@@ -39,7 +39,7 @@ section { padding-block: 110px; }
   transition: color .22s, background-color .22s, border-color .22s, transform .22s;
 }
 .theme-toggle:hover { color: var(--blue-deep); transform: translateY(-2px); }
-.theme-toggle .theme-sun, .theme-toggle .theme-moon { grid-area: 1 / 1; font-size: 22px; line-height: 1; }
+.theme-toggle .theme-sun, .theme-toggle .theme-moon { grid-area: 1 / 1; width: 22px; height: 22px; }
 html[data-theme="light"] .theme-sun, html[data-theme="dark"] .theme-moon { display: none; }
 
 .btn { border-radius: 12px; }
@@ -70,6 +70,10 @@ html[data-theme="light"] .theme-sun, html[data-theme="dark"] .theme-moon { displ
 .hero p.lead { margin-top: 23px; color: var(--ink-2); font-size: 16px; line-height: 1.85; max-width: 520px; }
 .hero-actions { gap: 8px; margin-top: 30px; }
 .hero-actions .btn { min-height: 48px; font-size: 12px; padding-inline: 8px; }
+.hero-android-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 17px; color: var(--blue-deep); font-size: 13px; font-weight: 750; text-underline-offset: 3px; }
+.hero-android-link svg { width: 17px; height: 17px; flex: none; }
+.hero-android-link:hover { text-decoration: underline; }
+.hero-android-link:focus-visible { outline: 3px solid #9fc1ff; outline-offset: 4px; border-radius: 4px; }
 .hero-meta { gap: 16px; margin-top: 27px; }
 .hero-meta div { color: #59708e; font-size: 11px; }
 .stage {

@@ -15,7 +15,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 .nav-links a{padding:8px 13px;border-radius:10px;font-size:13px;font-weight:700;color:var(--ink-2)}
 .nav-links a:hover{background:var(--surface-alt);color:var(--blue-deep)}
 .theme-toggle{width:39px;height:39px;flex:none;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--ink-2);cursor:pointer}
-.theme-toggle span{grid-area:1/1;font-size:22px;line-height:1}
+.theme-toggle svg{grid-area:1/1;width:22px;height:22px}
 html[data-theme=light] .theme-sun,html[data-theme=dark] .theme-moon{display:none}
 .language-switch{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line);border-radius:11px;background:var(--surface)}
 .language-switch a{min-width:31px;padding:5px 8px;border-radius:7px;text-align:center;font-size:12px;font-weight:700;color:var(--muted)}
