@@ -378,15 +378,13 @@ table.matrix{width:100%;border-collapse:collapse;table-layout:fixed;min-width:90
 .cn-card.alt{background:var(--bg);border:1px solid var(--line);color:var(--muted)}
 .cn-card.alt h4{color:var(--ink)}
 
-/* ============ 下载运行 ============ */
+/* ============ 下载 ============ */
 .download{background:#fff;border-top:1px solid var(--line)}
 .dl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .dl-card{min-width:0;border:1px solid var(--line);border-radius:var(--radius);padding:27px;display:flex;flex-direction:column;background:var(--bg)}
 .dl-ico{width:41px;height:41px;border-radius:11px;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
 .dl-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
 .dl-card p{font-size:13.5px;color:var(--muted);line-height:1.8}
-.dl-card ul{margin:9px 0 0;padding-left:18px;font-size:13px;color:var(--muted);line-height:2}
-.dl-card ul li::marker{color:var(--blue)}
 .dl-links{display:grid;gap:8px;margin-top:15px}
 .dl-links a{display:flex;align-items:center;justify-content:center;gap:10px;padding:9px 12px;border:1px solid #D9E6FF;border-radius:9px;background:#fff;color:var(--blue-deep);font-size:13px;font-weight:700;text-align:center;transition:border-color .18s,background .18s}
 .dl-links a:hover{border-color:var(--blue);background:var(--blue-softer)}
@@ -396,10 +394,6 @@ table.matrix{width:100%;border-collapse:collapse;table-layout:fixed;min-width:90
 .download-help summary{cursor:pointer;color:var(--blue-deep);font-weight:700}
 .download-help p{margin-top:9px;font-size:12px}
 .download-help a{color:var(--blue-deep);text-decoration:underline;text-underline-offset:2px}
-pre.code{background:var(--ink);color:#CFDBED;border-radius:11px;padding:15px 17px;font-family:var(--mono);font-size:12.5px;line-height:1.9;overflow-x:auto;margin-top:12px;white-space:pre}
-pre.code .c{color:#7E8DA6}
-.dl-foot{margin-top:38px;text-align:center;font-size:13.5px;color:var(--muted)}
-.dl-foot b{color:var(--ink)}
 
 /* ============ Footer ============ */
 footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
@@ -872,18 +866,18 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
   </div>
 </section>
 
-<!-- ===== 下载与运行 ===== -->
+<!-- ===== 下载 ===== -->
 <section class="download" id="download">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-kicker">开始使用</div>
-      <h2 class="sec-title">下载已发布版本，或从源码运行</h2>
+      <h2 class="sec-title">下载发行版</h2>
     </div>
     <div class="dl-grid">
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
         <h3>Windows 1.0.0 安装版与便携版</h3>
-        <p>Windows 1.0.0 已更新构建：安装版约 85.7 MiB，便携版约 85.4 MiB。两种版本都无需安装 Git。</p>
+        <p>安装版约 85.7 MiB，便携版约 85.4 MiB。两种版本都无需安装 Git。</p>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Gitee 下载</div>
         <div class="dl-links">
           <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-1.0.0-setup.exe">下载安装版</a>
@@ -926,27 +920,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
           <div class="phone-tabs"><span></span><span></span><span></span><span></span></div>
         </div>
       </div>
-      <div class="dl-card reveal">
-        <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div>
-        <h3>从源码运行</h3>
-        <p>环境要求：</p>
-        <ul><li>Windows 系统</li><li>Node.js 22 或更高</li><li>pnpm 11 或更高</li></ul>
-        <pre class="code"><span class="c"># 安装依赖并启动</span>
-pnpm install
-pnpm dev</pre>
-      </div>
-      <div class="dl-card reveal">
-        <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <h3>检查与构建</h3>
-        <p>项目提供 TypeScript 检查、Lint、单元测试与界面点击测试，交付前可完整检查：</p>
-        <pre class="code">pnpm typecheck
-pnpm lint
-pnpm test
-pnpm build</pre>
-        <p style="margin-top:10px">界面冒烟测试运行 pnpm test:ui。</p>
-      </div>
     </div>
-    <p class="dl-foot reveal">当前版本 <b>v1.0.0</b> · 功能范围与构建方式见项目说明</p>
   </div>
 </section>
 

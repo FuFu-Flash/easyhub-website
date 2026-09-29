@@ -180,7 +180,7 @@ html[data-theme="light"] .theme-sun, html[data-theme="dark"] .theme-moon { displ
 .compare-note { gap: 15px; }
 .cn-card { border-radius: 18px; }
 
-/* The actual download is the primary action; source commands stay available below. */
+/* Keep the download choices clear and easy to scan. */
 .download { background: #f7faff; }
 .dl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .dl-card { border-radius: 20px; background: #fff; padding: 30px; }
@@ -254,7 +254,6 @@ html[data-theme="light"] .theme-sun, html[data-theme="dark"] .theme-moon { displ
 .phone-tabs span:first-child { border-color: #2f6bfe; background: #e7efff; }
 .dl-card:nth-child(n+2) .dl-ico { background: #dfeaff; }
 .dl-card:nth-child(n+2) .dl-ico svg { stroke: var(--blue); }
-.dl-foot { display: none; }
 
 footer { background: #edf3fc; color: #536887; border-top: 1px solid #dce6f5; }
 .footer-brand b { color: var(--ink); }
@@ -380,7 +379,6 @@ html[data-theme="dark"] .compare-expand > summary, html[data-theme="dark"] .matr
 html[data-theme="dark"] .matrix tbody tr:nth-child(even) { background: #182941; }
 html[data-theme="dark"] .dl-links a, html[data-theme="dark"] .dl-card:first-child .dl-links a,
 html[data-theme="dark"] .ai-points span { background: #233956; color: #e7f0ff; border-color: #3a5883; }
-html[data-theme="dark"] pre.code { background: #0a1422; }
 html[data-theme="dark"] footer { background: #14223a; border-color: #31425e; }
 html[data-theme="dark"] .footer-links a, html[data-theme="dark"] .footer-brand b,
 html[data-theme="dark"] .footer-note, html[data-theme="dark"] .footer-copy { color: #ccd9ed; }
