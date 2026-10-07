@@ -13,7 +13,7 @@
 })();
 </script>
 <title>EasyHub - 简单易用的 GitHub 客户端 | Windows 与 Android</title>
-<meta name="description" content="EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，Android 上查看项目、回复问题和审查改进。">
+<meta name="description" content="EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，用 AI 辅助审查代码与程序文件；Android 上查看项目、回复问题和审查改进。">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/">
 <link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/">
@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="EasyHub">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android">
-<meta property="og:description" content="免装 Git，一句话发布源码；收到改进请求时，用 AI 整理可能的问题和建议，批准或拒绝由你决定。">
+<meta property="og:description" content="免装 Git，一句话发布源码。Windows 上用 AI 辅助审查代码改进、本地程序和发行版附件，确认后才发送内容，由你作出决定。">
 <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/">
 <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <meta property="og:image:width" content="1200">
@@ -32,23 +32,37 @@
 <meta property="og:image:alt" content="EasyHub：让 GitHub 简单到每个人都会用">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android">
-<meta name="twitter:description" content="免装 Git 管理项目和问题，AI 辅助审查代码改进；最后由你决定是否采纳。">
+<meta name="twitter:description" content="免装 Git 管理项目和问题。Windows 支持 AI 辅助审查代码与程序文件，Android 随时查看项目与改进。">
 <meta name="twitter:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@graph": [{
   "@type": "SoftwareApplication",
-  "name": "EasyHub",
+  "name": "EasyHub for Windows",
   "url": "https://fufu-flash.github.io/easyhub-website/",
-  "description": "面向新手的开源 GitHub 客户端。Windows 上发布作品，Android 上浏览项目和处理问题。",
+  "description": "面向新手的开源 GitHub 客户端。在 Windows 上发布作品，用 AI 辅助审查代码与程序文件。",
   "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Windows, Android",
-  "softwareVersion": "1.0.0",
+  "operatingSystem": "Windows x64",
+  "softwareVersion": "1.0.1",
+  "datePublished": "2026-10-07",
   "image": "https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png",
-  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe",
   "license": "https://github.com/FuFu-Flash/EasyHub/blob/main/LICENSE",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
   "author": {"@type": "Person", "name": "FuFu-Flash", "url": "https://github.com/FuFu-Flash"}
+  }, {
+  "@type": "SoftwareApplication",
+  "name": "EasyHub for Android",
+  "url": "https://fufu-flash.github.io/easyhub-website/android.html",
+  "description": "在 Android 上查看 GitHub 项目、回复问题、下载发行版和审查文字改进。",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Android 7.0+",
+  "softwareVersion": "1.0.0",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-Android-1.0.0-arm64.apk",
+  "license": "https://github.com/FuFu-Flash/EasyHub/blob/main/LICENSE",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }]
 }
 </script>
 <script>
@@ -621,15 +635,15 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="ai-spotlight reveal">
       <div>
         <span class="ai-eyebrow">AI 辅助审查</span>
-        <h3>收到代码改进，先看清楚再决定</h3>
-        <p>先查看对方修改的文件，再让 AI 整理可能的问题和修改建议。每次审查前都会显示要发送的内容和所选服务，得到你的确认才开始；批准或拒绝始终由你决定。</p>
-        <div class="ai-points"><span>支持 API Key</span><span>确认后才发送</span><span>不会自动合入</span></div>
-        <small>只分析可读取的文字修改，不运行程序或测试；结果仅供参考，服务商可能收费。</small>
+        <h3>代码与程序文件，先看清楚再决定</h3>
+        <p>收到改进请求时，AI 把文字修改和程序文件整理到同一份结果中。Windows 也能审查电脑上的程序文件，或发行版里的 EXE、DLL 附件。确认后才开始，决定始终由你作出。</p>
+        <div class="ai-points"><span>支持 API Key</span><span>确认后才发送</span><span>可随时取消</span></div>
+        <small>程序文件审查仅限 Windows，按需安装组件；不会启动被审查程序，原始程序文件不会发给 AI。结果仅供参考，服务商可能收费。</small>
       </div>
       <div class="ai-preview" role="img" aria-label="EasyHub AI 辅助审查界面示意">
-        <div class="ai-preview-head"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg>AI 审查建议<small>由你决定</small></div>
-        <div class="ai-preview-files">修改文件 <b>App.tsx</b><b>settings.ts</b></div>
-        <div class="ai-preview-result"><strong>可能需要检查设置保存时机</strong><p>关闭窗口后重新打开，确认设置仍然保留。</p></div>
+        <div class="ai-preview-head"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg>AI 审查结果<small>由你决定</small></div>
+        <div class="ai-preview-files">审查内容 <b>App.tsx</b><b>EasyHub.exe</b></div>
+        <div class="ai-preview-result"><strong>文字修改与程序文件，集中查看</strong><p>查看可能的问题、相关文件和建议，也能确认哪些内容已检查。</p></div>
         <div class="ai-preview-bottom"><span>建议仅供参考</span><span class="ai-preview-actions"><span>拒绝</span><span>批准</span></span></div>
       </div>
     </div>
@@ -663,6 +677,16 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h10M4 12h16M4 19h7"/><path d="M18 3l3 2-3 2"/></svg></div>
         <h3>公开内容翻译</h3>
         <p>一键统一翻译项目简介、README、问题与 Release 描述；README 按段落随滚动逐步翻译。私有项目不发送给第三方，项目名、版本号、文件名以占位符保护，译文本地缓存。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a16 16 0 0 1 0 18 16 16 0 0 1 0-18"/></svg></div>
+        <h3>连接不畅，有办法处理</h3>
+        <p>Windows 设置提供 GitHub 代理，可以查看登录、项目和下载的连接情况。只影响 EasyHub，其他应用的网络设置不变。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></div>
+        <h3>通知和下载，一眼看清</h3>
+        <p>Windows 通知显示未读条数，查看后清零，已有待办仍然保留。下载时可查看进度、速度和剩余时间，也能取消下载。</p>
       </div>
     </div>
   </div>
@@ -876,21 +900,21 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="dl-grid">
       <div class="dl-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg></div>
-        <h3>Windows 1.0.0 安装版与便携版</h3>
+        <h3>Windows 1.0.1 安装版与便携版</h3>
         <p>安装版约 85.7 MiB，便携版约 85.4 MiB。两种版本都无需安装 Git。</p>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Gitee 下载</div>
         <div class="dl-links">
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-1.0.0-setup.exe">下载安装版</a>
-          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.0/EasyHub-1.0.0-portable.exe">下载便携版</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe">下载安装版</a>
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.0.1/EasyHub-1.0.1-portable.exe">下载便携版</a>
         </div>
         <div class="dl-source"><img src="assets/github.svg" alt="">GitHub 下载</div>
         <div class="dl-links">
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-1.0.0-setup.exe">下载安装版</a>
-          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.0/EasyHub-1.0.0-portable.exe">下载便携版</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-setup.exe">下载安装版</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.0.1/EasyHub-1.0.1-portable.exe">下载便携版</a>
         </div>
         <details class="download-help">
           <summary>下载慢？切换下载来源</summary>
-          <p>Gitee 和 GitHub 均提供安装版与便携版，两个来源的文件一致。也可以查看 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>和 <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>。</p>
+          <p>Gitee 和 GitHub 均提供安装版与便携版，两个来源的文件一致。也可以查看 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>和 <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/v1.0.1" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>。</p>
         </details>
         <p style="margin-top:10px">适用于 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。</p>
       </div>
@@ -941,7 +965,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub 仓库</a>
     </div>
     <p class="footer-note">EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows 与 Android 版本，以 GPL-3.0-only 协议发布。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。</p>
-    <p class="footer-copy">© 2026 EasyHub · v1.0.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
+    <p class="footer-copy">© 2026 EasyHub · Windows 1.0.1 · Android 1.0.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理</p>
   </div>
 </footer>
 
