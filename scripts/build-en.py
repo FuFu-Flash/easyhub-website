@@ -65,6 +65,10 @@ TEXT = {
     '把日常用到的 GitHub 操作，都做成简单按钮': 'Everyday GitHub tasks, made simple',
     'Windows 版负责创作和发布，Android 版方便随时查看项目、处理问题和改进请求。两端通过 GitHub 获取内容，无需 EasyHub 账号或自有服务器。': 'Create and publish on Windows. Use Android to browse projects, handle issues, and review proposed changes on the go. Both apps connect to GitHub with no separate EasyHub account or server.',
     'AI 辅助审查': 'AI assisted review',
+    '项目介绍，边写边看': 'Write your project introduction with live preview',
+    '在 Windows 上选择“编辑”“预览”或“边写边看”。支持 Markdown 和常见 HTML，图片、居中内容、表格和折叠内容都能预览；宽屏双栏，窄屏自动上下排列。': 'On Windows, choose Edit, Preview, or Live Preview. Combine Markdown with common HTML and preview images, centered content, tables, and expandable sections. The editor and preview sit side by side in wide windows and stack in narrow ones.',
+    '先保存，准备好了再发布': 'Save first, publish when ready',
+    '切换模式保留草稿，取消不改原介绍。保存后先更新本地，点击“发布源码”再同步到 GitHub；英文界面也保留作者撰写的原文。': 'Switching modes keeps your draft; Cancel leaves the original unchanged. Save updates the local copy, and Publish Source syncs it to GitHub. The English interface preserves the author’s original text.',
     '代码与程序文件，先看清楚再决定': 'Review code and program files before you decide',
     '收到改进请求时，AI 把文字修改和程序文件整理到同一份结果中。Windows 也能审查电脑上的程序文件，或发行版里的 EXE、DLL 附件。确认后才开始，决定始终由你作出。': 'AI brings text changes and program files into one review. On Windows, also review local program files or EXE and DLL release attachments. Reviews begin after confirmation; the decision stays yours.',
     '支持 API Key': 'Supports API keys',
@@ -160,8 +164,8 @@ TEXT = {
     '一句话定位': 'In one sentence',
     'EasyHub 不追求覆盖 GitHub 的全部功能，只追求让"记录创意、发布更新、管理项目"对普通人足够简单；免装 Git、中文界面与内容翻译都为这一个目标服务。对比基于各项目 2026 年 9 月公开资料整理。': 'EasyHub makes recording ideas, publishing updates, and managing projects simple for ordinary users. Its Git-free setup, bilingual interface, and content translation all serve that goal. This comparison is based on publicly available information from September 2026.',
     '下载发行版': 'Download EasyHub',
-    'Windows 1.0.1 安装版与便携版': 'EasyHub 1.0.1 for Windows: installer and portable app',
-    '安装版约 85.7 MiB，便携版约 85.5 MiB。两种版本都无需安装 Git。': 'The installer is about 85.7 MiB and the portable app about 85.5 MiB. Neither requires Git.',
+    'Windows 1.1.0 安装版与便携版': 'EasyHub 1.1.0 for Windows: installer and portable app',
+    '安装版约 86.0 MiB，便携版约 85.7 MiB。两种版本都无需安装 Git。': 'The installer is about 86.0 MiB and the portable app about 85.7 MiB. Neither requires Git.',
     'Gitee 下载': 'Download from Gitee',
     'GitHub 下载': 'Download from GitHub',
     '下载安装版': 'Download installer',
@@ -182,17 +186,17 @@ TEXT = {
     '大多数较新的手机选择精简安装包；无法安装时再试通用安装包。': 'Choose the arm64 APK for most newer phones. Try the universal APK if it does not install.',
     '让 GitHub 简单到每个人都会用': 'Make GitHub simple for everyone',
     'EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows 与 Android 版本，以 GPL-3.0-only 协议发布。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。': 'EasyHub is an open source GitHub app for beginners on Windows and Android, licensed under GPL-3.0-only. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.',
-    '© 2026 EasyHub · Windows 1.0.1 · Android 1.0.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · Windows 1.0.1 · Android 1.0.0 · Comparison based on public project information from September 2026',
+    '© 2026 EasyHub · Windows 1.1.0 · Android 1.0.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · Windows 1.1.0 · Android 1.0.0 · Comparison based on public project information from September 2026',
     'Gitee 仓库': 'Gitee repository',
     'GitHub 仓库': 'GitHub repository',
 }
 
 ATTRIBUTES = {
     'EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android': 'EasyHub - A simpler GitHub app for Windows and Android',
-    'EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，用 AI 辅助审查代码与程序文件；Android 上查看项目、回复问题和审查改进。': 'EasyHub is an open source GitHub app for beginners. Publish and review code or program files on Windows; browse projects, reply, and review changes on Android.',
-    '免装 Git，一句话发布源码。Windows 上用 AI 辅助审查代码改进、本地程序和发行版附件，确认后才发送内容，由你作出决定。': 'Publish code without installing Git. On Windows, use AI to review contributions, local programs, and release attachments. Content is sent after confirmation; you decide.',
+    'EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，项目介绍可边写边看；Android 上查看项目、回复问题和审查改进。': 'EasyHub is an open source GitHub app for beginners. Publish on Windows without installing Git and preview project introductions as you write; browse and review changes on Android.',
+    '免装 Git，一句话发布源码。Windows 项目介绍支持编辑、预览与边写边看，图片、表格和折叠内容都能预览，确认后再发布。': 'Publish code without installing Git. On Windows, use Edit, Preview, or Live Preview for project introductions, including images, tables, and expandable sections. Publish when ready.',
     'EasyHub：让 GitHub 简单到每个人都会用': 'EasyHub: Make GitHub simple for everyone',
-    '免装 Git 管理项目和问题。Windows 支持 AI 辅助审查代码与程序文件，Android 随时查看项目与改进。': 'Manage GitHub projects and issues without installing Git. Windows supports AI reviews of code and program files; Android keeps projects and contributions close at hand.',
+    '免装 Git 管理项目和问题。Windows 项目介绍可以边写边看，保存后再发布；Android 随时查看项目与改进。': 'Manage GitHub projects and issues without installing Git. Preview project introductions as you write on Windows, save, then publish. Browse projects and changes on Android.',
     'EasyHub 图标': 'EasyHub icon',
     'EasyHub 盆栽': 'EasyHub potted plant',
     'EasyHub 热门手绘界面示意': 'Illustration of EasyHub Trending',
@@ -249,8 +253,8 @@ def build() -> None:
                             '<meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/en.html">', 1)
     result = result.replace('"url": "https://fufu-flash.github.io/easyhub-website/",',
                             '"url": "https://fufu-flash.github.io/easyhub-website/en.html",', 1)
-    result = result.replace('"description": "面向新手的开源 GitHub 客户端。在 Windows 上发布作品，用 AI 辅助审查代码与程序文件。",',
-                            '"description": "An open source GitHub app for beginners. Publish on Windows and use AI to review code and program files.",', 1)
+    result = result.replace('"description": "面向新手的开源 GitHub 客户端。在 Windows 上发布作品，编辑项目介绍时可边写边看，也能用 AI 辅助审查代码与程序文件。",',
+                            '"description": "An open source GitHub app for beginners. Publish on Windows, preview project introductions as you write, and use AI to review code and program files.",', 1)
     result = result.replace('"url": "https://fufu-flash.github.io/easyhub-website/android.html",',
                             '"url": "https://fufu-flash.github.io/easyhub-website/android-en.html",', 1)
     result = result.replace('"description": "在 Android 上查看 GitHub 项目、回复问题、下载发行版和审查文字改进。",',
