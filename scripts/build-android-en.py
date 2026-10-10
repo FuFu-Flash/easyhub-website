@@ -58,7 +58,7 @@ TEXT = {
     '从 Gitee 下载': 'Download from Gitee', '从 GitHub 下载': 'Download from GitHub',
     '下载 APK 后，按 Android 系统提示允许安装。iOS 版尚未推出。': 'After downloading the APK, follow Android prompts to allow installation. An iOS app is not available yet.',
     '查看完整发行版': 'View the full release',
-    '开源 · GPL-3.0-only · v1.0.0': 'Open source · GPL-3.0-only · v1.0.0',
+    '当前源代码：Apache-2.0 · Android v1.0.0': 'Current source: Apache-2.0 · Android v1.0.0',
     '网站首页': 'Website home', 'Gitee 仓库': 'Gitee repository',
     'GitHub 仓库': 'GitHub repository',
 }
