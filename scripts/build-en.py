@@ -164,7 +164,7 @@ TEXT = {
     '一句话定位': 'In one sentence',
     'EasyHub 不追求覆盖 GitHub 的全部功能，只追求让"记录创意、发布更新、管理项目"对普通人足够简单；免装 Git、中文界面与内容翻译都为这一个目标服务。对比基于各项目 2026 年 9 月公开资料整理。': 'EasyHub makes recording ideas, publishing updates, and managing projects simple for ordinary users. Its Git-free setup, bilingual interface, and content translation all serve that goal. This comparison is based on publicly available information from September 2026.',
     '下载发行版': 'Download EasyHub',
-    'Windows 1.2.1 安装版与便携版': 'EasyHub 1.2.1 for Windows: installer and portable app',
+    'Windows 1.2.2 安装版与便携版': 'EasyHub 1.2.2 for Windows: installer and portable app',
     '安装版约 86.1 MiB，便携版约 85.8 MiB。两种版本都无需安装 Git。': 'The installer is about 86.1 MiB and the portable app about 85.8 MiB. Neither requires Git.',
     'Gitee 下载': 'Download from Gitee',
     'GitHub 下载': 'Download from GitHub',
@@ -186,7 +186,7 @@ TEXT = {
     '精简安装包约 26.2 MiB，适合大多数较新的手机；通用安装包约 44.5 MiB，支持 ARM32、ARM64、x86 和 x86_64。': 'The arm64 APK is about 26.2 MiB and suits most newer phones. The universal APK is about 44.5 MiB and supports ARM32, ARM64, x86, and x86_64.',
     '让 GitHub 简单到每个人都会用': 'Make GitHub simple for everyone',
     'EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows 与 Android 版本，当前源代码采用 Apache-2.0 协议。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。': 'EasyHub is an open source GitHub app for beginners on Windows and Android. The current source code is licensed under Apache-2.0. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.',
-    '© 2026 EasyHub · Windows 1.2.1 · Android 1.1.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · Windows 1.2.1 · Android 1.1.0 · Comparison based on public project information from September 2026',
+    '© 2026 EasyHub · Windows 1.2.2 · Android 1.1.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · Windows 1.2.2 · Android 1.1.0 · Comparison based on public project information from September 2026',
     'Gitee 仓库': 'Gitee repository',
     'GitHub 仓库': 'GitHub repository',
 }
