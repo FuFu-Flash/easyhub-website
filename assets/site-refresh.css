@@ -210,6 +210,12 @@ html[data-theme="light"] .theme-sun, html[data-theme="dark"] .theme-moon { displ
 .dl-card:first-child .dl-links { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
 .dl-links a { min-height: 43px; border-radius: 10px; }
 .dl-card:first-child .dl-links a { background: #fff; }
+.dl-card.mac-card { grid-column: 1 / -1; padding: 32px 42px; }
+.mac-card h3 { font-size: 23px; }
+.mac-card .dl-links { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
+.mac-card .dl-links.single-link { grid-template-columns: 1fr; }
+.mac-card .mac-install-note { margin-top: 16px; }
+.mac-install-note a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
 .dl-card.android-card {
   grid-column: 1 / -1;
   position: relative;
@@ -336,6 +342,8 @@ html.motion-ready .stage { animation: stage-enter .68s .26s both; }
   .dl-card:first-child .dl-links { grid-template-columns: 1fr 1fr; }
   .dl-card:first-child::before { width: 160px; height: 160px; right: 10px; top: 52px; }
   .dl-card:first-child .dl-links a { font-size: 12px; }
+  .dl-card.mac-card { padding: 27px 23px; }
+  .mac-card .dl-links a { font-size: 12px; }
   .dl-card.android-card { padding: 27px 23px; }
   .android-card::before, .android-phone { display: none; }
   .android-card .dl-links { grid-template-columns: 1fr 1fr; }
@@ -379,6 +387,8 @@ html[data-theme="dark"] .compare-expand > summary, html[data-theme="dark"] .matr
 html[data-theme="dark"] .matrix tbody tr:nth-child(even) { background: #182941; }
 html[data-theme="dark"] .dl-links a, html[data-theme="dark"] .dl-card:first-child .dl-links a,
 html[data-theme="dark"] .ai-points span { background: #233956; color: #e7f0ff; border-color: #3a5883; }
+html[data-theme="dark"] .mac-install-note a { color: #adc9ff; }
+html[data-theme="dark"] .download .dl-source img[src$="github.svg"] { filter: invert(1); }
 html[data-theme="dark"] footer { background: #14223a; border-color: #31425e; }
 html[data-theme="dark"] .footer-links a, html[data-theme="dark"] .footer-brand b,
 html[data-theme="dark"] .footer-note, html[data-theme="dark"] .footer-copy { color: #ccd9ed; }

@@ -12,8 +12,8 @@
   if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ready')}
 })();
 </script>
-<title>EasyHub - A simpler GitHub app for Windows and Android</title>
-<meta name="description" content="EasyHub is an open source GitHub app for beginners. Publish on Windows without installing Git and preview project introductions as you write; browse projects and review pull requests on Android.">
+<title>EasyHub - A simpler GitHub app for Windows, macOS and Android</title>
+<meta name="description" content="EasyHub is an open source GitHub app for beginners. Publish on Windows or macOS without installing Git and preview project introductions as you write; browse projects and review pull requests on Android.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/en.html">
 <link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/">
@@ -23,7 +23,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="EasyHub">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="EasyHub - A simpler GitHub app for Windows and Android">
+<meta property="og:title" content="EasyHub - A simpler GitHub app for Windows, macOS and Android">
 <meta property="og:description" content="Publish code without installing Git. On Windows, use Edit, Preview, or Live Preview for project introductions, including images, tables, and expandable sections. Publish when ready.">
 <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/en.html">
 <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
@@ -31,7 +31,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="EasyHub: Make GitHub simple for everyone">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EasyHub - A simpler GitHub app for Windows and Android">
+<meta name="twitter:title" content="EasyHub - A simpler GitHub app for Windows, macOS and Android">
 <meta name="twitter:description" content="Manage GitHub projects and issues without installing Git. Preview project introductions as you write on Windows, save, then publish. Browse projects and pull requests on Android.">
 <meta name="twitter:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
 <script type="application/ld+json">
@@ -51,6 +51,18 @@
   "license": "https://github.com/FuFu-Flash/EasyHub/blob/main/LICENSE",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
   "author": {"@type": "Person", "name": "FuFu-Flash", "url": "https://github.com/FuFu-Flash"}
+  }, {
+  "@type": "SoftwareApplication",
+  "name": "EasyHub for macOS",
+  "url": "https://fufu-flash.github.io/easyhub-website/en.html#download",
+  "description": "An open source GitHub app for creating, publishing and managing projects on Apple Silicon Macs.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS 27+ (Apple Silicon)",
+  "softwareVersion": "1.2.2",
+  "datePublished": "2026-10-11",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/macos-v1.2.2/EasyHub-macOS.zip",
+  "license": "https://github.com/FuFu-Flash/EasyHub/blob/macos-v1.2.2/LICENSE",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
   }, {
   "@type": "SoftwareApplication",
   "name": "EasyHub for Android",
@@ -529,9 +541,9 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span>Open source code · Apache-2.0 · Windows and Android</span>
+      <span class="hero-badge"><span class="dot"></span>Open source code · Apache-2.0 · Windows, macOS and Android</span>
       <h1>Make GitHub<br><span class="accent">simple for everyone</span></h1>
-      <p class="lead">On Windows, choose a project folder and write a short note to save your work to GitHub. On Android, browse projects, reply to issues, and review pull requests wherever you are.</p>
+      <p class="lead">On Windows or macOS, choose a project folder and write a short note to save your work to GitHub. On Android, browse projects, reply to issues, and review pull requests wherever you are.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#download">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
@@ -631,7 +643,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
     <div class="sec-head reveal">
       <div class="sec-kicker">Features</div>
       <h2 class="sec-title">Everyday GitHub tasks, made simple</h2>
-      <p class="sec-sub">Create and publish on Windows. Use Android to browse projects, handle issues, and review pull requests on the go. Both apps connect to GitHub with no separate EasyHub account or server.</p>
+      <p class="sec-sub">Create and publish on desktop. Use Android to browse projects, handle issues, and review pull requests on the go. Both apps connect to GitHub with no separate EasyHub account or server.</p>
     </div>
     <div class="ai-spotlight reveal">
       <div>
@@ -639,7 +651,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         <h3>Review code and program files before you decide</h3>
         <p>For pull requests, AI brings text changes and program files into one review. On Windows, also review local program files or EXE and DLL release attachments. Reviews begin after confirmation; the decision stays yours.</p>
         <div class="ai-points"><span>Supports API keys</span><span>Sent only after confirmation</span><span>Cancel at any time</span></div>
-        <small>Program file reviews support Windows and Android, with components installed as needed. Reviewed programs are never launched and original files are not sent to AI. Results are advisory; provider fees may apply.</small>
+        <small>Program file reviews support Windows, macOS and Android, with components installed as needed. Reviewed programs are never launched and original files are not sent to AI. Results are advisory; provider fees may apply.</small>
       </div>
       <div class="ai-preview" role="img" aria-label="Illustration of EasyHub Pull Request Reviews">
         <div class="ai-preview-head"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg>Pull Request Reviews<small>You decide</small></div>
@@ -662,7 +674,7 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 11l2 2 3-4"/></svg></div>
         <h3>Secure GitHub sign-in</h3>
-        <p>Sign in through GitHub device authorization with no new account. Windows and Android each keep credentials in secure device storage; project data comes directly from GitHub.</p>
+        <p>Sign in through GitHub device authorization with no new account. Desktop and Android each keep credentials in secure device storage; project data comes directly from GitHub.</p>
       </div>
       <div class="feat-card reveal">
         <div class="feat-ico b"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
@@ -929,10 +941,25 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
         </details>
         <p style="margin-top:10px">For Windows x64. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.</p>
       </div>
+      <div class="dl-card mac-card reveal">
+        <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg></div>
+        <h3>EasyHub 1.2.2 for macOS</h3>
+        <p>For Apple Silicon Macs running macOS 27 or later. The DMG is about 107.2 MiB and the ZIP about 98.2 MiB.</p>
+        <div class="dl-source"><img src="assets/gitee.svg" alt="">Download from Gitee</div>
+        <div class="dl-links single-link">
+          <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/macos-v1.2.2/EasyHub-macOS.zip">Download ZIP</a>
+        </div>
+        <div class="dl-source"><img src="assets/github.svg" alt="">Download from GitHub</div>
+        <div class="dl-links">
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/macos-v1.2.2/EasyHub-macOS.dmg">Download DMG</a>
+          <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/macos-v1.2.2/EasyHub-macOS.zip">Download ZIP</a>
+        </div>
+        <p class="mac-install-note">Open the DMG and drag EasyHub into Applications. The app is not Apple notarized; for first launch, see the <a href="https://github.com/FuFu-Flash/EasyHub/blob/main/README.en.md#macos-must-read" target="_blank" rel="noopener noreferrer">installation guide</a>。</p>
+      </div>
       <div class="dl-card android-card reveal">
         <div class="dl-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 17h4"/></svg></div>
         <h3>EasyHub 1.1.0 for Android</h3>
-        <p>Browse projects, reply to issues, download releases, and review pull requests on your phone. Requires Android 7.0 or later; local file publishing remains on Windows.</p>
+        <p>Browse projects, reply to issues, download releases, and review pull requests on your phone. Requires Android 7.0 or later; local file publishing is available on desktop.</p>
         <a class="android-page-link" href="android-en.html">Explore Android app <span aria-hidden="true">↗</span></a>
         <div class="dl-source"><img src="assets/gitee.svg" alt="">Download from Gitee</div>
         <div class="dl-links">
@@ -975,8 +1002,8 @@ footer{background:var(--ink);color:#AEBBD0;padding:54px 0 40px}
       <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee repository</a>
       <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub repository</a>
     </div>
-    <p class="footer-note">EasyHub is an open source GitHub app for beginners on Windows and Android. The current source code is licensed under Apache-2.0. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.</p>
-    <p class="footer-copy">© 2026 EasyHub · Windows 1.2.2 · Android 1.1.0 · Comparison based on public project information from September 2026</p>
+    <p class="footer-note">EasyHub is an open source GitHub app for beginners on Windows, macOS and Android. The current source code is licensed under Apache-2.0. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.</p>
+    <p class="footer-copy">© 2026 EasyHub · Windows / macOS 1.2.2 · Android 1.1.0 · Comparison based on public project information from September 2026</p>
   </div>
 </footer>
 

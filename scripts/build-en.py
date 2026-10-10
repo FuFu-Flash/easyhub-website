@@ -16,10 +16,10 @@ TEXT = {
     '使用流程': 'How it works',
     '同类对比': 'Comparison',
     '开始使用': 'Get started',
-    '开源源码 · Apache-2.0 · Windows 与 Android': 'Open source code · Apache-2.0 · Windows and Android',
+    '开源源码 · Apache-2.0 · Windows、macOS 与 Android': 'Open source code · Apache-2.0 · Windows, macOS and Android',
     '让 GitHub': 'Make GitHub',
     '简单到每个人都会用': 'simple for everyone',
-    '在 Windows 上选择项目文件夹、写一句更新说明，就能把作品保存到 GitHub。拿起 Android 手机，随时查看项目、回复问题和审查合并请求。': 'On Windows, choose a project folder and write a short note to save your work to GitHub. On Android, browse projects, reply to issues, and review pull requests wherever you are.',
+    '在桌面版（Windows / macOS）上选择项目文件夹、写一句更新说明，就能把作品保存到 GitHub。拿起 Android 手机，随时查看项目、回复问题和审查合并请求。': 'On Windows or macOS, choose a project folder and write a short note to save your work to GitHub. On Android, browse projects, reply to issues, and review pull requests wherever you are.',
     '下载': 'Download',
     '查看 Gitee 仓库': 'View Gitee repo',
     '查看 GitHub 仓库': 'View GitHub repo',
@@ -63,7 +63,7 @@ TEXT = {
     '把操作说清楚：新建项目、发布源码、查看问题': 'Clear actions: create a project, publish code, view issues',
     '核心特性': 'Features',
     '把日常用到的 GitHub 操作，都做成简单按钮': 'Everyday GitHub tasks, made simple',
-    'Windows 版负责创作和发布，Android 版方便随时查看项目、处理问题和合并请求。两端通过 GitHub 获取内容，无需 EasyHub 账号或自有服务器。': 'Create and publish on Windows. Use Android to browse projects, handle issues, and review pull requests on the go. Both apps connect to GitHub with no separate EasyHub account or server.',
+    '桌面版负责创作和发布，Android 版方便随时查看项目、处理问题和合并请求。两端通过 GitHub 获取内容，无需 EasyHub 账号或自有服务器。': 'Create and publish on desktop. Use Android to browse projects, handle issues, and review pull requests on the go. Both apps connect to GitHub with no separate EasyHub account or server.',
     'AI 辅助审查': 'AI assisted review',
     '项目介绍，边写边看': 'Write your project introduction with live preview',
     '在 Windows 上选择“编辑”“预览”或“边写边看”。支持 Markdown 和常见 HTML，图片、居中内容、表格和折叠内容都能预览；宽屏双栏，窄屏自动上下排列。': 'On Windows, choose Edit, Preview, or Live Preview. Combine Markdown with common HTML and preview images, centered content, tables, and expandable sections. The editor and preview sit side by side in wide windows and stack in narrow ones.',
@@ -74,7 +74,7 @@ TEXT = {
     '支持 API Key': 'Supports API keys',
     '确认后才发送': 'Sent only after confirmation',
     '可随时取消': 'Cancel at any time',
-    '程序文件审查支持 Windows 与 Android，按需安装组件；不会启动被审查程序，原始程序文件不会发给 AI。结果仅供参考，服务商可能收费。': 'Program file reviews support Windows and Android, with components installed as needed. Reviewed programs are never launched and original files are not sent to AI. Results are advisory; provider fees may apply.',
+    '程序文件审查支持 Windows、macOS 与 Android，按需安装组件；不会启动被审查程序，原始程序文件不会发给 AI。结果仅供参考，服务商可能收费。': 'Program file reviews support Windows, macOS and Android, with components installed as needed. Reviewed programs are never launched and original files are not sent to AI. Results are advisory; provider fees may apply.',
     '合并请求审查': 'Pull Request Reviews',
     '由你决定': 'You decide',
     '审查内容': 'Review content',
@@ -84,7 +84,7 @@ TEXT = {
     '拒绝': 'Reject',
     '批准': 'Approve',
     '使用 GitHub 安全登录': 'Secure GitHub sign-in',
-    '通过 GitHub 设备授权登录，无需另建账号。Windows 和 Android 各自使用系统安全存储保存凭证；项目资料直接从 GitHub 获取。': 'Sign in through GitHub device authorization with no new account. Windows and Android each keep credentials in secure device storage; project data comes directly from GitHub.',
+    '通过 GitHub 设备授权登录，无需另建账号。桌面版和 Android 各自使用系统安全存储保存凭证；项目资料直接从 GitHub 获取。': 'Sign in through GitHub device authorization with no new account. Desktop and Android each keep credentials in secure device storage; project data comes directly from GitHub.',
     '本地文件夹发布源码': 'Publish from a local folder',
     '选择文件夹即可识别项目；也能指定位置，找回已连接到自己 GitHub 项目的文件夹。后台扫描新增、修改、删除和重命名的文件，遵守 .gitignore、避开依赖目录；无需安装 Git。': 'Choose a folder to make it a project, or search a location for folders already connected to your GitHub projects. Background scanning detects added, changed, deleted, and renamed files while respecting .gitignore and skipping dependency folders. No Git installation is required.',
     '冲突安全处理': 'Safe conflict handling',
@@ -178,22 +178,29 @@ TEXT = {
     '安装版': 'Installer',
     '便携版': 'Portable app',
     '适用于 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。': 'For Windows x64. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.',
+    'macOS 1.2.2 桌面版': 'EasyHub 1.2.2 for macOS',
+    '适用于 Apple 芯片 Mac，macOS 27 及以上。DMG 约 107.2 MiB，ZIP 约 98.2 MiB。': 'For Apple Silicon Macs running macOS 27 or later. The DMG is about 107.2 MiB and the ZIP about 98.2 MiB.',
+    '下载 DMG': 'Download DMG',
+    '下载 ZIP': 'Download ZIP',
+    '打开 DMG，将 EasyHub 拖入 Applications。当前未通过 Apple 公证，首次打开请参考': 'Open the DMG and drag EasyHub into Applications. The app is not Apple notarized; for first launch, see the',
+    '安装说明': 'installation guide',
+    '。': '.',
     'Android 1.1.0 随身版': 'EasyHub 1.1.0 for Android',
-    '在手机上查看项目、回复问题、下载发行版，也能审查合并请求。适用于 Android 7.0 及以上；本地文件发布仍在 Windows 版完成。': 'Browse projects, reply to issues, download releases, and review pull requests on your phone. Requires Android 7.0 or later; local file publishing remains on Windows.',
+    '在手机上查看项目、回复问题、下载发行版，也能审查合并请求。适用于 Android 7.0 及以上；本地文件发布在桌面版完成。': 'Browse projects, reply to issues, download releases, and review pull requests on your phone. Requires Android 7.0 or later; local file publishing is available on desktop.',
     '了解 Android 版': 'Explore Android app',
     '下载精简安装包': 'Download arm64 APK',
     '下载通用安装包': 'Download universal APK',
     '精简安装包约 26.2 MiB，适合大多数较新的手机；通用安装包约 44.5 MiB，支持 ARM32、ARM64、x86 和 x86_64。': 'The arm64 APK is about 26.2 MiB and suits most newer phones. The universal APK is about 44.5 MiB and supports ARM32, ARM64, x86, and x86_64.',
     '让 GitHub 简单到每个人都会用': 'Make GitHub simple for everyone',
-    'EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows 与 Android 版本，当前源代码采用 Apache-2.0 协议。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。': 'EasyHub is an open source GitHub app for beginners on Windows and Android. The current source code is licensed under Apache-2.0. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.',
-    '© 2026 EasyHub · Windows 1.2.2 · Android 1.1.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · Windows 1.2.2 · Android 1.1.0 · Comparison based on public project information from September 2026',
+    'EasyHub 是面向新手的开源 GitHub 客户端，提供 Windows、macOS 与 Android 版本，当前源代码采用 Apache-2.0 协议。通过 GitHub 授权登录，凭证保存在设备的安全存储中，无自有服务器。': 'EasyHub is an open source GitHub app for beginners on Windows, macOS and Android. The current source code is licensed under Apache-2.0. Sign in through GitHub; credentials stay in secure device storage, with no EasyHub server.',
+    '© 2026 EasyHub · Windows / macOS 1.2.2 · Android 1.1.0 · 本页对比信息基于各项目 2026 年 9 月公开资料整理': '© 2026 EasyHub · Windows / macOS 1.2.2 · Android 1.1.0 · Comparison based on public project information from September 2026',
     'Gitee 仓库': 'Gitee repository',
     'GitHub 仓库': 'GitHub repository',
 }
 
 ATTRIBUTES = {
-    'EasyHub - 简单易用的 GitHub 客户端，支持 Windows 与 Android': 'EasyHub - A simpler GitHub app for Windows and Android',
-    'EasyHub 是面向新手的开源 GitHub 客户端。Windows 上免装 Git 发布作品，项目介绍可边写边看；Android 上查看项目、回复问题和审查合并请求。': 'EasyHub is an open source GitHub app for beginners. Publish on Windows without installing Git and preview project introductions as you write; browse projects and review pull requests on Android.',
+    'EasyHub - 简单易用的 GitHub 客户端，支持 Windows、macOS 与 Android': 'EasyHub - A simpler GitHub app for Windows, macOS and Android',
+    'EasyHub 是面向新手的开源 GitHub 客户端。Windows / macOS 上免装 Git 发布作品，项目介绍可边写边看；Android 上查看项目、回复问题和审查合并请求。': 'EasyHub is an open source GitHub app for beginners. Publish on Windows or macOS without installing Git and preview project introductions as you write; browse projects and review pull requests on Android.',
     '免装 Git，一句话发布源码。Windows 项目介绍支持编辑、预览与边写边看，图片、表格和折叠内容都能预览，确认后再发布。': 'Publish code without installing Git. On Windows, use Edit, Preview, or Live Preview for project introductions, including images, tables, and expandable sections. Publish when ready.',
     'EasyHub：让 GitHub 简单到每个人都会用': 'EasyHub: Make GitHub simple for everyone',
     '免装 Git 管理项目和问题。Windows 项目介绍可以边写边看，保存后再发布；Android 随时查看项目与合并请求。': 'Manage GitHub projects and issues without installing Git. Preview project introductions as you write on Windows, save, then publish. Browse projects and pull requests on Android.',
@@ -243,8 +250,8 @@ def build() -> None:
     result = result.replace('GitHub release page</a>。</p>', 'GitHub release page</a>.</p>')
 
     result = result.replace('<html lang="zh-CN">', '<html lang="en">', 1)
-    result = result.replace('<title>EasyHub - 简单易用的 GitHub 客户端 | Windows 与 Android</title>',
-                            '<title>EasyHub - A simpler GitHub app for Windows and Android</title>', 1)
+    result = result.replace('<title>EasyHub - 简单易用的 GitHub 客户端 | Windows、macOS 与 Android</title>',
+                            '<title>EasyHub - A simpler GitHub app for Windows, macOS and Android</title>', 1)
     result = result.replace('<meta property="og:locale" content="zh_CN">',
                             '<meta property="og:locale" content="en_US">', 1)
     result = result.replace('<link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/">',
@@ -264,6 +271,13 @@ def build() -> None:
     result = result.replace('<a href="en.html" data-lang="en" lang="en">',
                             '<a href="en.html" data-lang="en" lang="en" aria-current="page">', 1)
     result = result.replace('href="android.html"', 'href="android-en.html"')
+
+    result = result.replace('"description": "Apple 芯片 Mac 上的开源 GitHub 客户端，用于创作、发布和管理项目。",',
+                            '"description": "An open source GitHub app for creating, publishing and managing projects on Apple Silicon Macs.",', 1)
+    result = result.replace('"url": "https://fufu-flash.github.io/easyhub-website/#download",',
+                            '"url": "https://fufu-flash.github.io/easyhub-website/en.html#download",', 1)
+    result = result.replace('https://github.com/FuFu-Flash/EasyHub#macos-%E5%BF%85%E7%9C%8B',
+                            'https://github.com/FuFu-Flash/EasyHub/blob/main/README.en.md#macos-must-read', 1)
 
     # Text in CSS/HTML comments and the shared script can stay in Chinese.
     head, body = result.split('<body id="top">', 1)
