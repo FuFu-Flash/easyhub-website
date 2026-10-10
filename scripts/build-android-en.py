@@ -9,7 +9,7 @@ SOURCE = ROOT / 'android.html'
 OUTPUT = ROOT / 'android-en.html'
 
 TEXT = {
-    'EasyHub Android 1.0.0 | 随时查看 GitHub 项目': 'EasyHub Android 1.0.0 | Your GitHub projects on the go',
+    'EasyHub Android 1.1.0 | 随时查看 GitHub 项目': 'EasyHub Android 1.1.0 | Your GitHub projects on the go',
     '首页': 'Home', '功能': 'Features', '下载 Android 版': 'Download Android',
     '中文': '中文', '你的项目，': 'Your projects,', '随时在手边。': 'wherever you are.',
     '在电脑上发布，在手机上接着看。浏览项目、回复问题、下载发行版，也能查看和审查合并请求。': 'Publish on your computer and stay connected on your phone. Browse projects, reply to issues, download releases, and review pull requests.',
@@ -53,12 +53,12 @@ TEXT = {
     '大多数较新的 Android 手机选择精简安装包；如果无法安装，再试通用安装包。': 'Choose the smaller APK for most newer Android phones. If it does not install, try the universal APK.',
     '推荐': 'Recommended', '兼容选择': 'Compatibility option',
     '精简安装包': 'Smaller APK', '通用安装包': 'Universal APK',
-    '适合大多数较新的 Android 手机，约 18 MiB。': 'For most newer Android phones, about 18 MiB.',
-    '精简版无法安装时使用，约 39 MiB。': 'Try this if the smaller APK does not install, about 39 MiB.',
+    '适合大多数较新的 Android 手机，约 26.2 MiB。': 'For most newer Android phones, about 26.2 MiB.',
+    '精简版无法安装时使用，约 44.5 MiB，支持 ARM32、ARM64、x86 和 x86_64。': 'Try this if the smaller APK does not install, about 44.5 MiB. Supports ARM32, ARM64, x86, and x86_64.',
     '从 Gitee 下载': 'Download from Gitee', '从 GitHub 下载': 'Download from GitHub',
     '下载 APK 后，按 Android 系统提示允许安装。iOS 版尚未推出。': 'After downloading the APK, follow Android prompts to allow installation. An iOS app is not available yet.',
     '查看完整发行版': 'View the full release',
-    '当前源代码：Apache-2.0 · Android v1.0.0': 'Current source: Apache-2.0 · Android v1.0.0',
+    '当前源代码：Apache-2.0 · Android v1.1.0': 'Current source: Apache-2.0 · Android v1.1.0',
     '网站首页': 'Website home', 'Gitee 仓库': 'Gitee repository',
     'GitHub 仓库': 'GitHub repository',
 }
