@@ -179,7 +179,7 @@ TEXT = {
     '便携版': 'Portable app',
     '适用于 Windows x64；尚未使用商业代码签名，首次运行可能提示“未知发布者”。': 'For Windows x64. The files are not commercially code signed, so Windows may show an “Unknown publisher” warning on first launch.',
     'macOS 1.2.2 桌面版': 'EasyHub 1.2.2 for macOS',
-    '构建 18 · 适用于 Apple 芯片 Mac，macOS 27 及以上。DMG 约 69.6 MiB，ZIP 约 93.1 MiB。': 'Build 18 · For Apple Silicon Macs running macOS 27 or later. The DMG is about 69.6 MiB and the ZIP about 93.1 MiB.',
+    '构建 18 · 适用于 Apple 芯片 Mac，macOS 12 及以上。DMG 约 69.6 MiB，ZIP 约 93.1 MiB。': 'Build 18 · For Apple Silicon Macs running macOS 12 or later. The DMG is about 69.6 MiB and the ZIP about 93.1 MiB.',
     '下载 DMG': 'Download DMG',
     '下载 ZIP': 'Download ZIP',
     '打开 DMG，将 EasyHub 拖入 Applications。当前未通过 Apple 公证，首次打开请参考': 'Open the DMG and drag EasyHub into Applications. The app is not Apple notarized; for first launch, see the',
