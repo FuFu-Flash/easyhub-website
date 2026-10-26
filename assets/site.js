@@ -23,6 +23,34 @@
     });
   }
   updateThemeButton();
+  // 页面滚动后顶栏加一层浅阴影
+  var topbar=document.querySelector('.topbar');
+  function updateTopbar(){topbar.classList.toggle('scrolled',window.scrollY>4)}
+  window.addEventListener('scroll',updateTopbar,{passive:true});
+  updateTopbar();
+  // 滚动渐显：出现后移除标记，悬停动画恢复原来的快节奏；任何情况下都不留空白区块
+  var reveals=document.querySelectorAll('.reveal');
+  function finish(el){
+    el.classList.add('in');
+    el.addEventListener('transitionend',function done(event){
+      if(event.target!==el||event.propertyName!=='opacity')return;
+      el.classList.remove('reveal','in');
+      el.removeEventListener('transitionend',done);
+    });
+  }
+  if(!root.classList.contains('motion-ready')||!('IntersectionObserver' in window)){
+    reveals.forEach(function(el){el.classList.remove('reveal')});
+  }else{
+    var observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){finish(entry.target);observer.unobserve(entry.target)}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){observer.observe(el)});
+    window.addEventListener('load',function(){
+      setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(finish)},3000);
+    });
+  }
   // 记住手动选择的语言，并保留当前所在的区块
   document.querySelectorAll('.lang a[data-lang]').forEach(function(link){
     link.addEventListener('click',function(){

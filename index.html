@@ -9,6 +9,7 @@
   try{saved=localStorage.getItem('easyhub-site-theme')||''}catch(e){}
   var system=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
   document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:(system?'dark':'light');
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ready')}
 })();
 </script>
 <script>
@@ -157,37 +158,37 @@
 
 <section class="band" id="features">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="section-label">功能</p>
       <h2 class="section-title">日常要做的事，都变成了按钮</h2>
     </div>
     <div class="features">
-      <article class="feature">
+      <article class="feature reveal">
         <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 16v-5M9.5 13.5 12 11l2.5 2.5"/></svg></span>
         <h3>选文件夹就能发布</h3>
         <p>自动找出新增、修改和删除的文件。勾选这次要发的改动，写一句说明，点“发布源码”。没勾选的继续留在电脑上。</p>
       </article>
-      <article class="feature">
+      <article class="feature reveal">
         <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
         <h3>不会悄悄覆盖文件</h3>
         <p>发布前先看看 GitHub 上有没有新内容。同一个文件两边都改过时，会把两个版本摆出来，让你选留哪个。</p>
       </article>
-      <article class="feature">
+      <article class="feature reveal">
         <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M2 7h20v5H2zM12 21V7M12 7S10 3 7.5 3 5 5.5 7 7M12 7s2-4 4.5-4S19 5.5 17 7"/></svg></span>
         <h3>发布新版本</h3>
         <p>写好版本号和介绍，附上安装包等下载文件。可以先预览，确认后再发布；没写完的下次接着写。</p>
       </article>
-      <article class="feature">
+      <article class="feature reveal">
         <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.4-5.6A8.5 8.5 0 1 1 21 12Z"/></svg></span>
         <h3>问题和合并请求</h3>
         <p>首页“等你处理”列出待回复的问题和待审查的合并请求。看完改了什么，再决定合入还是关闭。</p>
       </article>
-      <article class="feature">
+      <article class="feature reveal">
         <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/></svg></span>
         <h3>AI 帮你看改动<span class="tag">可选</span></h3>
         <p>填上自己的 API Key，AI 会总结改了什么、指出可能的问题。发送前先告诉你要发什么，合不合入还是你说了算。</p>
       </article>
-      <article class="feature">
+      <article class="feature reveal">
         <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></svg></span>
         <h3>发现好项目</h3>
         <p>搜索公开项目和用户，看看今天、本周的 EasyHub 热门。英文介绍和问题可以一键翻译成中文。</p>
@@ -198,36 +199,36 @@
 
 <section id="start">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="section-label">怎么用</p>
       <h2 class="section-title">三步发布第一个作品</h2>
     </div>
     <div class="steps">
-      <div class="step">
+      <div class="step reveal">
         <h3>用 GitHub 登录</h3>
         <p>在浏览器里完成授权就行，不用另外注册 EasyHub 账号。</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <h3>选择项目</h3>
         <p>添加电脑上已有的文件夹，下载自己在 GitHub 上的项目，或者新建一个。</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <h3>写一句说明，发布</h3>
         <p>看看改了哪些文件，写下这次改了什么，点“发布源码”。</p>
       </div>
     </div>
-    <p class="steps-note">还没准备好登录？先打开模拟项目随便点点，不会上传到 GitHub。</p>
+    <p class="steps-note reveal">还没准备好登录？先打开模拟项目随便点点，不会上传到 GitHub。</p>
   </div>
 </section>
 
 <section class="band" id="download">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <p class="section-label">下载</p>
       <h2 class="section-title">选择你的设备</h2>
       <p class="section-sub">全部免费。桌面版负责创作和发布，Android 版适合随时查看项目、回复问题和审查合并请求。</p>
     </div>
-    <div class="table" role="list">
+    <div class="table reveal" role="list">
       <div class="table-head" aria-hidden="true"><span>平台</span><span>适用于</span><span></span></div>
       <div class="row" role="listitem">
         <div class="platform">
@@ -266,7 +267,7 @@
         <p class="row-note">装不上时换成通用安装包（<a href="https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-universal.apk">Gitee</a> · <a href="https://github.com/FuFu-Flash/EasyHub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-universal.apk">GitHub</a>）。手机上不能发布源码，发布请用桌面版。</p>
       </div>
     </div>
-    <ul class="notes">
+    <ul class="notes reveal">
       <li>Windows 版还没有购买代码签名，第一次运行可能提示“未知发布者”。</li>
       <li>历史版本和 macOS 的 ZIP 包在 <a href="https://github.com/FuFu-Flash/EasyHub/releases" target="_blank" rel="noopener noreferrer">GitHub 发布页</a> 和 <a href="https://gitee.com/HUAJILA/easy-hub/releases" target="_blank" rel="noopener noreferrer">Gitee 发布页</a>。</li>
     </ul>

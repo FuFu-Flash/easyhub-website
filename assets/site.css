@@ -164,7 +164,43 @@ footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--faint);f
   .hero-actions .btn{flex:1 1 100%}
   .footer-links{margin-left:0}
 }
+/* 动画：时长和缓动沿用应用的 --eh-duration / --eh-ease-standard */
+:root{--ease:cubic-bezier(.2,.7,.2,1)}
+body,.topbar,.feature,.table,.btn,.icon-btn,.lang a{transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),box-shadow .2s var(--ease),transform .16s var(--ease)}
+.topbar.scrolled{box-shadow:0 1px 8px rgba(98,98,93,.08)}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-lg svg{transition:transform .2s var(--ease)}
+.btn-primary:hover svg{transform:translateY(2px)}
+.feature:hover{transform:translateY(-3px);border-color:var(--line-strong);box-shadow:var(--shadow-raised)}
+.feature-icon{transition:transform .2s var(--ease),background-color .2s var(--ease)}
+.feature:hover .feature-icon{transform:scale(1.08) rotate(-4deg)}
+.row{transition:background-color .2s var(--ease)}
+.row:hover{background:var(--surface-subtle)}
+.platform-icon{transition:background-color .2s var(--ease),color .2s var(--ease)}
+.row:hover .platform-icon{background:var(--primary-soft);color:var(--primary)}
+.hero-meta i{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(32,138,77,.45)}50%{box-shadow:0 0 0 5px rgba(32,138,77,0)}}
+
+/* 首屏依次出现，截图从下方升起；只有允许动画时才加 motion-ready */
+.motion-ready .hero h1,.motion-ready .hero .lead,.motion-ready .hero-actions,.motion-ready .hero-meta{animation:rise .6s var(--ease) both}
+.motion-ready .hero .lead{animation-delay:.08s}
+.motion-ready .hero-actions{animation-delay:.16s}
+.motion-ready .hero-meta{animation-delay:.24s}
+.motion-ready .shot{animation:rise-shot .9s var(--ease) .3s both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes rise-shot{from{opacity:0;transform:translateY(40px) scale(.98)}to{opacity:1;transform:none}}
+
+/* 滚动到区块时渐显，同组元素错开出现 */
+.motion-ready .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.motion-ready .reveal.in{opacity:1;transform:none}
+.motion-ready .features .reveal:nth-child(3n+2),.motion-ready .steps .reveal:nth-child(2){transition-delay:.08s}
+.motion-ready .features .reveal:nth-child(3n),.motion-ready .steps .reveal:nth-child(3){transition-delay:.16s}
+.motion-ready .reveal.in:hover{transition-delay:0s}
+.motion-ready .step.reveal::before{transform:scale(.4);transition:transform .5s var(--ease) .2s}
+.motion-ready .step.reveal.in::before{transform:none}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *{transition:none!important}
+  *,*::before{transition:none!important;animation:none!important}
 }
