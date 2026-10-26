@@ -9,17 +9,29 @@
     themeToggle.setAttribute('title',label);
     themeToggle.setAttribute('aria-pressed',String(dark));
   }
+  // 深浅切换时整页淡入淡出，避免一下子闪白或闪黑
+  function setTheme(next){
+    function apply(){
+      // 先关掉各元素自己的颜色过渡，整页由淡入淡出统一完成
+      root.classList.add('theme-instant');
+      root.dataset.theme=next;
+      updateThemeButton();
+      getComputedStyle(root).color;
+      requestAnimationFrame(function(){root.classList.remove('theme-instant')});
+    }
+    if(root.classList.contains('motion-ready')&&document.startViewTransition)document.startViewTransition(apply);
+    else apply();
+  }
   themeToggle.addEventListener('click',function(){
     var next=root.dataset.theme==='dark'?'light':'dark';
-    root.dataset.theme=next;
     try{localStorage.setItem('easyhub-site-theme',next)}catch(e){}
-    updateThemeButton();
+    setTheme(next);
   });
   if(window.matchMedia){
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(event){
       var saved='';
       try{saved=localStorage.getItem('easyhub-site-theme')||''}catch(e){}
-      if(saved!=='light'&&saved!=='dark'){root.dataset.theme=event.matches?'dark':'light';updateThemeButton()}
+      if(saved!=='light'&&saved!=='dark')setTheme(event.matches?'dark':'light');
     });
   }
   updateThemeButton();

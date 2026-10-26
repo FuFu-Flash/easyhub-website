@@ -200,6 +200,11 @@ body,.topbar,.feature,.table,.btn,.icon-btn,.lang a{transition:background-color 
 .motion-ready .step.reveal::before{transform:scale(.4);transition:transform .5s var(--ease) .2s}
 .motion-ready .step.reveal.in::before{transform:none}
 
+/* 深浅切换：整页用 0.5 秒交叉淡化；深色下截图略微压暗，免得一片亮白刺眼 */
+.theme-instant,.theme-instant *,.theme-instant *::before,.theme-instant *::after{transition:none!important}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.5s;animation-timing-function:ease}
+:root[data-theme="dark"] .shot img{filter:brightness(.82)}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before{transition:none!important;animation:none!important}
