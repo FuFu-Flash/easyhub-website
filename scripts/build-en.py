@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parent.parent
 src = (root / 'index.html').read_text(encoding='utf-8')
 R = [
 # 先换整句提示，避免后面的按钮文字替换拆开它
-('从 Gitee 下载。也可以从 GitHub 下载<a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.0/EasyHub-1.4.0-setup.exe">安装版</a>或<a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.0/EasyHub-1.4.0-portable.exe">便携版</a>，文件完全一样。', 'Also on Gitee: <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.0/EasyHub-1.4.0-setup.exe">installer</a> · <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.0/EasyHub-1.4.0-portable.exe">portable</a>. The files are identical.'),
+('从 Gitee 下载。也可以从 GitHub 下载<a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.1/EasyHub-1.4.1-setup.exe">安装版</a>或<a href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.1/EasyHub-1.4.1-portable.exe">便携版</a>，文件完全一样。', 'Also on Gitee: <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.1/EasyHub-1.4.1-setup.exe">installer</a> · <a href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.1/EasyHub-1.4.1-portable.exe">portable</a>. The files are identical.'),
 ('<html lang="zh-CN">', '<html lang="en">'),
 ("""  if(english){
     location.replace(new URL('en.html'+location.search+location.hash,location.href));
@@ -28,7 +28,7 @@ R = [
 ('"Apple 芯片 Mac 上的开源 GitHub 客户端，用于发布和管理项目。"', '"An open source GitHub app for Apple silicon Macs to publish and manage projects."'),
 ('"url": "https://fufu-flash.github.io/easyhub-website/android.html"', '"url": "https://fufu-flash.github.io/easyhub-website/android-en.html"'),
 ('"在 Android 上查看 GitHub 项目、回复问题、下载发行版和审查合并请求。"', '"Browse GitHub projects, reply to issues, download releases and review pull requests on Android."'),
-('"downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/macos-v1.2.2/EasyHub-macOS.dmg"', '"downloadUrl": "https://github.com/FuFu-Flash/EasyHub/releases/download/macos-v1.2.2/EasyHub-macOS.dmg"'),
+('"downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/macos-v1.4.1/EasyHub-macOS.dmg"', '"downloadUrl": "https://github.com/FuFu-Flash/EasyHub/releases/download/macos-v1.4.1/EasyHub-macOS.dmg"'),
 ('"downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk"', '"downloadUrl": "https://github.com/FuFu-Flash/EasyHub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk"'),
 ('跳到正文', 'Skip to content'),
 ('aria-label="页面导航"', 'aria-label="Page sections"'),
@@ -70,7 +70,8 @@ R = [
 ('选择你的设备', 'Choose your device'),
 ('全部免费。桌面版负责创作和发布，Android 版适合随时查看项目、回复问题和审查合并请求。', 'Free on every platform. Use the desktop app to create and publish, and Android to check projects, reply to issues and review pull requests on the go.'),
 ('<span>平台</span><span>适用于</span>', '<span>Platform</span><span>Requirements</span>'),
-('1.4.0 · 全新界面', '1.4.0 · New look'),
+('1.4.1 · 新增深色模式', '1.4.1 · Dark mode'),
+('<small>1.4.1 · 全新界面</small>', '<small>1.4.1 · New look</small>'),
 ('<b>64 位 Windows</b><br>安装版约 83 MB，便携版下载后直接运行', '<b>64-bit Windows</b><br>Installer about 83 MB; the portable version runs without installing'),
 ('>下载安装版</a>', '>Download installer</a>'), ('>便携版</a>', '>Portable</a>'),
 ('<b>Apple 芯片 Mac</b><br>macOS 12 及以上，DMG 约 70 MB', '<b>Apple silicon Mac</b><br>macOS 12 or later, DMG about 70 MB'),
@@ -88,12 +89,12 @@ for a, b in R:
         print('MISSING', a[:60])
     src = src.replace(a, b)
 # English visitors get GitHub links first; the Chinese page leads with Gitee
-for name in ['EasyHub-1.4.0-setup.exe', 'EasyHub-1.4.0-portable.exe']:
-    button = f'btn-sm" href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.0/{name}"'
+for name in ['EasyHub-1.4.1-setup.exe', 'EasyHub-1.4.1-portable.exe']:
+    button = f'btn-sm" href="https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.1/{name}"'
     assert button in src, name
-    src = src.replace(button, f'btn-sm" href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.0/{name}"')
-src = src.replace('"downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.0/', '"downloadUrl": "https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.0/')
-for plat in ['macos-v1.2.2/EasyHub-macOS.dmg', 'android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk']:
+    src = src.replace(button, f'btn-sm" href="https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.1/{name}"')
+src = src.replace('"downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/v1.4.1/', '"downloadUrl": "https://github.com/FuFu-Flash/EasyHub/releases/download/v1.4.1/')
+for plat in ['macos-v1.4.1/EasyHub-macOS.dmg', 'android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk']:
     gitee = f'<a class="btn btn-primary btn-sm" href="https://gitee.com/HUAJILA/easy-hub/releases/download/{plat}">从 Gitee 下载</a>'
     gh = f'<a class="btn btn-secondary btn-sm" href="https://github.com/FuFu-Flash/EasyHub/releases/download/{plat}">从 GitHub 下载</a>'
     pair = gitee + '\n          ' + gh
