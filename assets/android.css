@@ -1,0 +1,79 @@
+/* Android 页专用：手机界面示意、签名提醒和分工对比，其余沿用 site.css */
+.hero-android{padding-bottom:64px}
+.hero-split{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:center}
+.hero-kicker{display:inline-block;margin-bottom:14px;padding:2px 10px;border-radius:999px;background:var(--primary-soft);color:var(--primary);font-size:13px;font-weight:600}
+
+/* 手机示意：配色与 Android 1.2.0 首页一致，跟随网页深浅色 */
+.phone-stage{display:flex;justify-content:center}
+.phone{width:300px;border:8px solid var(--ink);border-radius:36px;background:var(--bg);overflow:hidden;box-shadow:var(--shadow-raised)}
+:root[data-theme="dark"] .phone{border-color:#3a3a36}
+.phone-status{display:flex;justify-content:space-between;align-items:center;padding:8px 18px 4px;font-size:11px;font-weight:600;color:var(--ink)}
+.phone-status-icons{display:flex;gap:3px;align-items:center}
+.phone-status-icons i{width:4px;height:8px;border-radius:1px;background:currentColor}
+.phone-status-icons i+i{height:10px}
+.phone-status-icons b{width:16px;height:8px;margin-left:3px;border:1.5px solid currentColor;border-radius:2px}
+.phone-bar{display:flex;align-items:center;gap:10px;padding:8px 16px 10px;background:var(--surface);border-bottom:1px solid var(--line)}
+.phone-bar strong{font-size:17px;font-weight:700;margin-right:auto}
+.phone-bell{position:relative;color:var(--muted)}
+.phone-bell svg{width:20px;height:20px;display:block}
+.phone-bell em{position:absolute;top:-4px;right:-6px;min-width:14px;height:14px;padding:0 3px;border-radius:7px;background:#c53347;color:#fff;font-size:9px;font-style:normal;font-weight:700;line-height:14px;text-align:center}
+.phone-avatar{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--primary-soft);color:var(--primary);font-size:12px;font-weight:700}
+.phone-body{padding:14px 14px 18px;min-height:380px}
+.phone-label{font-size:12px;font-weight:600;color:var(--muted)}
+.phone-label span{margin-left:4px;color:var(--faint);font-weight:500}
+.phone-card{margin-top:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.phone-task{display:flex;align-items:center;gap:10px;padding:12px}
+.phone-task img,.phone-row img,.phone-icon{width:32px;height:32px;flex:none;border-radius:8px}
+.phone-task div,.phone-row div{min-width:0;flex:1}
+.phone-task strong,.phone-row strong{display:block;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phone-task small,.phone-row small{display:block;font-size:11px;color:var(--faint);line-height:1.4}
+.phone-btn{flex:none;padding:5px 10px;border-radius:8px;background:var(--primary);color:#fff;font-size:11px;font-weight:600}
+.phone-more{margin:8px 2px 18px;font-size:11px;color:var(--primary);font-weight:600}
+.phone-head{display:flex;justify-content:space-between;align-items:baseline}
+.phone-head span{font-size:11px;color:var(--primary);font-weight:600}
+.phone-list{padding:2px 12px}
+.phone-row{display:flex;align-items:center;gap:10px;padding:10px 0}
+.phone-row+.phone-row{border-top:1px solid var(--line)}
+.phone-icon{display:grid;place-items:center;background:var(--primary-soft);color:var(--primary);font-size:13px;font-weight:700}
+.phone-icon.violet{background:#f0e8ff;color:#7655e8}
+:root[data-theme="dark"] .phone-icon.violet{background:#2a2142;color:#a28bff}
+.motion-ready .phone{animation:rise-shot .9s var(--ease) .2s both}
+
+/* 换签名提醒 */
+.notice-band{padding:0 0 56px}
+.notice{display:flex;gap:14px;padding:18px 20px;border:1px solid #efd9b4;border-radius:12px;background:var(--warning-soft);color:var(--ink)}
+:root[data-theme="dark"] .notice{border-color:#5f4620}
+.notice svg{width:22px;height:22px;flex:none;margin-top:1px;color:var(--warning)}
+.notice strong{display:block;font-size:15px;font-weight:600}
+.notice p{margin-top:4px;color:var(--ink-soft)}
+
+/* 手机与桌面版分工 */
+.split{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-card)}
+.split-col{padding:22px 24px}
+.split-col+.split-col{border-left:1px solid var(--line);background:var(--surface-subtle)}
+.split-col h3{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:600}
+.split-dot{width:8px;height:8px;border-radius:50%;background:var(--line-strong)}
+.split-dot.ok{background:var(--success)}
+.split-col ul{margin-top:12px;display:grid;gap:8px;list-style:none;color:var(--muted)}
+.split-col li{padding-left:16px;position:relative}
+.split-col li::before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line-strong)}
+.split-link{display:inline-block;margin-top:16px;color:var(--primary);font-weight:600}
+.split-link:hover{text-decoration:underline}
+
+/* 校验信息 */
+.verify{margin-top:16px;padding:14px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--muted);font-size:13px}
+.verify summary{cursor:pointer;color:var(--ink);font-weight:600}
+.verify p{margin-top:10px}
+.verify dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin-top:10px}
+.verify dt{color:var(--faint)}
+.verify code{font-family:Consolas,'Cascadia Code',monospace;font-size:12px;color:var(--ink);word-break:break-all}
+
+@media (max-width:850px){
+  .hero-split{grid-template-columns:1fr;gap:40px}
+  .split{grid-template-columns:1fr}
+  .split-col+.split-col{border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:480px){
+  .phone{width:min(300px,100%)}
+  .verify dl{grid-template-columns:1fr}
+}

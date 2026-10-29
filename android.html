@@ -1,102 +1,264 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EasyHub Android 1.1.0 | 随时查看 GitHub 项目</title>
-  <meta name="description" content="EasyHub Android 版让你在手机上查看 GitHub 项目、回复问题、下载发行版和审查合并请求。提供精简与通用安装包。">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/android.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/android.html">
-  <link rel="alternate" hreflang="en" href="https://fufu-flash.github.io/easyhub-website/android-en.html">
-  <link rel="alternate" hreflang="x-default" href="https://fufu-flash.github.io/easyhub-website/android-en.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="EasyHub Android | 你的项目，随时在手边">
-  <meta property="og:description" content="在手机上查看项目、回复问题、下载发行版和审查合并请求。">
-  <meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
-  <meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/android.html">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"EasyHub for Android","operatingSystem":"Android 7.0+","applicationCategory":"DeveloperApplication","softwareVersion":"1.1.0","datePublished":"2026-10-10","url":"https://fufu-flash.github.io/easyhub-website/android.html","downloadUrl":"https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk","license":"https://github.com/FuFu-Flash/EasyHub/blob/android-v1.1.0/LICENSE","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-  <script>
-    (function(){
-      var theme='',language='';
-      try{theme=localStorage.getItem('easyhub-site-theme')||'';language=localStorage.getItem('easyhub-site-language')||''}catch(e){}
-      var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.dataset.theme=theme==='light'||theme==='dark'?theme:(dark?'dark':'light');
-      if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion-ready');
-      var browser=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
-      if(language==='en'||(!language&&!browser.toLowerCase().startsWith('zh')))location.replace(new URL('android-en.html'+location.search+location.hash,location.href));
-    })();
-  </script>
-  <link rel="icon" type="image/svg+xml" href="assets/easyhub-icon.svg">
-  <link rel="stylesheet" href="assets/android-page.css">
-  <link rel="stylesheet" href="assets/android-illustration.css">
-  <script src="assets/android-page.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function(){
+  var saved='',language='';
+  try{saved=localStorage.getItem('easyhub-site-theme')||'';language=localStorage.getItem('easyhub-site-language')||''}catch(e){}
+  var system=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:(system?'dark':'light');
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('motion-ready')}
+  var browser=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
+  if(language==='en'||(!language&&!browser.toLowerCase().startsWith('zh'))){
+    location.replace(new URL('android-en.html'+location.search+location.hash,location.href));
+  }
+})();
+</script>
+<title>EasyHub Android - 在手机上查看 GitHub 项目</title>
+<meta name="description" content="EasyHub Android 版让你在手机上查看 GitHub 项目、回复问题、下载发行版和审查合并请求。适用于 Android 7.0 及以上，免费开源。">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://fufu-flash.github.io/easyhub-website/android.html">
+<link rel="alternate" hreflang="zh-CN" href="https://fufu-flash.github.io/easyhub-website/android.html">
+<link rel="alternate" hreflang="en" href="https://fufu-flash.github.io/easyhub-website/android-en.html">
+<link rel="alternate" hreflang="x-default" href="https://fufu-flash.github.io/easyhub-website/android.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EasyHub">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="EasyHub Android - 你的项目，随时在手边">
+<meta property="og:description" content="在手机上查看项目、回复问题、下载发行版和审查合并请求。">
+<meta property="og:url" content="https://fufu-flash.github.io/easyhub-website/android.html">
+<meta property="og:image" content="https://fufu-flash.github.io/easyhub-website/assets/easyhub-social.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EasyHub for Android",
+  "url": "https://fufu-flash.github.io/easyhub-website/android.html",
+  "description": "在 Android 上查看 GitHub 项目、回复问题、下载发行版和审查合并请求。",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Android 7.0+",
+  "softwareVersion": "1.2.0",
+  "datePublished": "2026-10-29",
+  "downloadUrl": "https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.2.0/EasyHub-Android-1.2.0-arm64.apk",
+  "license": "https://github.com/FuFu-Flash/EasyHub/blob/android-v1.2.0/LICENSE",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="assets/easyhub-icon.svg">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/android.css">
+<script src="assets/site.js" defer></script>
 </head>
-<body id="top">
-  <header class="site-header">
-    <nav class="page-wrap site-nav" aria-label="主导航">
-      <a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
-      <div class="nav-links"><a href="#top">首页</a><a href="#features">功能</a><a href="#download">下载 Android 版</a></div>
-      <button class="theme-toggle" type="button" aria-label="切换到浅色模式" title="切换到浅色模式" aria-pressed="true"><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="theme-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.87 13.16A9 9 0 0 1 10.84 3.13a9 9 0 1 0 10.03 10.03Z"/></svg></button>
-      <div class="language-switch" role="group" aria-label="语言 / Language"><a href="android.html" data-lang="zh" aria-current="page">中文</a><a href="android-en.html" data-lang="en">EN</a></div>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="./?platform=windows"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#features">功能</a>
+      <a href="#download">下载</a>
+      <a href="./?platform=windows">桌面版</a>
     </nav>
-  </header>
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="page-wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> EasyHub Android 1.1.0</p>
-          <h1 id="hero-title">你的项目，<br><span>随时在手边。</span></h1>
-          <p class="hero-lead">在电脑上发布，在手机上接着看。浏览项目、回复问题、下载发行版，也能查看和审查合并请求。</p>
-          <div class="hero-actions"><a class="button primary" href="#download">下载 Android 版</a><a class="button quiet" href="./?platform=windows">了解桌面版 <span aria-hidden="true">↗</span></a></div>
-          <p class="hero-note">免费开源 · Android 7.0 及以上 · 使用 GitHub 登录</p>
+    <div class="top-tools">
+      <a class="icon-btn" href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 查看源码" title="在 GitHub 查看源码">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+      </a>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="切换到深色模式" title="切换到深色模式" aria-pressed="false">
+        <svg class="theme-light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="theme-dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <div class="lang" role="group" aria-label="语言 / Language">
+        <a href="android.html" data-lang="zh" lang="zh-CN" aria-current="page">中文</a>
+        <a href="android-en.html" data-lang="en" lang="en">EN</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero hero-android" id="top">
+  <div class="wrap hero-split">
+    <div class="hero-text">
+      <p class="hero-kicker">EasyHub Android 1.2.0</p>
+      <h1>你的项目，随时在手边</h1>
+      <p class="lead">在电脑上发布，在手机上接着看。浏览项目、回复问题、下载发行版，也能审查合并请求。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          下载 Android 版
+        </a>
+        <a class="btn btn-secondary btn-lg" href="./?platform=windows">了解桌面版</a>
+      </div>
+      <div class="hero-meta">
+        <span><i></i>Android 7.0 及以上</span>
+        <span>用 GitHub 登录</span>
+        <span>Apache-2.0 开源</span>
+      </div>
+    </div>
+    <div class="phone-stage" aria-hidden="true">
+      <div class="phone">
+        <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i></i><i></i><b></b></span></div>
+        <div class="phone-bar">
+          <strong>首页</strong>
+          <span class="phone-bell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><em>2</em></span>
+          <span class="phone-avatar">F</span>
         </div>
-        <div class="illustration" role="img" aria-label="根据 EasyHub Android 首页绘制的界面预览">
-          <span class="illustration-orbit orbit-one" aria-hidden="true"></span>
-          <span class="illustration-orbit orbit-two" aria-hidden="true"></span>
-          <div class="mobile-phone" aria-hidden="true">
-            <span class="mobile-phone-speaker"></span>
-            <div class="mobile-window">
-            <div class="mobile-topbar"><div class="mobile-brand"><img src="assets/easyhub-icon.svg" alt=""><strong>EasyHub</strong></div><div class="mobile-top-actions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 9h18c0-1-3-2-3-9M10 21h4"/></svg><span class="mobile-avatar">F</span></div></div>
-            <div class="mobile-content">
-              <div class="mobile-intro"><small>你的创作空间</small><strong>早上好 👋</strong><p>今天也来做点有趣的事情。</p><span class="mobile-new">＋ 新建项目</span></div>
-              <div class="mobile-feature"><span class="mobile-feature-kicker"><i></i>接着创作</span><strong>你的项目都已保存。</strong><p>打开项目，继续创作。</p><span class="mobile-feature-button">查看项目 →</span><img class="mobile-feature-icon" src="assets/easyhub-icon.svg" alt=""><img class="mobile-feature-plant" src="assets/easyhub-potted-plant.svg" alt=""></div>
-              <div class="mobile-projects"><div class="mobile-projects-head"><strong>我的项目</strong><span>查看全部 ›</span></div>
-                <div class="mobile-project"><span class="mobile-project-icon windows-mark"><i></i><i></i><i></i><i></i></span><span class="mobile-project-copy"><strong>MyTool</strong><small>一个 Windows 小工具</small></span><span class="mobile-saved">● 已保存</span></div>
-                <div class="mobile-project"><span class="mobile-project-icon globe-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9M12 3c-3 3-4 6-4 9s1 6 4 9"/></svg></span><span class="mobile-project-copy"><strong>我的网站</strong><small>我的个人主页</small></span><span class="mobile-saved">● 已保存</span></div>
-              </div>
-            </div>
-            <div class="mobile-tabs"><span class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="m3 10 9-7 9 7v11H3zM9 21v-8h6v8"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 6h6l2 2h10v12H3z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 4-4 2 2-4z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M5 19a9 9 0 1 1 4 2l-5 1z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 7h9m3 0h6M3 17h3m3 0h12"/><circle cx="13" cy="7" r="2"/><circle cx="7" cy="17" r="2"/></svg></span></div>
-            </div>
+        <div class="phone-body">
+          <p class="phone-label">等你处理 <span>2</span></p>
+          <div class="phone-card phone-task">
+            <img src="assets/minecraft-grass-block.png" alt="">
+            <div><strong>Minecraft Mod</strong><small>1 个待处理的问题 · 1 个待审查的合并请求</small></div>
+            <span class="phone-btn">去审查</span>
+          </div>
+          <p class="phone-more">还有 1 个项目</p>
+          <div class="phone-head"><p class="phone-label">我的项目</p><span>全部 4 个 ›</span></div>
+          <div class="phone-card phone-list">
+            <div class="phone-row"><img src="assets/minecraft-grass-block.png" alt=""><div><strong>Minecraft Mod</strong><small>已保存 · 刚刚</small></div></div>
+            <div class="phone-row"><span class="phone-icon">M</span><div><strong>MyTool</strong><small>已保存 · 2 小时前</small></div></div>
+            <div class="phone-row"><span class="phone-icon violet">W</span><div><strong>我的网站</strong><small>已保存 · 3 天前</small></div></div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="features" id="features" aria-labelledby="features-title">
-      <div class="page-wrap">
-        <div class="section-head reveal"><p class="kicker">带着项目走</p><h2 id="features-title">出门后，也能跟上项目的每一步。</h2><p>EasyHub Android 直接读取 GitHub 内容。电脑发布更新后，手机打开项目就能看到。</p></div>
-        <div class="feature-grid">
-          <article class="feature-card large reveal"><span class="feature-number">01 / 浏览</span><h3>项目和版本，都在手机里。</h3><p>查看自己的项目与公开项目，阅读介绍、历史版本和发行说明，再选择要下载的文件。</p><div class="card-preview"><span class="preview-icon"><img src="assets/minecraft-grass-block.png" alt=""></span><span><strong>Minecraft Mod</strong><small>历史版本 · 问题 · 下载</small></span><b>›</b></div></article>
-          <article class="feature-card reveal"><span class="feature-number">02 / 交流</span><h3>看到问题，直接回复。</h3><p>创建、回复、关闭或重新打开问题；在手机上也能继续和项目使用者交流。</p></article>
-          <article class="feature-card reveal"><span class="feature-number">03 / 发现</span><h3>找到值得关注的作品。</h3><p>搜索公开项目和用户，浏览 EasyHub 热门。热门排序由 EasyHub 提供，并非 GitHub 官方 Trending。</p></article>
-          <article class="feature-card wide reveal"><span class="feature-number">04 / 合并请求审查</span><h3>合并请求，先看清楚再决定。</h3><p>在“合并请求审查”中查看修改、发表意见。按需使用自己配置的 AI 服务整理风险与建议；批准或拒绝始终由你决定。</p><div class="review-tags"><span>查看修改</span><span>AI 辅助审查</span><span>由你决定</span></div></article>
-        </div>
+    </div>
+  </div>
+</section>
+
+<section class="notice-band">
+  <div class="wrap">
+    <div class="notice reveal" role="note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6Z"/><path d="M12 9v4M12 16.5v.01"/></svg>
+      <div>
+        <strong>1.2.0 换了新的签名，从旧版升级要先卸载</strong>
+        <p>1.1.0 及更早的安装包用的是公开的调试签名，别人也能做出同签名的假安装包。从 1.2.0 起改用 EasyHub 自己的签名。卸载旧版后需要重新登录 GitHub，你在 GitHub 上的项目不受影响。</p>
       </div>
-    </section>
-    <section class="together" aria-labelledby="together-title">
-      <div class="page-wrap together-inner reveal"><div><p class="kicker">各有所长</p><h2 id="together-title">桌面创作，Android 随行。</h2><p>选择本地文件夹、检测文件变化、发布源码和上传新版本，在桌面版（Windows / macOS）完成。两端使用同一个 GitHub 账号，项目、问题与版本通过 GitHub 保持一致。</p></div><a class="button quiet" href="./?platform=windows">查看桌面版 <span aria-hidden="true">↗</span></a></div>
-    </section>
-    <section class="download" id="download" aria-labelledby="download-title">
-      <div class="page-wrap"><div class="section-head reveal"><p class="kicker">开始使用</p><h2 id="download-title">选择适合手机的安装包。</h2><p>大多数较新的 Android 手机选择精简安装包；如果无法安装，再试通用安装包。</p></div>
-        <div class="download-grid">
-          <article class="download-card primary-card reveal"><span class="package-badge">推荐</span><h3>精简安装包 <span>arm64</span></h3><p>适合大多数较新的 Android 手机，约 26.2 MiB。</p><div class="download-actions"><a class="button gitee" href="https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk"><img src="assets/gitee.svg" alt=""> 从 Gitee 下载</a><a class="button github" href="https://github.com/FuFu-Flash/EasyHub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-arm64.apk"><img src="assets/github.svg" alt=""> 从 GitHub 下载</a></div></article>
-          <article class="download-card reveal"><span class="package-badge pale">兼容选择</span><h3>通用安装包 <span>universal</span></h3><p>精简版无法安装时使用，约 44.5 MiB，支持 ARM32、ARM64、x86 和 x86_64。</p><div class="download-actions"><a class="button gitee" href="https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-universal.apk"><img src="assets/gitee.svg" alt=""> 从 Gitee 下载</a><a class="button github" href="https://github.com/FuFu-Flash/EasyHub/releases/download/android-v1.1.0/EasyHub-Android-1.1.0-universal.apk"><img src="assets/github.svg" alt=""> 从 GitHub 下载</a></div></article>
-        </div>
-        <p class="install-note reveal">下载 APK 后，按 Android 系统提示允许安装。iOS 版尚未推出。<a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/android-v1.1.0">查看完整发行版</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-label">功能</p>
+      <h2 class="section-title">出门在外，也能跟上项目</h2>
+      <p class="section-sub">手机直接读取 GitHub 上的内容。电脑上发布了更新，手机打开项目就能看到。</p>
+    </div>
+    <div class="features">
+      <article class="feature reveal">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <h3>首页就是待办</h3>
+        <p>“等你处理”把同一个项目的问题和待审查的合并请求合成一行，其余的折叠起来，打开就知道先做什么。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.4-5.6A8.5 8.5 0 1 1 21 12Z"/></svg></span>
+        <h3>看到问题，直接回复</h3>
+        <p>提出、回复、关闭或重新打开问题，在手机上也能和使用你项目的人继续交流。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5V21M18 15.5V9a3 3 0 0 0-3-3h-4"/><path d="m13 3.5-2.5 2.5L13 8.5"/></svg></span>
+        <h3>合并请求，先看清楚</h3>
+        <p>查看改了哪些文件。批准合并前会显示改动文件数和检查结果，检查没通过会提醒你。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span>
+        <h3>项目和版本都在手里</h3>
+        <p>阅读项目介绍、修改记录和发行说明，选好文件直接下载到手机，能看到进度，也能取消。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></svg></span>
+        <h3>发现好项目</h3>
+        <p>搜索公开项目和用户，看看 EasyHub 热门。外文介绍和问题可以一键翻译。</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></span>
+        <h3>深色模式</h3>
+        <p>在设置的“外观”里选跟随系统、浅色或深色，配色和桌面版一致，晚上看也不刺眼。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="split">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-label">和桌面版的分工</p>
+      <h2 class="section-title">手机随身看，电脑来发布</h2>
+      <p class="section-sub">两边登录同一个 GitHub 账号，项目、问题和版本通过 GitHub 保持一致。</p>
+    </div>
+    <div class="split reveal">
+      <div class="split-col">
+        <h3><span class="split-dot ok"></span>手机上可以</h3>
+        <ul>
+          <li>查看自己的项目和公开项目</li>
+          <li>提出和回复问题</li>
+          <li>审查、合并或关闭合并请求</li>
+          <li>新建项目、下载发行版</li>
+        </ul>
       </div>
-    </section>
-  </main>
-  <footer><div class="page-wrap footer-inner"><a class="brand" href="#top"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a><span>当前源代码：Apache-2.0 · Android v1.1.0</span><div><a href="./?platform=windows">网站首页</a><a href="https://gitee.com/HUAJILA/easy-hub">Gitee 仓库</a><a href="https://github.com/FuFu-Flash/EasyHub">GitHub 仓库</a></div></div></footer>
+      <div class="split-col">
+        <h3><span class="split-dot"></span>需要用桌面版</h3>
+        <ul>
+          <li>管理电脑上的项目文件夹</li>
+          <li>发布源码</li>
+          <li>发布或编辑新版本</li>
+        </ul>
+        <a class="split-link" href="./?platform=windows#download">下载桌面版 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="download">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="section-label">下载</p>
+      <h2 class="section-title">下载 Android 版</h2>
+      <p class="section-sub">下载后按系统提示允许安装。从 1.1.0 或更早版本升级，请先卸载旧版。</p>
+    </div>
+    <div class="table reveal" role="list">
+      <div class="table-head" aria-hidden="true"><span>安装包</span><span>适用于</span><span></span></div>
+      <div class="row" role="listitem">
+        <div class="platform">
+          <span class="platform-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 9.4 19.4 6a.4.4 0 0 0-.7-.4l-1.9 3.4a11.5 11.5 0 0 0-9.6 0L5.3 5.6a.4.4 0 1 0-.7.4l1.9 3.4A10.7 10.7 0 0 0 1 18h22a10.7 10.7 0 0 0-5.5-8.6ZM7 15.2a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm10 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg></span>
+          <span><strong>Android 1.2.0</strong><small>ARM64 安装包 · 约 26 MB</small></span>
+        </div>
+        <p class="req"><b>Android 7.0 及以上</b><br>适合大多数较新的手机</p>
+        <div class="get">
+          <a class="btn btn-primary btn-sm" href="https://gitee.com/HUAJILA/easy-hub/releases/download/android-v1.2.0/EasyHub-Android-1.2.0-arm64.apk">从 Gitee 下载</a>
+          <a class="btn btn-secondary btn-sm" href="https://github.com/FuFu-Flash/EasyHub/releases/download/android-v1.2.0/EasyHub-Android-1.2.0-arm64.apk">从 GitHub 下载</a>
+        </div>
+        <p class="row-note">这一版暂时没有通用安装包，ARM32 和 x86 设备请等后续版本。旧的 1.1.0 通用包用的是公开调试签名，不再提供。</p>
+      </div>
+    </div>
+    <details class="verify reveal">
+      <summary>核对安装包是否来自 EasyHub</summary>
+      <p>只从本页或发行版页面下载。安装包和签名证书的 SHA-256 应与下面一致：</p>
+      <dl>
+        <dt>安装包</dt><dd><code>4d0ad1bff876941bba85ac4f5b248b5c32652e56ee6f95f61be061f2d0664ea1</code></dd>
+        <dt>签名证书</dt><dd><code>e3bc715e03d2e63aac2a898ec283e6f72c4a9b945ec91ebeda76e9882c4e9f79</code></dd>
+      </dl>
+    </details>
+    <ul class="notes">
+      <li>iOS 版还没有推出。</li>
+      <li>完整更新说明在 <a href="https://gitee.com/HUAJILA/easy-hub/releases/tag/android-v1.2.0" target="_blank" rel="noopener noreferrer">Gitee 发布页</a> 和 <a href="https://github.com/FuFu-Flash/EasyHub/releases/tag/android-v1.2.0" target="_blank" rel="noopener noreferrer">GitHub 发布页</a>。</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="brand" href="./?platform=windows"><img src="assets/easyhub-icon.svg" alt=""><span>EasyHub</span></a>
+    <span>Apache-2.0 开源 · 使用 GitHub 账号登录，没有自己的服务器</span>
+    <nav class="footer-links" aria-label="外部链接">
+      <a href="https://github.com/FuFu-Flash/EasyHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://gitee.com/HUAJILA/easy-hub" target="_blank" rel="noopener noreferrer">Gitee</a>
+      <a href="https://github.com/FuFu-Flash/EasyHub/issues" target="_blank" rel="noopener noreferrer">反馈问题</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
